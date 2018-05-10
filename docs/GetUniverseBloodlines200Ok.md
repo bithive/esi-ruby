@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseBloodlines200Ok
+# Esi::GetUniverseBloodlines200Ok
 
 ## Properties
 Name | Type | Description | Notes

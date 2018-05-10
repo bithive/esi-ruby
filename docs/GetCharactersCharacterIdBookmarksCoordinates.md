@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdBookmarksCoordinates
+# Esi::GetCharactersCharacterIdBookmarksCoordinates
 
 ## Properties
 Name | Type | Description | Notes

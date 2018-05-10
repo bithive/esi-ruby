@@ -1,4 +1,4 @@
-# EsiRuby::WarsApi
+# Esi::WarsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -21,7 +21,7 @@ Return a list of wars  --- Alternate route: `/dev/wars/`  Alternate route: `/leg
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::WarsApi.new
+api_instance = Esi::WarsApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -35,7 +35,7 @@ begin
   #List wars
   result = api_instance.get_wars(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WarsApi->get_wars: #{e}"
 end
 ```
@@ -77,7 +77,7 @@ Return details about a war  --- Alternate route: `/dev/wars/{war_id}/`  Alternat
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::WarsApi.new
+api_instance = Esi::WarsApi.new
 
 war_id = 56 # Integer | ID for a war
 
@@ -92,7 +92,7 @@ begin
   #Get war information
   result = api_instance.get_wars_war_id(war_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WarsApi->get_wars_war_id: #{e}"
 end
 ```
@@ -134,7 +134,7 @@ Return a list of kills related to a war  --- Alternate route: `/dev/wars/{war_id
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::WarsApi.new
+api_instance = Esi::WarsApi.new
 
 war_id = 56 # Integer | A valid war ID
 
@@ -150,7 +150,7 @@ begin
   #List kills for a war
   result = api_instance.get_wars_war_id_killmails(war_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WarsApi->get_wars_war_id_killmails: #{e}"
 end
 ```

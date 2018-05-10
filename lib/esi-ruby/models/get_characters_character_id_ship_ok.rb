@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # 200 ok object
   class GetCharactersCharacterIdShipOk
     # Item id's are unique to a ship and persist until it is repackaged. This value can be used to track repeated uses of a ship, or detect when a pilot changes into a different instance of the same ship type.
@@ -170,7 +170,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

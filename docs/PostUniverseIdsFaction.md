@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsFaction
+# Esi::PostUniverseIdsFaction
 
 ## Properties
 Name | Type | Description | Notes

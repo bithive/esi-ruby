@@ -1,4 +1,4 @@
-# EsiRuby::BadGateway
+# Esi::BadGateway
 
 ## Properties
 Name | Type | Description | Notes

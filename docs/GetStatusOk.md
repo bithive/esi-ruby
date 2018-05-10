@@ -1,4 +1,4 @@
-# EsiRuby::GetStatusOk
+# Esi::GetStatusOk
 
 ## Properties
 Name | Type | Description | Notes

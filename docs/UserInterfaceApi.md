@@ -1,4 +1,4 @@
-# EsiRuby::UserInterfaceApi
+# Esi::UserInterfaceApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -23,12 +23,12 @@ Set a solar system as autopilot waypoint  --- Alternate route: `/dev/ui/autopilo
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::UserInterfaceApi.new
+api_instance = Esi::UserInterfaceApi.new
 
 add_to_beginning = false # BOOLEAN | Whether this solar system should be added to the beginning of all waypoints
 
@@ -46,7 +46,7 @@ opts = {
 begin
   #Set Autopilot Waypoint
   api_instance.post_ui_autopilot_waypoint(add_to_beginning, clear_other_waypoints, destination_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UserInterfaceApi->post_ui_autopilot_waypoint: #{e}"
 end
 ```
@@ -90,12 +90,12 @@ Open the contract window inside the client  --- Alternate route: `/dev/ui/openwi
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::UserInterfaceApi.new
+api_instance = Esi::UserInterfaceApi.new
 
 contract_id = 56 # Integer | The contract to open
 
@@ -109,7 +109,7 @@ opts = {
 begin
   #Open Contract Window
   api_instance.post_ui_openwindow_contract(contract_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UserInterfaceApi->post_ui_openwindow_contract: #{e}"
 end
 ```
@@ -151,12 +151,12 @@ Open the information window for a character, corporation or alliance inside the 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::UserInterfaceApi.new
+api_instance = Esi::UserInterfaceApi.new
 
 target_id = 56 # Integer | The target to open
 
@@ -170,7 +170,7 @@ opts = {
 begin
   #Open Information Window
   api_instance.post_ui_openwindow_information(target_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UserInterfaceApi->post_ui_openwindow_information: #{e}"
 end
 ```
@@ -212,12 +212,12 @@ Open the market details window for a specific typeID inside the client  --- Alte
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::UserInterfaceApi.new
+api_instance = Esi::UserInterfaceApi.new
 
 type_id = 56 # Integer | The item type to open in market window
 
@@ -231,7 +231,7 @@ opts = {
 begin
   #Open Market Details
   api_instance.post_ui_openwindow_marketdetails(type_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UserInterfaceApi->post_ui_openwindow_marketdetails: #{e}"
 end
 ```
@@ -273,14 +273,14 @@ Open the New Mail window, according to settings from the request if applicable  
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::UserInterfaceApi.new
+api_instance = Esi::UserInterfaceApi.new
 
-new_mail = EsiRuby::PostUiOpenwindowNewmailNewMail.new # PostUiOpenwindowNewmailNewMail | The details of mail to create
+new_mail = Esi::PostUiOpenwindowNewmailNewMail.new # PostUiOpenwindowNewmailNewMail | The details of mail to create
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -292,7 +292,7 @@ opts = {
 begin
   #Open New Mail Window
   api_instance.post_ui_openwindow_newmail(new_mail, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UserInterfaceApi->post_ui_openwindow_newmail: #{e}"
 end
 ```

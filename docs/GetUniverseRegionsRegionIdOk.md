@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseRegionsRegionIdOk
+# Esi::GetUniverseRegionsRegionIdOk
 
 ## Properties
 Name | Type | Description | Notes

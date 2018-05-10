@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsStructuresStructureId200Ok
+# Esi::GetMarketsStructuresStructureId200Ok
 
 ## Properties
 Name | Type | Description | Notes

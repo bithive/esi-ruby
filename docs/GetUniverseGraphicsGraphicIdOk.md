@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseGraphicsGraphicIdOk
+# Esi::GetUniverseGraphicsGraphicIdOk
 
 ## Properties
 Name | Type | Description | Notes

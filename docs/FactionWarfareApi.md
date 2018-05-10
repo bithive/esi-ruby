@@ -1,4 +1,4 @@
-# EsiRuby::FactionWarfareApi
+# Esi::FactionWarfareApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -26,12 +26,12 @@ Statistical overview of a character involved in faction warfare  --- Alternate r
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -47,7 +47,7 @@ begin
   #Overview of a character involved in faction warfare
   result = api_instance.get_characters_character_id_fw_stats(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_characters_character_id_fw_stats: #{e}"
 end
 ```
@@ -90,12 +90,12 @@ Statistics about a corporation involved in faction warfare  --- Alternate route:
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -111,7 +111,7 @@ begin
   #Overview of a corporation involved in faction warfare
   result = api_instance.get_corporations_corporation_id_fw_stats(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_corporations_corporation_id_fw_stats: #{e}"
 end
 ```
@@ -154,7 +154,7 @@ Top 4 leaderboard of factions for kills and victory points separated by total, l
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -167,7 +167,7 @@ begin
   #List of the top factions in faction warfare
   result = api_instance.get_fw_leaderboards(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_fw_leaderboards: #{e}"
 end
 ```
@@ -208,7 +208,7 @@ Top 100 leaderboard of pilots for kills and victory points separated by total, l
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -221,7 +221,7 @@ begin
   #List of the top pilots in faction warfare
   result = api_instance.get_fw_leaderboards_characters(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_fw_leaderboards_characters: #{e}"
 end
 ```
@@ -262,7 +262,7 @@ Top 10 leaderboard of corporations for kills and victory points separated by tot
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -275,7 +275,7 @@ begin
   #List of the top corporations in faction warfare
   result = api_instance.get_fw_leaderboards_corporations(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_fw_leaderboards_corporations: #{e}"
 end
 ```
@@ -316,7 +316,7 @@ Statistical overviews of factions involved in faction warfare  --- Alternate rou
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -329,7 +329,7 @@ begin
   #An overview of statistics about factions involved in faction warfare
   result = api_instance.get_fw_stats(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_fw_stats: #{e}"
 end
 ```
@@ -370,7 +370,7 @@ An overview of the current ownership of faction warfare solar systems  --- Alter
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -383,7 +383,7 @@ begin
   #Ownership of faction warfare systems
   result = api_instance.get_fw_systems(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_fw_systems: #{e}"
 end
 ```
@@ -424,7 +424,7 @@ Data about which NPC factions are at war  --- Alternate route: `/dev/fw/wars/`  
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::FactionWarfareApi.new
+api_instance = Esi::FactionWarfareApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -437,7 +437,7 @@ begin
   #Data about which NPC factions are at war
   result = api_instance.get_fw_wars(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FactionWarfareApi->get_fw_wars: #{e}"
 end
 ```

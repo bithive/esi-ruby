@@ -398,10 +398,10 @@ require 'esi-ruby/api/user_interface_api'
 require 'esi-ruby/api/wallet_api'
 require 'esi-ruby/api/wars_api'
 
-module EsiRuby
+module Esi
   class << self
     # Customize default settings for the SDK using block.
-    #   EsiRuby.configure do |config|
+    #   Esi.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

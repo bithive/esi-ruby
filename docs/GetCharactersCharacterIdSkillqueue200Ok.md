@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdSkillqueue200Ok
+# Esi::GetCharactersCharacterIdSkillqueue200Ok
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdContractsContractIdBids200Ok
+# Esi::GetCharactersCharacterIdContractsContractIdBids200Ok
 
 ## Properties
 Name | Type | Description | Notes

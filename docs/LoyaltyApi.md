@@ -1,4 +1,4 @@
-# EsiRuby::LoyaltyApi
+# Esi::LoyaltyApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -20,12 +20,12 @@ Return a list of loyalty points for all corporations the character has worked fo
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::LoyaltyApi.new
+api_instance = Esi::LoyaltyApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -41,7 +41,7 @@ begin
   #Get loyalty points
   result = api_instance.get_characters_character_id_loyalty_points(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling LoyaltyApi->get_characters_character_id_loyalty_points: #{e}"
 end
 ```
@@ -84,7 +84,7 @@ Return a list of offers from a specific corporation's loyalty store  --- Alterna
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::LoyaltyApi.new
+api_instance = Esi::LoyaltyApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -99,7 +99,7 @@ begin
   #List loyalty store offers
   result = api_instance.get_loyalty_stores_corporation_id_offers(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling LoyaltyApi->get_loyalty_stores_corporation_id_offers: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdCustomsOffices200Ok
+# Esi::GetCorporationsCorporationIdCustomsOffices200Ok
 
 ## Properties
 Name | Type | Description | Notes

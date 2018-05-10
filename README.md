@@ -1,6 +1,6 @@
 # esi-ruby
 
-EsiRuby - the Ruby gem for the EVE Swagger Interface
+Esi - the Ruby gem for the EVE Swagger Interface
 
 An OpenAPI for EVE Online
 
@@ -54,7 +54,7 @@ Please follow the [installation](#installation) procedure and then run the follo
 # Load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::AllianceApi.new
+api_instance = Esi::AllianceApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -67,7 +67,7 @@ begin
   #List all alliances
   result = api_instance.get_alliances(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AllianceApi->get_alliances: #{e}"
 end
 
@@ -79,563 +79,563 @@ All URIs are relative to *https://esi.evetech.net/latest*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*EsiRuby::AllianceApi* | [**get_alliances**](docs/AllianceApi.md#get_alliances) | **GET** /alliances/ | List all alliances
-*EsiRuby::AllianceApi* | [**get_alliances_alliance_id**](docs/AllianceApi.md#get_alliances_alliance_id) | **GET** /alliances/{alliance_id}/ | Get alliance information
-*EsiRuby::AllianceApi* | [**get_alliances_alliance_id_corporations**](docs/AllianceApi.md#get_alliances_alliance_id_corporations) | **GET** /alliances/{alliance_id}/corporations/ | List alliance's corporations
-*EsiRuby::AllianceApi* | [**get_alliances_alliance_id_icons**](docs/AllianceApi.md#get_alliances_alliance_id_icons) | **GET** /alliances/{alliance_id}/icons/ | Get alliance icon
-*EsiRuby::AllianceApi* | [**get_alliances_names**](docs/AllianceApi.md#get_alliances_names) | **GET** /alliances/names/ | Get alliance names
-*EsiRuby::AssetsApi* | [**get_characters_character_id_assets**](docs/AssetsApi.md#get_characters_character_id_assets) | **GET** /characters/{character_id}/assets/ | Get character assets
-*EsiRuby::AssetsApi* | [**get_corporations_corporation_id_assets**](docs/AssetsApi.md#get_corporations_corporation_id_assets) | **GET** /corporations/{corporation_id}/assets/ | Get corporation assets
-*EsiRuby::AssetsApi* | [**post_characters_character_id_assets_locations**](docs/AssetsApi.md#post_characters_character_id_assets_locations) | **POST** /characters/{character_id}/assets/locations/ | Get character asset locations
-*EsiRuby::AssetsApi* | [**post_characters_character_id_assets_names**](docs/AssetsApi.md#post_characters_character_id_assets_names) | **POST** /characters/{character_id}/assets/names/ | Get character asset names
-*EsiRuby::AssetsApi* | [**post_corporations_corporation_id_assets_locations**](docs/AssetsApi.md#post_corporations_corporation_id_assets_locations) | **POST** /corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
-*EsiRuby::AssetsApi* | [**post_corporations_corporation_id_assets_names**](docs/AssetsApi.md#post_corporations_corporation_id_assets_names) | **POST** /corporations/{corporation_id}/assets/names/ | Get coporation asset names
-*EsiRuby::BookmarksApi* | [**get_characters_character_id_bookmarks**](docs/BookmarksApi.md#get_characters_character_id_bookmarks) | **GET** /characters/{character_id}/bookmarks/ | List bookmarks
-*EsiRuby::BookmarksApi* | [**get_characters_character_id_bookmarks_folders**](docs/BookmarksApi.md#get_characters_character_id_bookmarks_folders) | **GET** /characters/{character_id}/bookmarks/folders/ | List bookmark folders
-*EsiRuby::BookmarksApi* | [**get_corporations_corporation_id_bookmarks**](docs/BookmarksApi.md#get_corporations_corporation_id_bookmarks) | **GET** /corporations/{corporation_id}/bookmarks/ | List corporation bookmarks
-*EsiRuby::BookmarksApi* | [**get_corporations_corporation_id_bookmarks_folders**](docs/BookmarksApi.md#get_corporations_corporation_id_bookmarks_folders) | **GET** /corporations/{corporation_id}/bookmarks/folders/ | List corporation bookmark folders
-*EsiRuby::CalendarApi* | [**get_characters_character_id_calendar**](docs/CalendarApi.md#get_characters_character_id_calendar) | **GET** /characters/{character_id}/calendar/ | List calendar event summaries
-*EsiRuby::CalendarApi* | [**get_characters_character_id_calendar_event_id**](docs/CalendarApi.md#get_characters_character_id_calendar_event_id) | **GET** /characters/{character_id}/calendar/{event_id}/ | Get an event
-*EsiRuby::CalendarApi* | [**get_characters_character_id_calendar_event_id_attendees**](docs/CalendarApi.md#get_characters_character_id_calendar_event_id_attendees) | **GET** /characters/{character_id}/calendar/{event_id}/attendees/ | Get attendees
-*EsiRuby::CalendarApi* | [**put_characters_character_id_calendar_event_id**](docs/CalendarApi.md#put_characters_character_id_calendar_event_id) | **PUT** /characters/{character_id}/calendar/{event_id}/ | Respond to an event
-*EsiRuby::CharacterApi* | [**get_characters_character_id**](docs/CharacterApi.md#get_characters_character_id) | **GET** /characters/{character_id}/ | Get character's public information
-*EsiRuby::CharacterApi* | [**get_characters_character_id_agents_research**](docs/CharacterApi.md#get_characters_character_id_agents_research) | **GET** /characters/{character_id}/agents_research/ | Get agents research
-*EsiRuby::CharacterApi* | [**get_characters_character_id_blueprints**](docs/CharacterApi.md#get_characters_character_id_blueprints) | **GET** /characters/{character_id}/blueprints/ | Get blueprints
-*EsiRuby::CharacterApi* | [**get_characters_character_id_corporationhistory**](docs/CharacterApi.md#get_characters_character_id_corporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
-*EsiRuby::CharacterApi* | [**get_characters_character_id_fatigue**](docs/CharacterApi.md#get_characters_character_id_fatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
-*EsiRuby::CharacterApi* | [**get_characters_character_id_medals**](docs/CharacterApi.md#get_characters_character_id_medals) | **GET** /characters/{character_id}/medals/ | Get medals
-*EsiRuby::CharacterApi* | [**get_characters_character_id_notifications**](docs/CharacterApi.md#get_characters_character_id_notifications) | **GET** /characters/{character_id}/notifications/ | Get character notifications
-*EsiRuby::CharacterApi* | [**get_characters_character_id_notifications_contacts**](docs/CharacterApi.md#get_characters_character_id_notifications_contacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications
-*EsiRuby::CharacterApi* | [**get_characters_character_id_portrait**](docs/CharacterApi.md#get_characters_character_id_portrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
-*EsiRuby::CharacterApi* | [**get_characters_character_id_roles**](docs/CharacterApi.md#get_characters_character_id_roles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
-*EsiRuby::CharacterApi* | [**get_characters_character_id_standings**](docs/CharacterApi.md#get_characters_character_id_standings) | **GET** /characters/{character_id}/standings/ | Get standings
-*EsiRuby::CharacterApi* | [**get_characters_character_id_stats**](docs/CharacterApi.md#get_characters_character_id_stats) | **GET** /characters/{character_id}/stats/ | Yearly aggregate stats
-*EsiRuby::CharacterApi* | [**get_characters_character_id_titles**](docs/CharacterApi.md#get_characters_character_id_titles) | **GET** /characters/{character_id}/titles/ | Get character corporation titles
-*EsiRuby::CharacterApi* | [**get_characters_names**](docs/CharacterApi.md#get_characters_names) | **GET** /characters/names/ | Get character names
-*EsiRuby::CharacterApi* | [**post_characters_affiliation**](docs/CharacterApi.md#post_characters_affiliation) | **POST** /characters/affiliation/ | Character affiliation
-*EsiRuby::CharacterApi* | [**post_characters_character_id_cspa**](docs/CharacterApi.md#post_characters_character_id_cspa) | **POST** /characters/{character_id}/cspa/ | Calculate a CSPA charge cost
-*EsiRuby::ClonesApi* | [**get_characters_character_id_clones**](docs/ClonesApi.md#get_characters_character_id_clones) | **GET** /characters/{character_id}/clones/ | Get clones
-*EsiRuby::ClonesApi* | [**get_characters_character_id_implants**](docs/ClonesApi.md#get_characters_character_id_implants) | **GET** /characters/{character_id}/implants/ | Get active implants
-*EsiRuby::ContactsApi* | [**delete_characters_character_id_contacts**](docs/ContactsApi.md#delete_characters_character_id_contacts) | **DELETE** /characters/{character_id}/contacts/ | Delete contacts
-*EsiRuby::ContactsApi* | [**get_alliances_alliance_id_contacts**](docs/ContactsApi.md#get_alliances_alliance_id_contacts) | **GET** /alliances/{alliance_id}/contacts/ | Get alliance contacts
-*EsiRuby::ContactsApi* | [**get_alliances_alliance_id_contacts_labels**](docs/ContactsApi.md#get_alliances_alliance_id_contacts_labels) | **GET** /alliances/{alliance_id}/contacts/labels/ | Get alliance contact labels
-*EsiRuby::ContactsApi* | [**get_characters_character_id_contacts**](docs/ContactsApi.md#get_characters_character_id_contacts) | **GET** /characters/{character_id}/contacts/ | Get contacts
-*EsiRuby::ContactsApi* | [**get_characters_character_id_contacts_labels**](docs/ContactsApi.md#get_characters_character_id_contacts_labels) | **GET** /characters/{character_id}/contacts/labels/ | Get contact labels
-*EsiRuby::ContactsApi* | [**get_corporations_corporation_id_contacts**](docs/ContactsApi.md#get_corporations_corporation_id_contacts) | **GET** /corporations/{corporation_id}/contacts/ | Get corporation contacts
-*EsiRuby::ContactsApi* | [**get_corporations_corporation_id_contacts_labels**](docs/ContactsApi.md#get_corporations_corporation_id_contacts_labels) | **GET** /corporations/{corporation_id}/contacts/labels/ | Get corporation contact labels
-*EsiRuby::ContactsApi* | [**post_characters_character_id_contacts**](docs/ContactsApi.md#post_characters_character_id_contacts) | **POST** /characters/{character_id}/contacts/ | Add contacts
-*EsiRuby::ContactsApi* | [**put_characters_character_id_contacts**](docs/ContactsApi.md#put_characters_character_id_contacts) | **PUT** /characters/{character_id}/contacts/ | Edit contacts
-*EsiRuby::ContractsApi* | [**get_characters_character_id_contracts**](docs/ContractsApi.md#get_characters_character_id_contracts) | **GET** /characters/{character_id}/contracts/ | Get contracts
-*EsiRuby::ContractsApi* | [**get_characters_character_id_contracts_contract_id_bids**](docs/ContractsApi.md#get_characters_character_id_contracts_contract_id_bids) | **GET** /characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
-*EsiRuby::ContractsApi* | [**get_characters_character_id_contracts_contract_id_items**](docs/ContractsApi.md#get_characters_character_id_contracts_contract_id_items) | **GET** /characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
-*EsiRuby::ContractsApi* | [**get_corporations_corporation_id_contracts**](docs/ContractsApi.md#get_corporations_corporation_id_contracts) | **GET** /corporations/{corporation_id}/contracts/ | Get coporation contracts
-*EsiRuby::ContractsApi* | [**get_corporations_corporation_id_contracts_contract_id_bids**](docs/ContractsApi.md#get_corporations_corporation_id_contracts_contract_id_bids) | **GET** /corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
-*EsiRuby::ContractsApi* | [**get_corporations_corporation_id_contracts_contract_id_items**](docs/ContractsApi.md#get_corporations_corporation_id_contracts_contract_id_items) | **GET** /corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id**](docs/CorporationApi.md#get_corporations_corporation_id) | **GET** /corporations/{corporation_id}/ | Get corporation information
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_alliancehistory**](docs/CorporationApi.md#get_corporations_corporation_id_alliancehistory) | **GET** /corporations/{corporation_id}/alliancehistory/ | Get alliance history
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_blueprints**](docs/CorporationApi.md#get_corporations_corporation_id_blueprints) | **GET** /corporations/{corporation_id}/blueprints/ | Get corporation blueprints
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_containers_logs**](docs/CorporationApi.md#get_corporations_corporation_id_containers_logs) | **GET** /corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_divisions**](docs/CorporationApi.md#get_corporations_corporation_id_divisions) | **GET** /corporations/{corporation_id}/divisions/ | Get corporation divisions
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_facilities**](docs/CorporationApi.md#get_corporations_corporation_id_facilities) | **GET** /corporations/{corporation_id}/facilities/ | Get corporation facilities
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_icons**](docs/CorporationApi.md#get_corporations_corporation_id_icons) | **GET** /corporations/{corporation_id}/icons/ | Get corporation icon
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_medals**](docs/CorporationApi.md#get_corporations_corporation_id_medals) | **GET** /corporations/{corporation_id}/medals/ | Get corporation medals
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_medals_issued**](docs/CorporationApi.md#get_corporations_corporation_id_medals_issued) | **GET** /corporations/{corporation_id}/medals/issued/ | Get corporation issued medals
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_members**](docs/CorporationApi.md#get_corporations_corporation_id_members) | **GET** /corporations/{corporation_id}/members/ | Get corporation members
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_members_limit**](docs/CorporationApi.md#get_corporations_corporation_id_members_limit) | **GET** /corporations/{corporation_id}/members/limit/ | Get corporation member limit
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_members_titles**](docs/CorporationApi.md#get_corporations_corporation_id_members_titles) | **GET** /corporations/{corporation_id}/members/titles/ | Get corporation's members' titles
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_membertracking**](docs/CorporationApi.md#get_corporations_corporation_id_membertracking) | **GET** /corporations/{corporation_id}/membertracking/ | Track corporation members
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_outposts**](docs/CorporationApi.md#get_corporations_corporation_id_outposts) | **GET** /corporations/{corporation_id}/outposts/ | Get corporation outposts
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_outposts_outpost_id**](docs/CorporationApi.md#get_corporations_corporation_id_outposts_outpost_id) | **GET** /corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_roles**](docs/CorporationApi.md#get_corporations_corporation_id_roles) | **GET** /corporations/{corporation_id}/roles/ | Get corporation member roles
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_roles_history**](docs/CorporationApi.md#get_corporations_corporation_id_roles_history) | **GET** /corporations/{corporation_id}/roles/history/ | Get corporation member roles history
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_shareholders**](docs/CorporationApi.md#get_corporations_corporation_id_shareholders) | **GET** /corporations/{corporation_id}/shareholders/ | Get corporation shareholders
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_standings**](docs/CorporationApi.md#get_corporations_corporation_id_standings) | **GET** /corporations/{corporation_id}/standings/ | Get corporation standings
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_starbases**](docs/CorporationApi.md#get_corporations_corporation_id_starbases) | **GET** /corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_starbases_starbase_id**](docs/CorporationApi.md#get_corporations_corporation_id_starbases_starbase_id) | **GET** /corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_structures**](docs/CorporationApi.md#get_corporations_corporation_id_structures) | **GET** /corporations/{corporation_id}/structures/ | Get corporation structures
-*EsiRuby::CorporationApi* | [**get_corporations_corporation_id_titles**](docs/CorporationApi.md#get_corporations_corporation_id_titles) | **GET** /corporations/{corporation_id}/titles/ | Get corporation titles
-*EsiRuby::CorporationApi* | [**get_corporations_names**](docs/CorporationApi.md#get_corporations_names) | **GET** /corporations/names/ | Get corporation names
-*EsiRuby::CorporationApi* | [**get_corporations_npccorps**](docs/CorporationApi.md#get_corporations_npccorps) | **GET** /corporations/npccorps/ | Get npc corporations
-*EsiRuby::DogmaApi* | [**get_dogma_attributes**](docs/DogmaApi.md#get_dogma_attributes) | **GET** /dogma/attributes/ | Get attributes
-*EsiRuby::DogmaApi* | [**get_dogma_attributes_attribute_id**](docs/DogmaApi.md#get_dogma_attributes_attribute_id) | **GET** /dogma/attributes/{attribute_id}/ | Get attribute information
-*EsiRuby::DogmaApi* | [**get_dogma_effects**](docs/DogmaApi.md#get_dogma_effects) | **GET** /dogma/effects/ | Get effects
-*EsiRuby::DogmaApi* | [**get_dogma_effects_effect_id**](docs/DogmaApi.md#get_dogma_effects_effect_id) | **GET** /dogma/effects/{effect_id}/ | Get effect information
-*EsiRuby::FactionWarfareApi* | [**get_characters_character_id_fw_stats**](docs/FactionWarfareApi.md#get_characters_character_id_fw_stats) | **GET** /characters/{character_id}/fw/stats/ | Overview of a character involved in faction warfare
-*EsiRuby::FactionWarfareApi* | [**get_corporations_corporation_id_fw_stats**](docs/FactionWarfareApi.md#get_corporations_corporation_id_fw_stats) | **GET** /corporations/{corporation_id}/fw/stats/ | Overview of a corporation involved in faction warfare
-*EsiRuby::FactionWarfareApi* | [**get_fw_leaderboards**](docs/FactionWarfareApi.md#get_fw_leaderboards) | **GET** /fw/leaderboards/ | List of the top factions in faction warfare
-*EsiRuby::FactionWarfareApi* | [**get_fw_leaderboards_characters**](docs/FactionWarfareApi.md#get_fw_leaderboards_characters) | **GET** /fw/leaderboards/characters/ | List of the top pilots in faction warfare
-*EsiRuby::FactionWarfareApi* | [**get_fw_leaderboards_corporations**](docs/FactionWarfareApi.md#get_fw_leaderboards_corporations) | **GET** /fw/leaderboards/corporations/ | List of the top corporations in faction warfare
-*EsiRuby::FactionWarfareApi* | [**get_fw_stats**](docs/FactionWarfareApi.md#get_fw_stats) | **GET** /fw/stats/ | An overview of statistics about factions involved in faction warfare
-*EsiRuby::FactionWarfareApi* | [**get_fw_systems**](docs/FactionWarfareApi.md#get_fw_systems) | **GET** /fw/systems/ | Ownership of faction warfare systems
-*EsiRuby::FactionWarfareApi* | [**get_fw_wars**](docs/FactionWarfareApi.md#get_fw_wars) | **GET** /fw/wars/ | Data about which NPC factions are at war
-*EsiRuby::FittingsApi* | [**delete_characters_character_id_fittings_fitting_id**](docs/FittingsApi.md#delete_characters_character_id_fittings_fitting_id) | **DELETE** /characters/{character_id}/fittings/{fitting_id}/ | Delete fitting
-*EsiRuby::FittingsApi* | [**get_characters_character_id_fittings**](docs/FittingsApi.md#get_characters_character_id_fittings) | **GET** /characters/{character_id}/fittings/ | Get fittings
-*EsiRuby::FittingsApi* | [**post_characters_character_id_fittings**](docs/FittingsApi.md#post_characters_character_id_fittings) | **POST** /characters/{character_id}/fittings/ | Create fitting
-*EsiRuby::FleetsApi* | [**delete_fleets_fleet_id_members_member_id**](docs/FleetsApi.md#delete_fleets_fleet_id_members_member_id) | **DELETE** /fleets/{fleet_id}/members/{member_id}/ | Kick fleet member
-*EsiRuby::FleetsApi* | [**delete_fleets_fleet_id_squads_squad_id**](docs/FleetsApi.md#delete_fleets_fleet_id_squads_squad_id) | **DELETE** /fleets/{fleet_id}/squads/{squad_id}/ | Delete fleet squad
-*EsiRuby::FleetsApi* | [**delete_fleets_fleet_id_wings_wing_id**](docs/FleetsApi.md#delete_fleets_fleet_id_wings_wing_id) | **DELETE** /fleets/{fleet_id}/wings/{wing_id}/ | Delete fleet wing
-*EsiRuby::FleetsApi* | [**get_characters_character_id_fleet**](docs/FleetsApi.md#get_characters_character_id_fleet) | **GET** /characters/{character_id}/fleet/ | Get character fleet info
-*EsiRuby::FleetsApi* | [**get_fleets_fleet_id**](docs/FleetsApi.md#get_fleets_fleet_id) | **GET** /fleets/{fleet_id}/ | Get fleet information
-*EsiRuby::FleetsApi* | [**get_fleets_fleet_id_members**](docs/FleetsApi.md#get_fleets_fleet_id_members) | **GET** /fleets/{fleet_id}/members/ | Get fleet members
-*EsiRuby::FleetsApi* | [**get_fleets_fleet_id_wings**](docs/FleetsApi.md#get_fleets_fleet_id_wings) | **GET** /fleets/{fleet_id}/wings/ | Get fleet wings
-*EsiRuby::FleetsApi* | [**post_fleets_fleet_id_members**](docs/FleetsApi.md#post_fleets_fleet_id_members) | **POST** /fleets/{fleet_id}/members/ | Create fleet invitation
-*EsiRuby::FleetsApi* | [**post_fleets_fleet_id_wings**](docs/FleetsApi.md#post_fleets_fleet_id_wings) | **POST** /fleets/{fleet_id}/wings/ | Create fleet wing
-*EsiRuby::FleetsApi* | [**post_fleets_fleet_id_wings_wing_id_squads**](docs/FleetsApi.md#post_fleets_fleet_id_wings_wing_id_squads) | **POST** /fleets/{fleet_id}/wings/{wing_id}/squads/ | Create fleet squad
-*EsiRuby::FleetsApi* | [**put_fleets_fleet_id**](docs/FleetsApi.md#put_fleets_fleet_id) | **PUT** /fleets/{fleet_id}/ | Update fleet
-*EsiRuby::FleetsApi* | [**put_fleets_fleet_id_members_member_id**](docs/FleetsApi.md#put_fleets_fleet_id_members_member_id) | **PUT** /fleets/{fleet_id}/members/{member_id}/ | Move fleet member
-*EsiRuby::FleetsApi* | [**put_fleets_fleet_id_squads_squad_id**](docs/FleetsApi.md#put_fleets_fleet_id_squads_squad_id) | **PUT** /fleets/{fleet_id}/squads/{squad_id}/ | Rename fleet squad
-*EsiRuby::FleetsApi* | [**put_fleets_fleet_id_wings_wing_id**](docs/FleetsApi.md#put_fleets_fleet_id_wings_wing_id) | **PUT** /fleets/{fleet_id}/wings/{wing_id}/ | Rename fleet wing
-*EsiRuby::IncursionsApi* | [**get_incursions**](docs/IncursionsApi.md#get_incursions) | **GET** /incursions/ | List incursions
-*EsiRuby::IndustryApi* | [**get_characters_character_id_industry_jobs**](docs/IndustryApi.md#get_characters_character_id_industry_jobs) | **GET** /characters/{character_id}/industry/jobs/ | List character industry jobs
-*EsiRuby::IndustryApi* | [**get_characters_character_id_mining**](docs/IndustryApi.md#get_characters_character_id_mining) | **GET** /characters/{character_id}/mining/ | Character mining ledger
-*EsiRuby::IndustryApi* | [**get_corporation_corporation_id_mining_extractions**](docs/IndustryApi.md#get_corporation_corporation_id_mining_extractions) | **GET** /corporation/{corporation_id}/mining/extractions/ | Moon extraction timers
-*EsiRuby::IndustryApi* | [**get_corporation_corporation_id_mining_observers**](docs/IndustryApi.md#get_corporation_corporation_id_mining_observers) | **GET** /corporation/{corporation_id}/mining/observers/ | Corporation mining observers
-*EsiRuby::IndustryApi* | [**get_corporation_corporation_id_mining_observers_observer_id**](docs/IndustryApi.md#get_corporation_corporation_id_mining_observers_observer_id) | **GET** /corporation/{corporation_id}/mining/observers/{observer_id}/ | Observed corporation mining
-*EsiRuby::IndustryApi* | [**get_corporations_corporation_id_industry_jobs**](docs/IndustryApi.md#get_corporations_corporation_id_industry_jobs) | **GET** /corporations/{corporation_id}/industry/jobs/ | List corporation industry jobs
-*EsiRuby::IndustryApi* | [**get_industry_facilities**](docs/IndustryApi.md#get_industry_facilities) | **GET** /industry/facilities/ | List industry facilities
-*EsiRuby::IndustryApi* | [**get_industry_systems**](docs/IndustryApi.md#get_industry_systems) | **GET** /industry/systems/ | List solar system cost indices
-*EsiRuby::InsuranceApi* | [**get_insurance_prices**](docs/InsuranceApi.md#get_insurance_prices) | **GET** /insurance/prices/ | List insurance levels
-*EsiRuby::KillmailsApi* | [**get_characters_character_id_killmails_recent**](docs/KillmailsApi.md#get_characters_character_id_killmails_recent) | **GET** /characters/{character_id}/killmails/recent/ | Get character kills and losses
-*EsiRuby::KillmailsApi* | [**get_corporations_corporation_id_killmails_recent**](docs/KillmailsApi.md#get_corporations_corporation_id_killmails_recent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
-*EsiRuby::KillmailsApi* | [**get_killmails_killmail_id_killmail_hash**](docs/KillmailsApi.md#get_killmails_killmail_id_killmail_hash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
-*EsiRuby::LocationApi* | [**get_characters_character_id_location**](docs/LocationApi.md#get_characters_character_id_location) | **GET** /characters/{character_id}/location/ | Get character location
-*EsiRuby::LocationApi* | [**get_characters_character_id_online**](docs/LocationApi.md#get_characters_character_id_online) | **GET** /characters/{character_id}/online/ | Get character online
-*EsiRuby::LocationApi* | [**get_characters_character_id_ship**](docs/LocationApi.md#get_characters_character_id_ship) | **GET** /characters/{character_id}/ship/ | Get current ship
-*EsiRuby::LoyaltyApi* | [**get_characters_character_id_loyalty_points**](docs/LoyaltyApi.md#get_characters_character_id_loyalty_points) | **GET** /characters/{character_id}/loyalty/points/ | Get loyalty points
-*EsiRuby::LoyaltyApi* | [**get_loyalty_stores_corporation_id_offers**](docs/LoyaltyApi.md#get_loyalty_stores_corporation_id_offers) | **GET** /loyalty/stores/{corporation_id}/offers/ | List loyalty store offers
-*EsiRuby::MailApi* | [**delete_characters_character_id_mail_labels_label_id**](docs/MailApi.md#delete_characters_character_id_mail_labels_label_id) | **DELETE** /characters/{character_id}/mail/labels/{label_id}/ | Delete a mail label
-*EsiRuby::MailApi* | [**delete_characters_character_id_mail_mail_id**](docs/MailApi.md#delete_characters_character_id_mail_mail_id) | **DELETE** /characters/{character_id}/mail/{mail_id}/ | Delete a mail
-*EsiRuby::MailApi* | [**get_characters_character_id_mail**](docs/MailApi.md#get_characters_character_id_mail) | **GET** /characters/{character_id}/mail/ | Return mail headers
-*EsiRuby::MailApi* | [**get_characters_character_id_mail_labels**](docs/MailApi.md#get_characters_character_id_mail_labels) | **GET** /characters/{character_id}/mail/labels/ | Get mail labels and unread counts
-*EsiRuby::MailApi* | [**get_characters_character_id_mail_lists**](docs/MailApi.md#get_characters_character_id_mail_lists) | **GET** /characters/{character_id}/mail/lists/ | Return mailing list subscriptions
-*EsiRuby::MailApi* | [**get_characters_character_id_mail_mail_id**](docs/MailApi.md#get_characters_character_id_mail_mail_id) | **GET** /characters/{character_id}/mail/{mail_id}/ | Return a mail
-*EsiRuby::MailApi* | [**post_characters_character_id_mail**](docs/MailApi.md#post_characters_character_id_mail) | **POST** /characters/{character_id}/mail/ | Send a new mail
-*EsiRuby::MailApi* | [**post_characters_character_id_mail_labels**](docs/MailApi.md#post_characters_character_id_mail_labels) | **POST** /characters/{character_id}/mail/labels/ | Create a mail label
-*EsiRuby::MailApi* | [**put_characters_character_id_mail_mail_id**](docs/MailApi.md#put_characters_character_id_mail_mail_id) | **PUT** /characters/{character_id}/mail/{mail_id}/ | Update metadata about a mail
-*EsiRuby::MarketApi* | [**get_characters_character_id_orders**](docs/MarketApi.md#get_characters_character_id_orders) | **GET** /characters/{character_id}/orders/ | List open orders from a character
-*EsiRuby::MarketApi* | [**get_characters_character_id_orders_history**](docs/MarketApi.md#get_characters_character_id_orders_history) | **GET** /characters/{character_id}/orders/history/ | List historical orders by a character
-*EsiRuby::MarketApi* | [**get_corporations_corporation_id_orders**](docs/MarketApi.md#get_corporations_corporation_id_orders) | **GET** /corporations/{corporation_id}/orders/ | List open orders from a corporation
-*EsiRuby::MarketApi* | [**get_corporations_corporation_id_orders_history**](docs/MarketApi.md#get_corporations_corporation_id_orders_history) | **GET** /corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
-*EsiRuby::MarketApi* | [**get_markets_groups**](docs/MarketApi.md#get_markets_groups) | **GET** /markets/groups/ | Get item groups
-*EsiRuby::MarketApi* | [**get_markets_groups_market_group_id**](docs/MarketApi.md#get_markets_groups_market_group_id) | **GET** /markets/groups/{market_group_id}/ | Get item group information
-*EsiRuby::MarketApi* | [**get_markets_prices**](docs/MarketApi.md#get_markets_prices) | **GET** /markets/prices/ | List market prices
-*EsiRuby::MarketApi* | [**get_markets_region_id_history**](docs/MarketApi.md#get_markets_region_id_history) | **GET** /markets/{region_id}/history/ | List historical market statistics in a region
-*EsiRuby::MarketApi* | [**get_markets_region_id_orders**](docs/MarketApi.md#get_markets_region_id_orders) | **GET** /markets/{region_id}/orders/ | List orders in a region
-*EsiRuby::MarketApi* | [**get_markets_region_id_types**](docs/MarketApi.md#get_markets_region_id_types) | **GET** /markets/{region_id}/types/ | List type IDs relevant to a market
-*EsiRuby::MarketApi* | [**get_markets_structures_structure_id**](docs/MarketApi.md#get_markets_structures_structure_id) | **GET** /markets/structures/{structure_id}/ | List orders in a structure
-*EsiRuby::OpportunitiesApi* | [**get_characters_character_id_opportunities**](docs/OpportunitiesApi.md#get_characters_character_id_opportunities) | **GET** /characters/{character_id}/opportunities/ | Get a character's completed tasks
-*EsiRuby::OpportunitiesApi* | [**get_opportunities_groups**](docs/OpportunitiesApi.md#get_opportunities_groups) | **GET** /opportunities/groups/ | Get opportunities groups
-*EsiRuby::OpportunitiesApi* | [**get_opportunities_groups_group_id**](docs/OpportunitiesApi.md#get_opportunities_groups_group_id) | **GET** /opportunities/groups/{group_id}/ | Get opportunities group
-*EsiRuby::OpportunitiesApi* | [**get_opportunities_tasks**](docs/OpportunitiesApi.md#get_opportunities_tasks) | **GET** /opportunities/tasks/ | Get opportunities tasks
-*EsiRuby::OpportunitiesApi* | [**get_opportunities_tasks_task_id**](docs/OpportunitiesApi.md#get_opportunities_tasks_task_id) | **GET** /opportunities/tasks/{task_id}/ | Get opportunities task
-*EsiRuby::PlanetaryInteractionApi* | [**get_characters_character_id_planets**](docs/PlanetaryInteractionApi.md#get_characters_character_id_planets) | **GET** /characters/{character_id}/planets/ | Get colonies
-*EsiRuby::PlanetaryInteractionApi* | [**get_characters_character_id_planets_planet_id**](docs/PlanetaryInteractionApi.md#get_characters_character_id_planets_planet_id) | **GET** /characters/{character_id}/planets/{planet_id}/ | Get colony layout
-*EsiRuby::PlanetaryInteractionApi* | [**get_corporations_corporation_id_customs_offices**](docs/PlanetaryInteractionApi.md#get_corporations_corporation_id_customs_offices) | **GET** /corporations/{corporation_id}/customs_offices/ | List corporation customs offices
-*EsiRuby::PlanetaryInteractionApi* | [**get_universe_schematics_schematic_id**](docs/PlanetaryInteractionApi.md#get_universe_schematics_schematic_id) | **GET** /universe/schematics/{schematic_id}/ | Get schematic information
-*EsiRuby::RoutesApi* | [**get_route_origin_destination**](docs/RoutesApi.md#get_route_origin_destination) | **GET** /route/{origin}/{destination}/ | Get route
-*EsiRuby::SearchApi* | [**get_characters_character_id_search**](docs/SearchApi.md#get_characters_character_id_search) | **GET** /characters/{character_id}/search/ | Search on a string
-*EsiRuby::SearchApi* | [**get_search**](docs/SearchApi.md#get_search) | **GET** /search/ | Search on a string
-*EsiRuby::SkillsApi* | [**get_characters_character_id_attributes**](docs/SkillsApi.md#get_characters_character_id_attributes) | **GET** /characters/{character_id}/attributes/ | Get character attributes
-*EsiRuby::SkillsApi* | [**get_characters_character_id_skillqueue**](docs/SkillsApi.md#get_characters_character_id_skillqueue) | **GET** /characters/{character_id}/skillqueue/ | Get character's skill queue
-*EsiRuby::SkillsApi* | [**get_characters_character_id_skills**](docs/SkillsApi.md#get_characters_character_id_skills) | **GET** /characters/{character_id}/skills/ | Get character skills
-*EsiRuby::SovereigntyApi* | [**get_sovereignty_campaigns**](docs/SovereigntyApi.md#get_sovereignty_campaigns) | **GET** /sovereignty/campaigns/ | List sovereignty campaigns
-*EsiRuby::SovereigntyApi* | [**get_sovereignty_map**](docs/SovereigntyApi.md#get_sovereignty_map) | **GET** /sovereignty/map/ | List sovereignty of systems
-*EsiRuby::SovereigntyApi* | [**get_sovereignty_structures**](docs/SovereigntyApi.md#get_sovereignty_structures) | **GET** /sovereignty/structures/ | List sovereignty structures
-*EsiRuby::StatusApi* | [**get_status**](docs/StatusApi.md#get_status) | **GET** /status/ | Retrieve the uptime and player counts
-*EsiRuby::UniverseApi* | [**get_universe_ancestries**](docs/UniverseApi.md#get_universe_ancestries) | **GET** /universe/ancestries/ | Get ancestries
-*EsiRuby::UniverseApi* | [**get_universe_asteroid_belts_asteroid_belt_id**](docs/UniverseApi.md#get_universe_asteroid_belts_asteroid_belt_id) | **GET** /universe/asteroid_belts/{asteroid_belt_id}/ | Get asteroid belt information
-*EsiRuby::UniverseApi* | [**get_universe_bloodlines**](docs/UniverseApi.md#get_universe_bloodlines) | **GET** /universe/bloodlines/ | Get bloodlines
-*EsiRuby::UniverseApi* | [**get_universe_categories**](docs/UniverseApi.md#get_universe_categories) | **GET** /universe/categories/ | Get item categories
-*EsiRuby::UniverseApi* | [**get_universe_categories_category_id**](docs/UniverseApi.md#get_universe_categories_category_id) | **GET** /universe/categories/{category_id}/ | Get item category information
-*EsiRuby::UniverseApi* | [**get_universe_constellations**](docs/UniverseApi.md#get_universe_constellations) | **GET** /universe/constellations/ | Get constellations
-*EsiRuby::UniverseApi* | [**get_universe_constellations_constellation_id**](docs/UniverseApi.md#get_universe_constellations_constellation_id) | **GET** /universe/constellations/{constellation_id}/ | Get constellation information
-*EsiRuby::UniverseApi* | [**get_universe_factions**](docs/UniverseApi.md#get_universe_factions) | **GET** /universe/factions/ | Get factions
-*EsiRuby::UniverseApi* | [**get_universe_graphics**](docs/UniverseApi.md#get_universe_graphics) | **GET** /universe/graphics/ | Get graphics
-*EsiRuby::UniverseApi* | [**get_universe_graphics_graphic_id**](docs/UniverseApi.md#get_universe_graphics_graphic_id) | **GET** /universe/graphics/{graphic_id}/ | Get graphic information
-*EsiRuby::UniverseApi* | [**get_universe_groups**](docs/UniverseApi.md#get_universe_groups) | **GET** /universe/groups/ | Get item groups
-*EsiRuby::UniverseApi* | [**get_universe_groups_group_id**](docs/UniverseApi.md#get_universe_groups_group_id) | **GET** /universe/groups/{group_id}/ | Get item group information
-*EsiRuby::UniverseApi* | [**get_universe_moons_moon_id**](docs/UniverseApi.md#get_universe_moons_moon_id) | **GET** /universe/moons/{moon_id}/ | Get moon information
-*EsiRuby::UniverseApi* | [**get_universe_planets_planet_id**](docs/UniverseApi.md#get_universe_planets_planet_id) | **GET** /universe/planets/{planet_id}/ | Get planet information
-*EsiRuby::UniverseApi* | [**get_universe_races**](docs/UniverseApi.md#get_universe_races) | **GET** /universe/races/ | Get character races
-*EsiRuby::UniverseApi* | [**get_universe_regions**](docs/UniverseApi.md#get_universe_regions) | **GET** /universe/regions/ | Get regions
-*EsiRuby::UniverseApi* | [**get_universe_regions_region_id**](docs/UniverseApi.md#get_universe_regions_region_id) | **GET** /universe/regions/{region_id}/ | Get region information
-*EsiRuby::UniverseApi* | [**get_universe_stargates_stargate_id**](docs/UniverseApi.md#get_universe_stargates_stargate_id) | **GET** /universe/stargates/{stargate_id}/ | Get stargate information
-*EsiRuby::UniverseApi* | [**get_universe_stars_star_id**](docs/UniverseApi.md#get_universe_stars_star_id) | **GET** /universe/stars/{star_id}/ | Get star information
-*EsiRuby::UniverseApi* | [**get_universe_stations_station_id**](docs/UniverseApi.md#get_universe_stations_station_id) | **GET** /universe/stations/{station_id}/ | Get station information
-*EsiRuby::UniverseApi* | [**get_universe_structures**](docs/UniverseApi.md#get_universe_structures) | **GET** /universe/structures/ | List all public structures
-*EsiRuby::UniverseApi* | [**get_universe_structures_structure_id**](docs/UniverseApi.md#get_universe_structures_structure_id) | **GET** /universe/structures/{structure_id}/ | Get structure information
-*EsiRuby::UniverseApi* | [**get_universe_system_jumps**](docs/UniverseApi.md#get_universe_system_jumps) | **GET** /universe/system_jumps/ | Get system jumps
-*EsiRuby::UniverseApi* | [**get_universe_system_kills**](docs/UniverseApi.md#get_universe_system_kills) | **GET** /universe/system_kills/ | Get system kills
-*EsiRuby::UniverseApi* | [**get_universe_systems**](docs/UniverseApi.md#get_universe_systems) | **GET** /universe/systems/ | Get solar systems
-*EsiRuby::UniverseApi* | [**get_universe_systems_system_id**](docs/UniverseApi.md#get_universe_systems_system_id) | **GET** /universe/systems/{system_id}/ | Get solar system information
-*EsiRuby::UniverseApi* | [**get_universe_types**](docs/UniverseApi.md#get_universe_types) | **GET** /universe/types/ | Get types
-*EsiRuby::UniverseApi* | [**get_universe_types_type_id**](docs/UniverseApi.md#get_universe_types_type_id) | **GET** /universe/types/{type_id}/ | Get type information
-*EsiRuby::UniverseApi* | [**post_universe_ids**](docs/UniverseApi.md#post_universe_ids) | **POST** /universe/ids/ | Bulk names to IDs
-*EsiRuby::UniverseApi* | [**post_universe_names**](docs/UniverseApi.md#post_universe_names) | **POST** /universe/names/ | Get names and categories for a set of ID's
-*EsiRuby::UserInterfaceApi* | [**post_ui_autopilot_waypoint**](docs/UserInterfaceApi.md#post_ui_autopilot_waypoint) | **POST** /ui/autopilot/waypoint/ | Set Autopilot Waypoint
-*EsiRuby::UserInterfaceApi* | [**post_ui_openwindow_contract**](docs/UserInterfaceApi.md#post_ui_openwindow_contract) | **POST** /ui/openwindow/contract/ | Open Contract Window
-*EsiRuby::UserInterfaceApi* | [**post_ui_openwindow_information**](docs/UserInterfaceApi.md#post_ui_openwindow_information) | **POST** /ui/openwindow/information/ | Open Information Window
-*EsiRuby::UserInterfaceApi* | [**post_ui_openwindow_marketdetails**](docs/UserInterfaceApi.md#post_ui_openwindow_marketdetails) | **POST** /ui/openwindow/marketdetails/ | Open Market Details
-*EsiRuby::UserInterfaceApi* | [**post_ui_openwindow_newmail**](docs/UserInterfaceApi.md#post_ui_openwindow_newmail) | **POST** /ui/openwindow/newmail/ | Open New Mail Window
-*EsiRuby::WalletApi* | [**get_characters_character_id_wallet**](docs/WalletApi.md#get_characters_character_id_wallet) | **GET** /characters/{character_id}/wallet/ | Get a character's wallet balance
-*EsiRuby::WalletApi* | [**get_characters_character_id_wallet_journal**](docs/WalletApi.md#get_characters_character_id_wallet_journal) | **GET** /characters/{character_id}/wallet/journal/ | Get character wallet journal
-*EsiRuby::WalletApi* | [**get_characters_character_id_wallet_transactions**](docs/WalletApi.md#get_characters_character_id_wallet_transactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
-*EsiRuby::WalletApi* | [**get_corporations_corporation_id_wallets**](docs/WalletApi.md#get_corporations_corporation_id_wallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation's wallet balance
-*EsiRuby::WalletApi* | [**get_corporations_corporation_id_wallets_division_journal**](docs/WalletApi.md#get_corporations_corporation_id_wallets_division_journal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
-*EsiRuby::WalletApi* | [**get_corporations_corporation_id_wallets_division_transactions**](docs/WalletApi.md#get_corporations_corporation_id_wallets_division_transactions) | **GET** /corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
-*EsiRuby::WarsApi* | [**get_wars**](docs/WarsApi.md#get_wars) | **GET** /wars/ | List wars
-*EsiRuby::WarsApi* | [**get_wars_war_id**](docs/WarsApi.md#get_wars_war_id) | **GET** /wars/{war_id}/ | Get war information
-*EsiRuby::WarsApi* | [**get_wars_war_id_killmails**](docs/WarsApi.md#get_wars_war_id_killmails) | **GET** /wars/{war_id}/killmails/ | List kills for a war
+*Esi::AllianceApi* | [**get_alliances**](docs/AllianceApi.md#get_alliances) | **GET** /alliances/ | List all alliances
+*Esi::AllianceApi* | [**get_alliances_alliance_id**](docs/AllianceApi.md#get_alliances_alliance_id) | **GET** /alliances/{alliance_id}/ | Get alliance information
+*Esi::AllianceApi* | [**get_alliances_alliance_id_corporations**](docs/AllianceApi.md#get_alliances_alliance_id_corporations) | **GET** /alliances/{alliance_id}/corporations/ | List alliance's corporations
+*Esi::AllianceApi* | [**get_alliances_alliance_id_icons**](docs/AllianceApi.md#get_alliances_alliance_id_icons) | **GET** /alliances/{alliance_id}/icons/ | Get alliance icon
+*Esi::AllianceApi* | [**get_alliances_names**](docs/AllianceApi.md#get_alliances_names) | **GET** /alliances/names/ | Get alliance names
+*Esi::AssetsApi* | [**get_characters_character_id_assets**](docs/AssetsApi.md#get_characters_character_id_assets) | **GET** /characters/{character_id}/assets/ | Get character assets
+*Esi::AssetsApi* | [**get_corporations_corporation_id_assets**](docs/AssetsApi.md#get_corporations_corporation_id_assets) | **GET** /corporations/{corporation_id}/assets/ | Get corporation assets
+*Esi::AssetsApi* | [**post_characters_character_id_assets_locations**](docs/AssetsApi.md#post_characters_character_id_assets_locations) | **POST** /characters/{character_id}/assets/locations/ | Get character asset locations
+*Esi::AssetsApi* | [**post_characters_character_id_assets_names**](docs/AssetsApi.md#post_characters_character_id_assets_names) | **POST** /characters/{character_id}/assets/names/ | Get character asset names
+*Esi::AssetsApi* | [**post_corporations_corporation_id_assets_locations**](docs/AssetsApi.md#post_corporations_corporation_id_assets_locations) | **POST** /corporations/{corporation_id}/assets/locations/ | Get corporation asset locations
+*Esi::AssetsApi* | [**post_corporations_corporation_id_assets_names**](docs/AssetsApi.md#post_corporations_corporation_id_assets_names) | **POST** /corporations/{corporation_id}/assets/names/ | Get coporation asset names
+*Esi::BookmarksApi* | [**get_characters_character_id_bookmarks**](docs/BookmarksApi.md#get_characters_character_id_bookmarks) | **GET** /characters/{character_id}/bookmarks/ | List bookmarks
+*Esi::BookmarksApi* | [**get_characters_character_id_bookmarks_folders**](docs/BookmarksApi.md#get_characters_character_id_bookmarks_folders) | **GET** /characters/{character_id}/bookmarks/folders/ | List bookmark folders
+*Esi::BookmarksApi* | [**get_corporations_corporation_id_bookmarks**](docs/BookmarksApi.md#get_corporations_corporation_id_bookmarks) | **GET** /corporations/{corporation_id}/bookmarks/ | List corporation bookmarks
+*Esi::BookmarksApi* | [**get_corporations_corporation_id_bookmarks_folders**](docs/BookmarksApi.md#get_corporations_corporation_id_bookmarks_folders) | **GET** /corporations/{corporation_id}/bookmarks/folders/ | List corporation bookmark folders
+*Esi::CalendarApi* | [**get_characters_character_id_calendar**](docs/CalendarApi.md#get_characters_character_id_calendar) | **GET** /characters/{character_id}/calendar/ | List calendar event summaries
+*Esi::CalendarApi* | [**get_characters_character_id_calendar_event_id**](docs/CalendarApi.md#get_characters_character_id_calendar_event_id) | **GET** /characters/{character_id}/calendar/{event_id}/ | Get an event
+*Esi::CalendarApi* | [**get_characters_character_id_calendar_event_id_attendees**](docs/CalendarApi.md#get_characters_character_id_calendar_event_id_attendees) | **GET** /characters/{character_id}/calendar/{event_id}/attendees/ | Get attendees
+*Esi::CalendarApi* | [**put_characters_character_id_calendar_event_id**](docs/CalendarApi.md#put_characters_character_id_calendar_event_id) | **PUT** /characters/{character_id}/calendar/{event_id}/ | Respond to an event
+*Esi::CharacterApi* | [**get_characters_character_id**](docs/CharacterApi.md#get_characters_character_id) | **GET** /characters/{character_id}/ | Get character's public information
+*Esi::CharacterApi* | [**get_characters_character_id_agents_research**](docs/CharacterApi.md#get_characters_character_id_agents_research) | **GET** /characters/{character_id}/agents_research/ | Get agents research
+*Esi::CharacterApi* | [**get_characters_character_id_blueprints**](docs/CharacterApi.md#get_characters_character_id_blueprints) | **GET** /characters/{character_id}/blueprints/ | Get blueprints
+*Esi::CharacterApi* | [**get_characters_character_id_corporationhistory**](docs/CharacterApi.md#get_characters_character_id_corporationhistory) | **GET** /characters/{character_id}/corporationhistory/ | Get corporation history
+*Esi::CharacterApi* | [**get_characters_character_id_fatigue**](docs/CharacterApi.md#get_characters_character_id_fatigue) | **GET** /characters/{character_id}/fatigue/ | Get jump fatigue
+*Esi::CharacterApi* | [**get_characters_character_id_medals**](docs/CharacterApi.md#get_characters_character_id_medals) | **GET** /characters/{character_id}/medals/ | Get medals
+*Esi::CharacterApi* | [**get_characters_character_id_notifications**](docs/CharacterApi.md#get_characters_character_id_notifications) | **GET** /characters/{character_id}/notifications/ | Get character notifications
+*Esi::CharacterApi* | [**get_characters_character_id_notifications_contacts**](docs/CharacterApi.md#get_characters_character_id_notifications_contacts) | **GET** /characters/{character_id}/notifications/contacts/ | Get new contact notifications
+*Esi::CharacterApi* | [**get_characters_character_id_portrait**](docs/CharacterApi.md#get_characters_character_id_portrait) | **GET** /characters/{character_id}/portrait/ | Get character portraits
+*Esi::CharacterApi* | [**get_characters_character_id_roles**](docs/CharacterApi.md#get_characters_character_id_roles) | **GET** /characters/{character_id}/roles/ | Get character corporation roles
+*Esi::CharacterApi* | [**get_characters_character_id_standings**](docs/CharacterApi.md#get_characters_character_id_standings) | **GET** /characters/{character_id}/standings/ | Get standings
+*Esi::CharacterApi* | [**get_characters_character_id_stats**](docs/CharacterApi.md#get_characters_character_id_stats) | **GET** /characters/{character_id}/stats/ | Yearly aggregate stats
+*Esi::CharacterApi* | [**get_characters_character_id_titles**](docs/CharacterApi.md#get_characters_character_id_titles) | **GET** /characters/{character_id}/titles/ | Get character corporation titles
+*Esi::CharacterApi* | [**get_characters_names**](docs/CharacterApi.md#get_characters_names) | **GET** /characters/names/ | Get character names
+*Esi::CharacterApi* | [**post_characters_affiliation**](docs/CharacterApi.md#post_characters_affiliation) | **POST** /characters/affiliation/ | Character affiliation
+*Esi::CharacterApi* | [**post_characters_character_id_cspa**](docs/CharacterApi.md#post_characters_character_id_cspa) | **POST** /characters/{character_id}/cspa/ | Calculate a CSPA charge cost
+*Esi::ClonesApi* | [**get_characters_character_id_clones**](docs/ClonesApi.md#get_characters_character_id_clones) | **GET** /characters/{character_id}/clones/ | Get clones
+*Esi::ClonesApi* | [**get_characters_character_id_implants**](docs/ClonesApi.md#get_characters_character_id_implants) | **GET** /characters/{character_id}/implants/ | Get active implants
+*Esi::ContactsApi* | [**delete_characters_character_id_contacts**](docs/ContactsApi.md#delete_characters_character_id_contacts) | **DELETE** /characters/{character_id}/contacts/ | Delete contacts
+*Esi::ContactsApi* | [**get_alliances_alliance_id_contacts**](docs/ContactsApi.md#get_alliances_alliance_id_contacts) | **GET** /alliances/{alliance_id}/contacts/ | Get alliance contacts
+*Esi::ContactsApi* | [**get_alliances_alliance_id_contacts_labels**](docs/ContactsApi.md#get_alliances_alliance_id_contacts_labels) | **GET** /alliances/{alliance_id}/contacts/labels/ | Get alliance contact labels
+*Esi::ContactsApi* | [**get_characters_character_id_contacts**](docs/ContactsApi.md#get_characters_character_id_contacts) | **GET** /characters/{character_id}/contacts/ | Get contacts
+*Esi::ContactsApi* | [**get_characters_character_id_contacts_labels**](docs/ContactsApi.md#get_characters_character_id_contacts_labels) | **GET** /characters/{character_id}/contacts/labels/ | Get contact labels
+*Esi::ContactsApi* | [**get_corporations_corporation_id_contacts**](docs/ContactsApi.md#get_corporations_corporation_id_contacts) | **GET** /corporations/{corporation_id}/contacts/ | Get corporation contacts
+*Esi::ContactsApi* | [**get_corporations_corporation_id_contacts_labels**](docs/ContactsApi.md#get_corporations_corporation_id_contacts_labels) | **GET** /corporations/{corporation_id}/contacts/labels/ | Get corporation contact labels
+*Esi::ContactsApi* | [**post_characters_character_id_contacts**](docs/ContactsApi.md#post_characters_character_id_contacts) | **POST** /characters/{character_id}/contacts/ | Add contacts
+*Esi::ContactsApi* | [**put_characters_character_id_contacts**](docs/ContactsApi.md#put_characters_character_id_contacts) | **PUT** /characters/{character_id}/contacts/ | Edit contacts
+*Esi::ContractsApi* | [**get_characters_character_id_contracts**](docs/ContractsApi.md#get_characters_character_id_contracts) | **GET** /characters/{character_id}/contracts/ | Get contracts
+*Esi::ContractsApi* | [**get_characters_character_id_contracts_contract_id_bids**](docs/ContractsApi.md#get_characters_character_id_contracts_contract_id_bids) | **GET** /characters/{character_id}/contracts/{contract_id}/bids/ | Get contract bids
+*Esi::ContractsApi* | [**get_characters_character_id_contracts_contract_id_items**](docs/ContractsApi.md#get_characters_character_id_contracts_contract_id_items) | **GET** /characters/{character_id}/contracts/{contract_id}/items/ | Get contract items
+*Esi::ContractsApi* | [**get_corporations_corporation_id_contracts**](docs/ContractsApi.md#get_corporations_corporation_id_contracts) | **GET** /corporations/{corporation_id}/contracts/ | Get coporation contracts
+*Esi::ContractsApi* | [**get_corporations_corporation_id_contracts_contract_id_bids**](docs/ContractsApi.md#get_corporations_corporation_id_contracts_contract_id_bids) | **GET** /corporations/{corporation_id}/contracts/{contract_id}/bids/ | Get corporation contract bids
+*Esi::ContractsApi* | [**get_corporations_corporation_id_contracts_contract_id_items**](docs/ContractsApi.md#get_corporations_corporation_id_contracts_contract_id_items) | **GET** /corporations/{corporation_id}/contracts/{contract_id}/items/ | Get corporation contract items
+*Esi::CorporationApi* | [**get_corporations_corporation_id**](docs/CorporationApi.md#get_corporations_corporation_id) | **GET** /corporations/{corporation_id}/ | Get corporation information
+*Esi::CorporationApi* | [**get_corporations_corporation_id_alliancehistory**](docs/CorporationApi.md#get_corporations_corporation_id_alliancehistory) | **GET** /corporations/{corporation_id}/alliancehistory/ | Get alliance history
+*Esi::CorporationApi* | [**get_corporations_corporation_id_blueprints**](docs/CorporationApi.md#get_corporations_corporation_id_blueprints) | **GET** /corporations/{corporation_id}/blueprints/ | Get corporation blueprints
+*Esi::CorporationApi* | [**get_corporations_corporation_id_containers_logs**](docs/CorporationApi.md#get_corporations_corporation_id_containers_logs) | **GET** /corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
+*Esi::CorporationApi* | [**get_corporations_corporation_id_divisions**](docs/CorporationApi.md#get_corporations_corporation_id_divisions) | **GET** /corporations/{corporation_id}/divisions/ | Get corporation divisions
+*Esi::CorporationApi* | [**get_corporations_corporation_id_facilities**](docs/CorporationApi.md#get_corporations_corporation_id_facilities) | **GET** /corporations/{corporation_id}/facilities/ | Get corporation facilities
+*Esi::CorporationApi* | [**get_corporations_corporation_id_icons**](docs/CorporationApi.md#get_corporations_corporation_id_icons) | **GET** /corporations/{corporation_id}/icons/ | Get corporation icon
+*Esi::CorporationApi* | [**get_corporations_corporation_id_medals**](docs/CorporationApi.md#get_corporations_corporation_id_medals) | **GET** /corporations/{corporation_id}/medals/ | Get corporation medals
+*Esi::CorporationApi* | [**get_corporations_corporation_id_medals_issued**](docs/CorporationApi.md#get_corporations_corporation_id_medals_issued) | **GET** /corporations/{corporation_id}/medals/issued/ | Get corporation issued medals
+*Esi::CorporationApi* | [**get_corporations_corporation_id_members**](docs/CorporationApi.md#get_corporations_corporation_id_members) | **GET** /corporations/{corporation_id}/members/ | Get corporation members
+*Esi::CorporationApi* | [**get_corporations_corporation_id_members_limit**](docs/CorporationApi.md#get_corporations_corporation_id_members_limit) | **GET** /corporations/{corporation_id}/members/limit/ | Get corporation member limit
+*Esi::CorporationApi* | [**get_corporations_corporation_id_members_titles**](docs/CorporationApi.md#get_corporations_corporation_id_members_titles) | **GET** /corporations/{corporation_id}/members/titles/ | Get corporation's members' titles
+*Esi::CorporationApi* | [**get_corporations_corporation_id_membertracking**](docs/CorporationApi.md#get_corporations_corporation_id_membertracking) | **GET** /corporations/{corporation_id}/membertracking/ | Track corporation members
+*Esi::CorporationApi* | [**get_corporations_corporation_id_outposts**](docs/CorporationApi.md#get_corporations_corporation_id_outposts) | **GET** /corporations/{corporation_id}/outposts/ | Get corporation outposts
+*Esi::CorporationApi* | [**get_corporations_corporation_id_outposts_outpost_id**](docs/CorporationApi.md#get_corporations_corporation_id_outposts_outpost_id) | **GET** /corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
+*Esi::CorporationApi* | [**get_corporations_corporation_id_roles**](docs/CorporationApi.md#get_corporations_corporation_id_roles) | **GET** /corporations/{corporation_id}/roles/ | Get corporation member roles
+*Esi::CorporationApi* | [**get_corporations_corporation_id_roles_history**](docs/CorporationApi.md#get_corporations_corporation_id_roles_history) | **GET** /corporations/{corporation_id}/roles/history/ | Get corporation member roles history
+*Esi::CorporationApi* | [**get_corporations_corporation_id_shareholders**](docs/CorporationApi.md#get_corporations_corporation_id_shareholders) | **GET** /corporations/{corporation_id}/shareholders/ | Get corporation shareholders
+*Esi::CorporationApi* | [**get_corporations_corporation_id_standings**](docs/CorporationApi.md#get_corporations_corporation_id_standings) | **GET** /corporations/{corporation_id}/standings/ | Get corporation standings
+*Esi::CorporationApi* | [**get_corporations_corporation_id_starbases**](docs/CorporationApi.md#get_corporations_corporation_id_starbases) | **GET** /corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
+*Esi::CorporationApi* | [**get_corporations_corporation_id_starbases_starbase_id**](docs/CorporationApi.md#get_corporations_corporation_id_starbases_starbase_id) | **GET** /corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
+*Esi::CorporationApi* | [**get_corporations_corporation_id_structures**](docs/CorporationApi.md#get_corporations_corporation_id_structures) | **GET** /corporations/{corporation_id}/structures/ | Get corporation structures
+*Esi::CorporationApi* | [**get_corporations_corporation_id_titles**](docs/CorporationApi.md#get_corporations_corporation_id_titles) | **GET** /corporations/{corporation_id}/titles/ | Get corporation titles
+*Esi::CorporationApi* | [**get_corporations_names**](docs/CorporationApi.md#get_corporations_names) | **GET** /corporations/names/ | Get corporation names
+*Esi::CorporationApi* | [**get_corporations_npccorps**](docs/CorporationApi.md#get_corporations_npccorps) | **GET** /corporations/npccorps/ | Get npc corporations
+*Esi::DogmaApi* | [**get_dogma_attributes**](docs/DogmaApi.md#get_dogma_attributes) | **GET** /dogma/attributes/ | Get attributes
+*Esi::DogmaApi* | [**get_dogma_attributes_attribute_id**](docs/DogmaApi.md#get_dogma_attributes_attribute_id) | **GET** /dogma/attributes/{attribute_id}/ | Get attribute information
+*Esi::DogmaApi* | [**get_dogma_effects**](docs/DogmaApi.md#get_dogma_effects) | **GET** /dogma/effects/ | Get effects
+*Esi::DogmaApi* | [**get_dogma_effects_effect_id**](docs/DogmaApi.md#get_dogma_effects_effect_id) | **GET** /dogma/effects/{effect_id}/ | Get effect information
+*Esi::FactionWarfareApi* | [**get_characters_character_id_fw_stats**](docs/FactionWarfareApi.md#get_characters_character_id_fw_stats) | **GET** /characters/{character_id}/fw/stats/ | Overview of a character involved in faction warfare
+*Esi::FactionWarfareApi* | [**get_corporations_corporation_id_fw_stats**](docs/FactionWarfareApi.md#get_corporations_corporation_id_fw_stats) | **GET** /corporations/{corporation_id}/fw/stats/ | Overview of a corporation involved in faction warfare
+*Esi::FactionWarfareApi* | [**get_fw_leaderboards**](docs/FactionWarfareApi.md#get_fw_leaderboards) | **GET** /fw/leaderboards/ | List of the top factions in faction warfare
+*Esi::FactionWarfareApi* | [**get_fw_leaderboards_characters**](docs/FactionWarfareApi.md#get_fw_leaderboards_characters) | **GET** /fw/leaderboards/characters/ | List of the top pilots in faction warfare
+*Esi::FactionWarfareApi* | [**get_fw_leaderboards_corporations**](docs/FactionWarfareApi.md#get_fw_leaderboards_corporations) | **GET** /fw/leaderboards/corporations/ | List of the top corporations in faction warfare
+*Esi::FactionWarfareApi* | [**get_fw_stats**](docs/FactionWarfareApi.md#get_fw_stats) | **GET** /fw/stats/ | An overview of statistics about factions involved in faction warfare
+*Esi::FactionWarfareApi* | [**get_fw_systems**](docs/FactionWarfareApi.md#get_fw_systems) | **GET** /fw/systems/ | Ownership of faction warfare systems
+*Esi::FactionWarfareApi* | [**get_fw_wars**](docs/FactionWarfareApi.md#get_fw_wars) | **GET** /fw/wars/ | Data about which NPC factions are at war
+*Esi::FittingsApi* | [**delete_characters_character_id_fittings_fitting_id**](docs/FittingsApi.md#delete_characters_character_id_fittings_fitting_id) | **DELETE** /characters/{character_id}/fittings/{fitting_id}/ | Delete fitting
+*Esi::FittingsApi* | [**get_characters_character_id_fittings**](docs/FittingsApi.md#get_characters_character_id_fittings) | **GET** /characters/{character_id}/fittings/ | Get fittings
+*Esi::FittingsApi* | [**post_characters_character_id_fittings**](docs/FittingsApi.md#post_characters_character_id_fittings) | **POST** /characters/{character_id}/fittings/ | Create fitting
+*Esi::FleetsApi* | [**delete_fleets_fleet_id_members_member_id**](docs/FleetsApi.md#delete_fleets_fleet_id_members_member_id) | **DELETE** /fleets/{fleet_id}/members/{member_id}/ | Kick fleet member
+*Esi::FleetsApi* | [**delete_fleets_fleet_id_squads_squad_id**](docs/FleetsApi.md#delete_fleets_fleet_id_squads_squad_id) | **DELETE** /fleets/{fleet_id}/squads/{squad_id}/ | Delete fleet squad
+*Esi::FleetsApi* | [**delete_fleets_fleet_id_wings_wing_id**](docs/FleetsApi.md#delete_fleets_fleet_id_wings_wing_id) | **DELETE** /fleets/{fleet_id}/wings/{wing_id}/ | Delete fleet wing
+*Esi::FleetsApi* | [**get_characters_character_id_fleet**](docs/FleetsApi.md#get_characters_character_id_fleet) | **GET** /characters/{character_id}/fleet/ | Get character fleet info
+*Esi::FleetsApi* | [**get_fleets_fleet_id**](docs/FleetsApi.md#get_fleets_fleet_id) | **GET** /fleets/{fleet_id}/ | Get fleet information
+*Esi::FleetsApi* | [**get_fleets_fleet_id_members**](docs/FleetsApi.md#get_fleets_fleet_id_members) | **GET** /fleets/{fleet_id}/members/ | Get fleet members
+*Esi::FleetsApi* | [**get_fleets_fleet_id_wings**](docs/FleetsApi.md#get_fleets_fleet_id_wings) | **GET** /fleets/{fleet_id}/wings/ | Get fleet wings
+*Esi::FleetsApi* | [**post_fleets_fleet_id_members**](docs/FleetsApi.md#post_fleets_fleet_id_members) | **POST** /fleets/{fleet_id}/members/ | Create fleet invitation
+*Esi::FleetsApi* | [**post_fleets_fleet_id_wings**](docs/FleetsApi.md#post_fleets_fleet_id_wings) | **POST** /fleets/{fleet_id}/wings/ | Create fleet wing
+*Esi::FleetsApi* | [**post_fleets_fleet_id_wings_wing_id_squads**](docs/FleetsApi.md#post_fleets_fleet_id_wings_wing_id_squads) | **POST** /fleets/{fleet_id}/wings/{wing_id}/squads/ | Create fleet squad
+*Esi::FleetsApi* | [**put_fleets_fleet_id**](docs/FleetsApi.md#put_fleets_fleet_id) | **PUT** /fleets/{fleet_id}/ | Update fleet
+*Esi::FleetsApi* | [**put_fleets_fleet_id_members_member_id**](docs/FleetsApi.md#put_fleets_fleet_id_members_member_id) | **PUT** /fleets/{fleet_id}/members/{member_id}/ | Move fleet member
+*Esi::FleetsApi* | [**put_fleets_fleet_id_squads_squad_id**](docs/FleetsApi.md#put_fleets_fleet_id_squads_squad_id) | **PUT** /fleets/{fleet_id}/squads/{squad_id}/ | Rename fleet squad
+*Esi::FleetsApi* | [**put_fleets_fleet_id_wings_wing_id**](docs/FleetsApi.md#put_fleets_fleet_id_wings_wing_id) | **PUT** /fleets/{fleet_id}/wings/{wing_id}/ | Rename fleet wing
+*Esi::IncursionsApi* | [**get_incursions**](docs/IncursionsApi.md#get_incursions) | **GET** /incursions/ | List incursions
+*Esi::IndustryApi* | [**get_characters_character_id_industry_jobs**](docs/IndustryApi.md#get_characters_character_id_industry_jobs) | **GET** /characters/{character_id}/industry/jobs/ | List character industry jobs
+*Esi::IndustryApi* | [**get_characters_character_id_mining**](docs/IndustryApi.md#get_characters_character_id_mining) | **GET** /characters/{character_id}/mining/ | Character mining ledger
+*Esi::IndustryApi* | [**get_corporation_corporation_id_mining_extractions**](docs/IndustryApi.md#get_corporation_corporation_id_mining_extractions) | **GET** /corporation/{corporation_id}/mining/extractions/ | Moon extraction timers
+*Esi::IndustryApi* | [**get_corporation_corporation_id_mining_observers**](docs/IndustryApi.md#get_corporation_corporation_id_mining_observers) | **GET** /corporation/{corporation_id}/mining/observers/ | Corporation mining observers
+*Esi::IndustryApi* | [**get_corporation_corporation_id_mining_observers_observer_id**](docs/IndustryApi.md#get_corporation_corporation_id_mining_observers_observer_id) | **GET** /corporation/{corporation_id}/mining/observers/{observer_id}/ | Observed corporation mining
+*Esi::IndustryApi* | [**get_corporations_corporation_id_industry_jobs**](docs/IndustryApi.md#get_corporations_corporation_id_industry_jobs) | **GET** /corporations/{corporation_id}/industry/jobs/ | List corporation industry jobs
+*Esi::IndustryApi* | [**get_industry_facilities**](docs/IndustryApi.md#get_industry_facilities) | **GET** /industry/facilities/ | List industry facilities
+*Esi::IndustryApi* | [**get_industry_systems**](docs/IndustryApi.md#get_industry_systems) | **GET** /industry/systems/ | List solar system cost indices
+*Esi::InsuranceApi* | [**get_insurance_prices**](docs/InsuranceApi.md#get_insurance_prices) | **GET** /insurance/prices/ | List insurance levels
+*Esi::KillmailsApi* | [**get_characters_character_id_killmails_recent**](docs/KillmailsApi.md#get_characters_character_id_killmails_recent) | **GET** /characters/{character_id}/killmails/recent/ | Get character kills and losses
+*Esi::KillmailsApi* | [**get_corporations_corporation_id_killmails_recent**](docs/KillmailsApi.md#get_corporations_corporation_id_killmails_recent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
+*Esi::KillmailsApi* | [**get_killmails_killmail_id_killmail_hash**](docs/KillmailsApi.md#get_killmails_killmail_id_killmail_hash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
+*Esi::LocationApi* | [**get_characters_character_id_location**](docs/LocationApi.md#get_characters_character_id_location) | **GET** /characters/{character_id}/location/ | Get character location
+*Esi::LocationApi* | [**get_characters_character_id_online**](docs/LocationApi.md#get_characters_character_id_online) | **GET** /characters/{character_id}/online/ | Get character online
+*Esi::LocationApi* | [**get_characters_character_id_ship**](docs/LocationApi.md#get_characters_character_id_ship) | **GET** /characters/{character_id}/ship/ | Get current ship
+*Esi::LoyaltyApi* | [**get_characters_character_id_loyalty_points**](docs/LoyaltyApi.md#get_characters_character_id_loyalty_points) | **GET** /characters/{character_id}/loyalty/points/ | Get loyalty points
+*Esi::LoyaltyApi* | [**get_loyalty_stores_corporation_id_offers**](docs/LoyaltyApi.md#get_loyalty_stores_corporation_id_offers) | **GET** /loyalty/stores/{corporation_id}/offers/ | List loyalty store offers
+*Esi::MailApi* | [**delete_characters_character_id_mail_labels_label_id**](docs/MailApi.md#delete_characters_character_id_mail_labels_label_id) | **DELETE** /characters/{character_id}/mail/labels/{label_id}/ | Delete a mail label
+*Esi::MailApi* | [**delete_characters_character_id_mail_mail_id**](docs/MailApi.md#delete_characters_character_id_mail_mail_id) | **DELETE** /characters/{character_id}/mail/{mail_id}/ | Delete a mail
+*Esi::MailApi* | [**get_characters_character_id_mail**](docs/MailApi.md#get_characters_character_id_mail) | **GET** /characters/{character_id}/mail/ | Return mail headers
+*Esi::MailApi* | [**get_characters_character_id_mail_labels**](docs/MailApi.md#get_characters_character_id_mail_labels) | **GET** /characters/{character_id}/mail/labels/ | Get mail labels and unread counts
+*Esi::MailApi* | [**get_characters_character_id_mail_lists**](docs/MailApi.md#get_characters_character_id_mail_lists) | **GET** /characters/{character_id}/mail/lists/ | Return mailing list subscriptions
+*Esi::MailApi* | [**get_characters_character_id_mail_mail_id**](docs/MailApi.md#get_characters_character_id_mail_mail_id) | **GET** /characters/{character_id}/mail/{mail_id}/ | Return a mail
+*Esi::MailApi* | [**post_characters_character_id_mail**](docs/MailApi.md#post_characters_character_id_mail) | **POST** /characters/{character_id}/mail/ | Send a new mail
+*Esi::MailApi* | [**post_characters_character_id_mail_labels**](docs/MailApi.md#post_characters_character_id_mail_labels) | **POST** /characters/{character_id}/mail/labels/ | Create a mail label
+*Esi::MailApi* | [**put_characters_character_id_mail_mail_id**](docs/MailApi.md#put_characters_character_id_mail_mail_id) | **PUT** /characters/{character_id}/mail/{mail_id}/ | Update metadata about a mail
+*Esi::MarketApi* | [**get_characters_character_id_orders**](docs/MarketApi.md#get_characters_character_id_orders) | **GET** /characters/{character_id}/orders/ | List open orders from a character
+*Esi::MarketApi* | [**get_characters_character_id_orders_history**](docs/MarketApi.md#get_characters_character_id_orders_history) | **GET** /characters/{character_id}/orders/history/ | List historical orders by a character
+*Esi::MarketApi* | [**get_corporations_corporation_id_orders**](docs/MarketApi.md#get_corporations_corporation_id_orders) | **GET** /corporations/{corporation_id}/orders/ | List open orders from a corporation
+*Esi::MarketApi* | [**get_corporations_corporation_id_orders_history**](docs/MarketApi.md#get_corporations_corporation_id_orders_history) | **GET** /corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
+*Esi::MarketApi* | [**get_markets_groups**](docs/MarketApi.md#get_markets_groups) | **GET** /markets/groups/ | Get item groups
+*Esi::MarketApi* | [**get_markets_groups_market_group_id**](docs/MarketApi.md#get_markets_groups_market_group_id) | **GET** /markets/groups/{market_group_id}/ | Get item group information
+*Esi::MarketApi* | [**get_markets_prices**](docs/MarketApi.md#get_markets_prices) | **GET** /markets/prices/ | List market prices
+*Esi::MarketApi* | [**get_markets_region_id_history**](docs/MarketApi.md#get_markets_region_id_history) | **GET** /markets/{region_id}/history/ | List historical market statistics in a region
+*Esi::MarketApi* | [**get_markets_region_id_orders**](docs/MarketApi.md#get_markets_region_id_orders) | **GET** /markets/{region_id}/orders/ | List orders in a region
+*Esi::MarketApi* | [**get_markets_region_id_types**](docs/MarketApi.md#get_markets_region_id_types) | **GET** /markets/{region_id}/types/ | List type IDs relevant to a market
+*Esi::MarketApi* | [**get_markets_structures_structure_id**](docs/MarketApi.md#get_markets_structures_structure_id) | **GET** /markets/structures/{structure_id}/ | List orders in a structure
+*Esi::OpportunitiesApi* | [**get_characters_character_id_opportunities**](docs/OpportunitiesApi.md#get_characters_character_id_opportunities) | **GET** /characters/{character_id}/opportunities/ | Get a character's completed tasks
+*Esi::OpportunitiesApi* | [**get_opportunities_groups**](docs/OpportunitiesApi.md#get_opportunities_groups) | **GET** /opportunities/groups/ | Get opportunities groups
+*Esi::OpportunitiesApi* | [**get_opportunities_groups_group_id**](docs/OpportunitiesApi.md#get_opportunities_groups_group_id) | **GET** /opportunities/groups/{group_id}/ | Get opportunities group
+*Esi::OpportunitiesApi* | [**get_opportunities_tasks**](docs/OpportunitiesApi.md#get_opportunities_tasks) | **GET** /opportunities/tasks/ | Get opportunities tasks
+*Esi::OpportunitiesApi* | [**get_opportunities_tasks_task_id**](docs/OpportunitiesApi.md#get_opportunities_tasks_task_id) | **GET** /opportunities/tasks/{task_id}/ | Get opportunities task
+*Esi::PlanetaryInteractionApi* | [**get_characters_character_id_planets**](docs/PlanetaryInteractionApi.md#get_characters_character_id_planets) | **GET** /characters/{character_id}/planets/ | Get colonies
+*Esi::PlanetaryInteractionApi* | [**get_characters_character_id_planets_planet_id**](docs/PlanetaryInteractionApi.md#get_characters_character_id_planets_planet_id) | **GET** /characters/{character_id}/planets/{planet_id}/ | Get colony layout
+*Esi::PlanetaryInteractionApi* | [**get_corporations_corporation_id_customs_offices**](docs/PlanetaryInteractionApi.md#get_corporations_corporation_id_customs_offices) | **GET** /corporations/{corporation_id}/customs_offices/ | List corporation customs offices
+*Esi::PlanetaryInteractionApi* | [**get_universe_schematics_schematic_id**](docs/PlanetaryInteractionApi.md#get_universe_schematics_schematic_id) | **GET** /universe/schematics/{schematic_id}/ | Get schematic information
+*Esi::RoutesApi* | [**get_route_origin_destination**](docs/RoutesApi.md#get_route_origin_destination) | **GET** /route/{origin}/{destination}/ | Get route
+*Esi::SearchApi* | [**get_characters_character_id_search**](docs/SearchApi.md#get_characters_character_id_search) | **GET** /characters/{character_id}/search/ | Search on a string
+*Esi::SearchApi* | [**get_search**](docs/SearchApi.md#get_search) | **GET** /search/ | Search on a string
+*Esi::SkillsApi* | [**get_characters_character_id_attributes**](docs/SkillsApi.md#get_characters_character_id_attributes) | **GET** /characters/{character_id}/attributes/ | Get character attributes
+*Esi::SkillsApi* | [**get_characters_character_id_skillqueue**](docs/SkillsApi.md#get_characters_character_id_skillqueue) | **GET** /characters/{character_id}/skillqueue/ | Get character's skill queue
+*Esi::SkillsApi* | [**get_characters_character_id_skills**](docs/SkillsApi.md#get_characters_character_id_skills) | **GET** /characters/{character_id}/skills/ | Get character skills
+*Esi::SovereigntyApi* | [**get_sovereignty_campaigns**](docs/SovereigntyApi.md#get_sovereignty_campaigns) | **GET** /sovereignty/campaigns/ | List sovereignty campaigns
+*Esi::SovereigntyApi* | [**get_sovereignty_map**](docs/SovereigntyApi.md#get_sovereignty_map) | **GET** /sovereignty/map/ | List sovereignty of systems
+*Esi::SovereigntyApi* | [**get_sovereignty_structures**](docs/SovereigntyApi.md#get_sovereignty_structures) | **GET** /sovereignty/structures/ | List sovereignty structures
+*Esi::StatusApi* | [**get_status**](docs/StatusApi.md#get_status) | **GET** /status/ | Retrieve the uptime and player counts
+*Esi::UniverseApi* | [**get_universe_ancestries**](docs/UniverseApi.md#get_universe_ancestries) | **GET** /universe/ancestries/ | Get ancestries
+*Esi::UniverseApi* | [**get_universe_asteroid_belts_asteroid_belt_id**](docs/UniverseApi.md#get_universe_asteroid_belts_asteroid_belt_id) | **GET** /universe/asteroid_belts/{asteroid_belt_id}/ | Get asteroid belt information
+*Esi::UniverseApi* | [**get_universe_bloodlines**](docs/UniverseApi.md#get_universe_bloodlines) | **GET** /universe/bloodlines/ | Get bloodlines
+*Esi::UniverseApi* | [**get_universe_categories**](docs/UniverseApi.md#get_universe_categories) | **GET** /universe/categories/ | Get item categories
+*Esi::UniverseApi* | [**get_universe_categories_category_id**](docs/UniverseApi.md#get_universe_categories_category_id) | **GET** /universe/categories/{category_id}/ | Get item category information
+*Esi::UniverseApi* | [**get_universe_constellations**](docs/UniverseApi.md#get_universe_constellations) | **GET** /universe/constellations/ | Get constellations
+*Esi::UniverseApi* | [**get_universe_constellations_constellation_id**](docs/UniverseApi.md#get_universe_constellations_constellation_id) | **GET** /universe/constellations/{constellation_id}/ | Get constellation information
+*Esi::UniverseApi* | [**get_universe_factions**](docs/UniverseApi.md#get_universe_factions) | **GET** /universe/factions/ | Get factions
+*Esi::UniverseApi* | [**get_universe_graphics**](docs/UniverseApi.md#get_universe_graphics) | **GET** /universe/graphics/ | Get graphics
+*Esi::UniverseApi* | [**get_universe_graphics_graphic_id**](docs/UniverseApi.md#get_universe_graphics_graphic_id) | **GET** /universe/graphics/{graphic_id}/ | Get graphic information
+*Esi::UniverseApi* | [**get_universe_groups**](docs/UniverseApi.md#get_universe_groups) | **GET** /universe/groups/ | Get item groups
+*Esi::UniverseApi* | [**get_universe_groups_group_id**](docs/UniverseApi.md#get_universe_groups_group_id) | **GET** /universe/groups/{group_id}/ | Get item group information
+*Esi::UniverseApi* | [**get_universe_moons_moon_id**](docs/UniverseApi.md#get_universe_moons_moon_id) | **GET** /universe/moons/{moon_id}/ | Get moon information
+*Esi::UniverseApi* | [**get_universe_planets_planet_id**](docs/UniverseApi.md#get_universe_planets_planet_id) | **GET** /universe/planets/{planet_id}/ | Get planet information
+*Esi::UniverseApi* | [**get_universe_races**](docs/UniverseApi.md#get_universe_races) | **GET** /universe/races/ | Get character races
+*Esi::UniverseApi* | [**get_universe_regions**](docs/UniverseApi.md#get_universe_regions) | **GET** /universe/regions/ | Get regions
+*Esi::UniverseApi* | [**get_universe_regions_region_id**](docs/UniverseApi.md#get_universe_regions_region_id) | **GET** /universe/regions/{region_id}/ | Get region information
+*Esi::UniverseApi* | [**get_universe_stargates_stargate_id**](docs/UniverseApi.md#get_universe_stargates_stargate_id) | **GET** /universe/stargates/{stargate_id}/ | Get stargate information
+*Esi::UniverseApi* | [**get_universe_stars_star_id**](docs/UniverseApi.md#get_universe_stars_star_id) | **GET** /universe/stars/{star_id}/ | Get star information
+*Esi::UniverseApi* | [**get_universe_stations_station_id**](docs/UniverseApi.md#get_universe_stations_station_id) | **GET** /universe/stations/{station_id}/ | Get station information
+*Esi::UniverseApi* | [**get_universe_structures**](docs/UniverseApi.md#get_universe_structures) | **GET** /universe/structures/ | List all public structures
+*Esi::UniverseApi* | [**get_universe_structures_structure_id**](docs/UniverseApi.md#get_universe_structures_structure_id) | **GET** /universe/structures/{structure_id}/ | Get structure information
+*Esi::UniverseApi* | [**get_universe_system_jumps**](docs/UniverseApi.md#get_universe_system_jumps) | **GET** /universe/system_jumps/ | Get system jumps
+*Esi::UniverseApi* | [**get_universe_system_kills**](docs/UniverseApi.md#get_universe_system_kills) | **GET** /universe/system_kills/ | Get system kills
+*Esi::UniverseApi* | [**get_universe_systems**](docs/UniverseApi.md#get_universe_systems) | **GET** /universe/systems/ | Get solar systems
+*Esi::UniverseApi* | [**get_universe_systems_system_id**](docs/UniverseApi.md#get_universe_systems_system_id) | **GET** /universe/systems/{system_id}/ | Get solar system information
+*Esi::UniverseApi* | [**get_universe_types**](docs/UniverseApi.md#get_universe_types) | **GET** /universe/types/ | Get types
+*Esi::UniverseApi* | [**get_universe_types_type_id**](docs/UniverseApi.md#get_universe_types_type_id) | **GET** /universe/types/{type_id}/ | Get type information
+*Esi::UniverseApi* | [**post_universe_ids**](docs/UniverseApi.md#post_universe_ids) | **POST** /universe/ids/ | Bulk names to IDs
+*Esi::UniverseApi* | [**post_universe_names**](docs/UniverseApi.md#post_universe_names) | **POST** /universe/names/ | Get names and categories for a set of ID's
+*Esi::UserInterfaceApi* | [**post_ui_autopilot_waypoint**](docs/UserInterfaceApi.md#post_ui_autopilot_waypoint) | **POST** /ui/autopilot/waypoint/ | Set Autopilot Waypoint
+*Esi::UserInterfaceApi* | [**post_ui_openwindow_contract**](docs/UserInterfaceApi.md#post_ui_openwindow_contract) | **POST** /ui/openwindow/contract/ | Open Contract Window
+*Esi::UserInterfaceApi* | [**post_ui_openwindow_information**](docs/UserInterfaceApi.md#post_ui_openwindow_information) | **POST** /ui/openwindow/information/ | Open Information Window
+*Esi::UserInterfaceApi* | [**post_ui_openwindow_marketdetails**](docs/UserInterfaceApi.md#post_ui_openwindow_marketdetails) | **POST** /ui/openwindow/marketdetails/ | Open Market Details
+*Esi::UserInterfaceApi* | [**post_ui_openwindow_newmail**](docs/UserInterfaceApi.md#post_ui_openwindow_newmail) | **POST** /ui/openwindow/newmail/ | Open New Mail Window
+*Esi::WalletApi* | [**get_characters_character_id_wallet**](docs/WalletApi.md#get_characters_character_id_wallet) | **GET** /characters/{character_id}/wallet/ | Get a character's wallet balance
+*Esi::WalletApi* | [**get_characters_character_id_wallet_journal**](docs/WalletApi.md#get_characters_character_id_wallet_journal) | **GET** /characters/{character_id}/wallet/journal/ | Get character wallet journal
+*Esi::WalletApi* | [**get_characters_character_id_wallet_transactions**](docs/WalletApi.md#get_characters_character_id_wallet_transactions) | **GET** /characters/{character_id}/wallet/transactions/ | Get wallet transactions
+*Esi::WalletApi* | [**get_corporations_corporation_id_wallets**](docs/WalletApi.md#get_corporations_corporation_id_wallets) | **GET** /corporations/{corporation_id}/wallets/ | Returns a corporation's wallet balance
+*Esi::WalletApi* | [**get_corporations_corporation_id_wallets_division_journal**](docs/WalletApi.md#get_corporations_corporation_id_wallets_division_journal) | **GET** /corporations/{corporation_id}/wallets/{division}/journal/ | Get corporation wallet journal
+*Esi::WalletApi* | [**get_corporations_corporation_id_wallets_division_transactions**](docs/WalletApi.md#get_corporations_corporation_id_wallets_division_transactions) | **GET** /corporations/{corporation_id}/wallets/{division}/transactions/ | Get corporation wallet transactions
+*Esi::WarsApi* | [**get_wars**](docs/WarsApi.md#get_wars) | **GET** /wars/ | List wars
+*Esi::WarsApi* | [**get_wars_war_id**](docs/WarsApi.md#get_wars_war_id) | **GET** /wars/{war_id}/ | Get war information
+*Esi::WarsApi* | [**get_wars_war_id_killmails**](docs/WarsApi.md#get_wars_war_id_killmails) | **GET** /wars/{war_id}/killmails/ | List kills for a war
 
 
 ## Documentation for Models
 
- - [EsiRuby::BadGateway](docs/BadGateway.md)
- - [EsiRuby::BadRequest](docs/BadRequest.md)
- - [EsiRuby::DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity](docs/DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity.md)
- - [EsiRuby::DeleteFleetsFleetIdMembersMemberIdNotFound](docs/DeleteFleetsFleetIdMembersMemberIdNotFound.md)
- - [EsiRuby::DeleteFleetsFleetIdSquadsSquadIdNotFound](docs/DeleteFleetsFleetIdSquadsSquadIdNotFound.md)
- - [EsiRuby::DeleteFleetsFleetIdWingsWingIdNotFound](docs/DeleteFleetsFleetIdWingsWingIdNotFound.md)
- - [EsiRuby::Forbidden](docs/Forbidden.md)
- - [EsiRuby::GetAlliancesAllianceIdContacts200Ok](docs/GetAlliancesAllianceIdContacts200Ok.md)
- - [EsiRuby::GetAlliancesAllianceIdContactsLabels200Ok](docs/GetAlliancesAllianceIdContactsLabels200Ok.md)
- - [EsiRuby::GetAlliancesAllianceIdIconsNotFound](docs/GetAlliancesAllianceIdIconsNotFound.md)
- - [EsiRuby::GetAlliancesAllianceIdIconsOk](docs/GetAlliancesAllianceIdIconsOk.md)
- - [EsiRuby::GetAlliancesAllianceIdNotFound](docs/GetAlliancesAllianceIdNotFound.md)
- - [EsiRuby::GetAlliancesAllianceIdOk](docs/GetAlliancesAllianceIdOk.md)
- - [EsiRuby::GetAlliancesNames200Ok](docs/GetAlliancesNames200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdAgentsResearch200Ok](docs/GetCharactersCharacterIdAgentsResearch200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdAssets200Ok](docs/GetCharactersCharacterIdAssets200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdAttributesOk](docs/GetCharactersCharacterIdAttributesOk.md)
- - [EsiRuby::GetCharactersCharacterIdBlueprints200Ok](docs/GetCharactersCharacterIdBlueprints200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdBookmarks200Ok](docs/GetCharactersCharacterIdBookmarks200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdBookmarksCoordinates](docs/GetCharactersCharacterIdBookmarksCoordinates.md)
- - [EsiRuby::GetCharactersCharacterIdBookmarksFolders200Ok](docs/GetCharactersCharacterIdBookmarksFolders200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdBookmarksItem](docs/GetCharactersCharacterIdBookmarksItem.md)
- - [EsiRuby::GetCharactersCharacterIdCalendar200Ok](docs/GetCharactersCharacterIdCalendar200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdCalendarEventIdAttendees200Ok](docs/GetCharactersCharacterIdCalendarEventIdAttendees200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdCalendarEventIdAttendeesNotFound](docs/GetCharactersCharacterIdCalendarEventIdAttendeesNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdCalendarEventIdNotFound](docs/GetCharactersCharacterIdCalendarEventIdNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdCalendarEventIdOk](docs/GetCharactersCharacterIdCalendarEventIdOk.md)
- - [EsiRuby::GetCharactersCharacterIdClonesHomeLocation](docs/GetCharactersCharacterIdClonesHomeLocation.md)
- - [EsiRuby::GetCharactersCharacterIdClonesJumpClone](docs/GetCharactersCharacterIdClonesJumpClone.md)
- - [EsiRuby::GetCharactersCharacterIdClonesOk](docs/GetCharactersCharacterIdClonesOk.md)
- - [EsiRuby::GetCharactersCharacterIdContacts200Ok](docs/GetCharactersCharacterIdContacts200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdContactsLabels200Ok](docs/GetCharactersCharacterIdContactsLabels200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdContracts200Ok](docs/GetCharactersCharacterIdContracts200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdContractsContractIdBids200Ok](docs/GetCharactersCharacterIdContractsContractIdBids200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdContractsContractIdBidsNotFound](docs/GetCharactersCharacterIdContractsContractIdBidsNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdContractsContractIdItems200Ok](docs/GetCharactersCharacterIdContractsContractIdItems200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdContractsContractIdItemsNotFound](docs/GetCharactersCharacterIdContractsContractIdItemsNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdCorporationhistory200Ok](docs/GetCharactersCharacterIdCorporationhistory200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdFatigueOk](docs/GetCharactersCharacterIdFatigueOk.md)
- - [EsiRuby::GetCharactersCharacterIdFittings200Ok](docs/GetCharactersCharacterIdFittings200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdFittingsItem](docs/GetCharactersCharacterIdFittingsItem.md)
- - [EsiRuby::GetCharactersCharacterIdFleetNotFound](docs/GetCharactersCharacterIdFleetNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdFleetOk](docs/GetCharactersCharacterIdFleetOk.md)
- - [EsiRuby::GetCharactersCharacterIdFwStatsKills](docs/GetCharactersCharacterIdFwStatsKills.md)
- - [EsiRuby::GetCharactersCharacterIdFwStatsOk](docs/GetCharactersCharacterIdFwStatsOk.md)
- - [EsiRuby::GetCharactersCharacterIdFwStatsVictoryPoints](docs/GetCharactersCharacterIdFwStatsVictoryPoints.md)
- - [EsiRuby::GetCharactersCharacterIdIndustryJobs200Ok](docs/GetCharactersCharacterIdIndustryJobs200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdKillmailsRecent200Ok](docs/GetCharactersCharacterIdKillmailsRecent200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdLocationOk](docs/GetCharactersCharacterIdLocationOk.md)
- - [EsiRuby::GetCharactersCharacterIdLoyaltyPoints200Ok](docs/GetCharactersCharacterIdLoyaltyPoints200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdMail200Ok](docs/GetCharactersCharacterIdMail200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdMailLabelsLabel](docs/GetCharactersCharacterIdMailLabelsLabel.md)
- - [EsiRuby::GetCharactersCharacterIdMailLabelsOk](docs/GetCharactersCharacterIdMailLabelsOk.md)
- - [EsiRuby::GetCharactersCharacterIdMailLists200Ok](docs/GetCharactersCharacterIdMailLists200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdMailMailIdNotFound](docs/GetCharactersCharacterIdMailMailIdNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdMailMailIdOk](docs/GetCharactersCharacterIdMailMailIdOk.md)
- - [EsiRuby::GetCharactersCharacterIdMailMailIdRecipient](docs/GetCharactersCharacterIdMailMailIdRecipient.md)
- - [EsiRuby::GetCharactersCharacterIdMailRecipient](docs/GetCharactersCharacterIdMailRecipient.md)
- - [EsiRuby::GetCharactersCharacterIdMedals200Ok](docs/GetCharactersCharacterIdMedals200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdMedalsGraphic](docs/GetCharactersCharacterIdMedalsGraphic.md)
- - [EsiRuby::GetCharactersCharacterIdMining200Ok](docs/GetCharactersCharacterIdMining200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdNotFound](docs/GetCharactersCharacterIdNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdNotifications200Ok](docs/GetCharactersCharacterIdNotifications200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdNotificationsContacts200Ok](docs/GetCharactersCharacterIdNotificationsContacts200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdOk](docs/GetCharactersCharacterIdOk.md)
- - [EsiRuby::GetCharactersCharacterIdOnlineOk](docs/GetCharactersCharacterIdOnlineOk.md)
- - [EsiRuby::GetCharactersCharacterIdOpportunities200Ok](docs/GetCharactersCharacterIdOpportunities200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdOrders200Ok](docs/GetCharactersCharacterIdOrders200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdOrdersHistory200Ok](docs/GetCharactersCharacterIdOrdersHistory200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdPlanets200Ok](docs/GetCharactersCharacterIdPlanets200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdContent](docs/GetCharactersCharacterIdPlanetsPlanetIdContent.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails](docs/GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails](docs/GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdHead](docs/GetCharactersCharacterIdPlanetsPlanetIdHead.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdLink](docs/GetCharactersCharacterIdPlanetsPlanetIdLink.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdNotFound](docs/GetCharactersCharacterIdPlanetsPlanetIdNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdOk](docs/GetCharactersCharacterIdPlanetsPlanetIdOk.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdPin](docs/GetCharactersCharacterIdPlanetsPlanetIdPin.md)
- - [EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdRoute](docs/GetCharactersCharacterIdPlanetsPlanetIdRoute.md)
- - [EsiRuby::GetCharactersCharacterIdPortraitNotFound](docs/GetCharactersCharacterIdPortraitNotFound.md)
- - [EsiRuby::GetCharactersCharacterIdPortraitOk](docs/GetCharactersCharacterIdPortraitOk.md)
- - [EsiRuby::GetCharactersCharacterIdRolesOk](docs/GetCharactersCharacterIdRolesOk.md)
- - [EsiRuby::GetCharactersCharacterIdSearchOk](docs/GetCharactersCharacterIdSearchOk.md)
- - [EsiRuby::GetCharactersCharacterIdShipOk](docs/GetCharactersCharacterIdShipOk.md)
- - [EsiRuby::GetCharactersCharacterIdSkillqueue200Ok](docs/GetCharactersCharacterIdSkillqueue200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdSkillsOk](docs/GetCharactersCharacterIdSkillsOk.md)
- - [EsiRuby::GetCharactersCharacterIdSkillsSkill](docs/GetCharactersCharacterIdSkillsSkill.md)
- - [EsiRuby::GetCharactersCharacterIdStandings200Ok](docs/GetCharactersCharacterIdStandings200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdStats200Ok](docs/GetCharactersCharacterIdStats200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdStatsCharacter](docs/GetCharactersCharacterIdStatsCharacter.md)
- - [EsiRuby::GetCharactersCharacterIdStatsCombat](docs/GetCharactersCharacterIdStatsCombat.md)
- - [EsiRuby::GetCharactersCharacterIdStatsIndustry](docs/GetCharactersCharacterIdStatsIndustry.md)
- - [EsiRuby::GetCharactersCharacterIdStatsInventory](docs/GetCharactersCharacterIdStatsInventory.md)
- - [EsiRuby::GetCharactersCharacterIdStatsIsk](docs/GetCharactersCharacterIdStatsIsk.md)
- - [EsiRuby::GetCharactersCharacterIdStatsMarket](docs/GetCharactersCharacterIdStatsMarket.md)
- - [EsiRuby::GetCharactersCharacterIdStatsMining](docs/GetCharactersCharacterIdStatsMining.md)
- - [EsiRuby::GetCharactersCharacterIdStatsModule](docs/GetCharactersCharacterIdStatsModule.md)
- - [EsiRuby::GetCharactersCharacterIdStatsOrbital](docs/GetCharactersCharacterIdStatsOrbital.md)
- - [EsiRuby::GetCharactersCharacterIdStatsPve](docs/GetCharactersCharacterIdStatsPve.md)
- - [EsiRuby::GetCharactersCharacterIdStatsSocial](docs/GetCharactersCharacterIdStatsSocial.md)
- - [EsiRuby::GetCharactersCharacterIdStatsTravel](docs/GetCharactersCharacterIdStatsTravel.md)
- - [EsiRuby::GetCharactersCharacterIdTitles200Ok](docs/GetCharactersCharacterIdTitles200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdWalletJournal200Ok](docs/GetCharactersCharacterIdWalletJournal200Ok.md)
- - [EsiRuby::GetCharactersCharacterIdWalletTransactions200Ok](docs/GetCharactersCharacterIdWalletTransactions200Ok.md)
- - [EsiRuby::GetCharactersNames200Ok](docs/GetCharactersNames200Ok.md)
- - [EsiRuby::GetCorporationCorporationIdMiningExtractions200Ok](docs/GetCorporationCorporationIdMiningExtractions200Ok.md)
- - [EsiRuby::GetCorporationCorporationIdMiningObservers200Ok](docs/GetCorporationCorporationIdMiningObservers200Ok.md)
- - [EsiRuby::GetCorporationCorporationIdMiningObserversObserverId200Ok](docs/GetCorporationCorporationIdMiningObserversObserverId200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdAlliancehistory200Ok](docs/GetCorporationsCorporationIdAlliancehistory200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdAssets200Ok](docs/GetCorporationsCorporationIdAssets200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdBlueprints200Ok](docs/GetCorporationsCorporationIdBlueprints200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdBookmarks200Ok](docs/GetCorporationsCorporationIdBookmarks200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdBookmarksCoordinates](docs/GetCorporationsCorporationIdBookmarksCoordinates.md)
- - [EsiRuby::GetCorporationsCorporationIdBookmarksFolders200Ok](docs/GetCorporationsCorporationIdBookmarksFolders200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdBookmarksItem](docs/GetCorporationsCorporationIdBookmarksItem.md)
- - [EsiRuby::GetCorporationsCorporationIdContacts200Ok](docs/GetCorporationsCorporationIdContacts200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdContactsLabels200Ok](docs/GetCorporationsCorporationIdContactsLabels200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdContainersLogs200Ok](docs/GetCorporationsCorporationIdContainersLogs200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdContracts200Ok](docs/GetCorporationsCorporationIdContracts200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdContractsContractIdBids200Ok](docs/GetCorporationsCorporationIdContractsContractIdBids200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdContractsContractIdBidsNotFound](docs/GetCorporationsCorporationIdContractsContractIdBidsNotFound.md)
- - [EsiRuby::GetCorporationsCorporationIdContractsContractIdItems200Ok](docs/GetCorporationsCorporationIdContractsContractIdItems200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdContractsContractIdItems520Response](docs/GetCorporationsCorporationIdContractsContractIdItems520Response.md)
- - [EsiRuby::GetCorporationsCorporationIdContractsContractIdItemsNotFound](docs/GetCorporationsCorporationIdContractsContractIdItemsNotFound.md)
- - [EsiRuby::GetCorporationsCorporationIdCustomsOffices200Ok](docs/GetCorporationsCorporationIdCustomsOffices200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdDivisionsHangar](docs/GetCorporationsCorporationIdDivisionsHangar.md)
- - [EsiRuby::GetCorporationsCorporationIdDivisionsOk](docs/GetCorporationsCorporationIdDivisionsOk.md)
- - [EsiRuby::GetCorporationsCorporationIdDivisionsWallet](docs/GetCorporationsCorporationIdDivisionsWallet.md)
- - [EsiRuby::GetCorporationsCorporationIdFacilities200Ok](docs/GetCorporationsCorporationIdFacilities200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdFwStatsKills](docs/GetCorporationsCorporationIdFwStatsKills.md)
- - [EsiRuby::GetCorporationsCorporationIdFwStatsOk](docs/GetCorporationsCorporationIdFwStatsOk.md)
- - [EsiRuby::GetCorporationsCorporationIdFwStatsVictoryPoints](docs/GetCorporationsCorporationIdFwStatsVictoryPoints.md)
- - [EsiRuby::GetCorporationsCorporationIdIconsNotFound](docs/GetCorporationsCorporationIdIconsNotFound.md)
- - [EsiRuby::GetCorporationsCorporationIdIconsOk](docs/GetCorporationsCorporationIdIconsOk.md)
- - [EsiRuby::GetCorporationsCorporationIdIndustryJobs200Ok](docs/GetCorporationsCorporationIdIndustryJobs200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdKillmailsRecent200Ok](docs/GetCorporationsCorporationIdKillmailsRecent200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdMedals200Ok](docs/GetCorporationsCorporationIdMedals200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdMedalsIssued200Ok](docs/GetCorporationsCorporationIdMedalsIssued200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdMembersTitles200Ok](docs/GetCorporationsCorporationIdMembersTitles200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdMembertracking200Ok](docs/GetCorporationsCorporationIdMembertracking200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdNotFound](docs/GetCorporationsCorporationIdNotFound.md)
- - [EsiRuby::GetCorporationsCorporationIdOk](docs/GetCorporationsCorporationIdOk.md)
- - [EsiRuby::GetCorporationsCorporationIdOrders200Ok](docs/GetCorporationsCorporationIdOrders200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdOrdersHistory200Ok](docs/GetCorporationsCorporationIdOrdersHistory200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdOutpostsOutpostIdCoordinates](docs/GetCorporationsCorporationIdOutpostsOutpostIdCoordinates.md)
- - [EsiRuby::GetCorporationsCorporationIdOutpostsOutpostIdOk](docs/GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
- - [EsiRuby::GetCorporationsCorporationIdOutpostsOutpostIdService](docs/GetCorporationsCorporationIdOutpostsOutpostIdService.md)
- - [EsiRuby::GetCorporationsCorporationIdRoles200Ok](docs/GetCorporationsCorporationIdRoles200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdRolesHistory200Ok](docs/GetCorporationsCorporationIdRolesHistory200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdShareholders200Ok](docs/GetCorporationsCorporationIdShareholders200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdStandings200Ok](docs/GetCorporationsCorporationIdStandings200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdStarbases200Ok](docs/GetCorporationsCorporationIdStarbases200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdStarbasesStarbaseIdFuel](docs/GetCorporationsCorporationIdStarbasesStarbaseIdFuel.md)
- - [EsiRuby::GetCorporationsCorporationIdStarbasesStarbaseIdOk](docs/GetCorporationsCorporationIdStarbasesStarbaseIdOk.md)
- - [EsiRuby::GetCorporationsCorporationIdStructures200Ok](docs/GetCorporationsCorporationIdStructures200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdStructuresService](docs/GetCorporationsCorporationIdStructuresService.md)
- - [EsiRuby::GetCorporationsCorporationIdTitles200Ok](docs/GetCorporationsCorporationIdTitles200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdWallets200Ok](docs/GetCorporationsCorporationIdWallets200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdWalletsDivisionJournal200Ok](docs/GetCorporationsCorporationIdWalletsDivisionJournal200Ok.md)
- - [EsiRuby::GetCorporationsCorporationIdWalletsDivisionTransactions200Ok](docs/GetCorporationsCorporationIdWalletsDivisionTransactions200Ok.md)
- - [EsiRuby::GetCorporationsNames200Ok](docs/GetCorporationsNames200Ok.md)
- - [EsiRuby::GetDogmaAttributesAttributeIdNotFound](docs/GetDogmaAttributesAttributeIdNotFound.md)
- - [EsiRuby::GetDogmaAttributesAttributeIdOk](docs/GetDogmaAttributesAttributeIdOk.md)
- - [EsiRuby::GetDogmaEffectsEffectIdModifier](docs/GetDogmaEffectsEffectIdModifier.md)
- - [EsiRuby::GetDogmaEffectsEffectIdNotFound](docs/GetDogmaEffectsEffectIdNotFound.md)
- - [EsiRuby::GetDogmaEffectsEffectIdOk](docs/GetDogmaEffectsEffectIdOk.md)
- - [EsiRuby::GetFleetsFleetIdMembers200Ok](docs/GetFleetsFleetIdMembers200Ok.md)
- - [EsiRuby::GetFleetsFleetIdMembersNotFound](docs/GetFleetsFleetIdMembersNotFound.md)
- - [EsiRuby::GetFleetsFleetIdNotFound](docs/GetFleetsFleetIdNotFound.md)
- - [EsiRuby::GetFleetsFleetIdOk](docs/GetFleetsFleetIdOk.md)
- - [EsiRuby::GetFleetsFleetIdWings200Ok](docs/GetFleetsFleetIdWings200Ok.md)
- - [EsiRuby::GetFleetsFleetIdWingsNotFound](docs/GetFleetsFleetIdWingsNotFound.md)
- - [EsiRuby::GetFleetsFleetIdWingsSquad](docs/GetFleetsFleetIdWingsSquad.md)
- - [EsiRuby::GetFwLeaderboardsActiveTotal](docs/GetFwLeaderboardsActiveTotal.md)
- - [EsiRuby::GetFwLeaderboardsActiveTotal1](docs/GetFwLeaderboardsActiveTotal1.md)
- - [EsiRuby::GetFwLeaderboardsCharactersActiveTotal](docs/GetFwLeaderboardsCharactersActiveTotal.md)
- - [EsiRuby::GetFwLeaderboardsCharactersActiveTotal1](docs/GetFwLeaderboardsCharactersActiveTotal1.md)
- - [EsiRuby::GetFwLeaderboardsCharactersKills](docs/GetFwLeaderboardsCharactersKills.md)
- - [EsiRuby::GetFwLeaderboardsCharactersLastWeek](docs/GetFwLeaderboardsCharactersLastWeek.md)
- - [EsiRuby::GetFwLeaderboardsCharactersLastWeek1](docs/GetFwLeaderboardsCharactersLastWeek1.md)
- - [EsiRuby::GetFwLeaderboardsCharactersOk](docs/GetFwLeaderboardsCharactersOk.md)
- - [EsiRuby::GetFwLeaderboardsCharactersVictoryPoints](docs/GetFwLeaderboardsCharactersVictoryPoints.md)
- - [EsiRuby::GetFwLeaderboardsCharactersYesterday](docs/GetFwLeaderboardsCharactersYesterday.md)
- - [EsiRuby::GetFwLeaderboardsCharactersYesterday1](docs/GetFwLeaderboardsCharactersYesterday1.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsActiveTotal](docs/GetFwLeaderboardsCorporationsActiveTotal.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsActiveTotal1](docs/GetFwLeaderboardsCorporationsActiveTotal1.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsKills](docs/GetFwLeaderboardsCorporationsKills.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsLastWeek](docs/GetFwLeaderboardsCorporationsLastWeek.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsLastWeek1](docs/GetFwLeaderboardsCorporationsLastWeek1.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsOk](docs/GetFwLeaderboardsCorporationsOk.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsVictoryPoints](docs/GetFwLeaderboardsCorporationsVictoryPoints.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsYesterday](docs/GetFwLeaderboardsCorporationsYesterday.md)
- - [EsiRuby::GetFwLeaderboardsCorporationsYesterday1](docs/GetFwLeaderboardsCorporationsYesterday1.md)
- - [EsiRuby::GetFwLeaderboardsKills](docs/GetFwLeaderboardsKills.md)
- - [EsiRuby::GetFwLeaderboardsLastWeek](docs/GetFwLeaderboardsLastWeek.md)
- - [EsiRuby::GetFwLeaderboardsLastWeek1](docs/GetFwLeaderboardsLastWeek1.md)
- - [EsiRuby::GetFwLeaderboardsOk](docs/GetFwLeaderboardsOk.md)
- - [EsiRuby::GetFwLeaderboardsVictoryPoints](docs/GetFwLeaderboardsVictoryPoints.md)
- - [EsiRuby::GetFwLeaderboardsYesterday](docs/GetFwLeaderboardsYesterday.md)
- - [EsiRuby::GetFwLeaderboardsYesterday1](docs/GetFwLeaderboardsYesterday1.md)
- - [EsiRuby::GetFwStats200Ok](docs/GetFwStats200Ok.md)
- - [EsiRuby::GetFwStatsKills](docs/GetFwStatsKills.md)
- - [EsiRuby::GetFwStatsVictoryPoints](docs/GetFwStatsVictoryPoints.md)
- - [EsiRuby::GetFwSystems200Ok](docs/GetFwSystems200Ok.md)
- - [EsiRuby::GetFwWars200Ok](docs/GetFwWars200Ok.md)
- - [EsiRuby::GetIncursions200Ok](docs/GetIncursions200Ok.md)
- - [EsiRuby::GetIndustryFacilities200Ok](docs/GetIndustryFacilities200Ok.md)
- - [EsiRuby::GetIndustrySystems200Ok](docs/GetIndustrySystems200Ok.md)
- - [EsiRuby::GetIndustrySystemsCostIndice](docs/GetIndustrySystemsCostIndice.md)
- - [EsiRuby::GetInsurancePrices200Ok](docs/GetInsurancePrices200Ok.md)
- - [EsiRuby::GetInsurancePricesLevel](docs/GetInsurancePricesLevel.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashAttacker](docs/GetKillmailsKillmailIdKillmailHashAttacker.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashItem](docs/GetKillmailsKillmailIdKillmailHashItem.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashItem1](docs/GetKillmailsKillmailIdKillmailHashItem1.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashOk](docs/GetKillmailsKillmailIdKillmailHashOk.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashPosition](docs/GetKillmailsKillmailIdKillmailHashPosition.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashUnprocessableEntity](docs/GetKillmailsKillmailIdKillmailHashUnprocessableEntity.md)
- - [EsiRuby::GetKillmailsKillmailIdKillmailHashVictim](docs/GetKillmailsKillmailIdKillmailHashVictim.md)
- - [EsiRuby::GetLoyaltyStoresCorporationIdOffers200Ok](docs/GetLoyaltyStoresCorporationIdOffers200Ok.md)
- - [EsiRuby::GetLoyaltyStoresCorporationIdOffersNotFound](docs/GetLoyaltyStoresCorporationIdOffersNotFound.md)
- - [EsiRuby::GetLoyaltyStoresCorporationIdOffersRequiredItem](docs/GetLoyaltyStoresCorporationIdOffersRequiredItem.md)
- - [EsiRuby::GetMarketsGroupsMarketGroupIdNotFound](docs/GetMarketsGroupsMarketGroupIdNotFound.md)
- - [EsiRuby::GetMarketsGroupsMarketGroupIdOk](docs/GetMarketsGroupsMarketGroupIdOk.md)
- - [EsiRuby::GetMarketsPrices200Ok](docs/GetMarketsPrices200Ok.md)
- - [EsiRuby::GetMarketsRegionIdHistory200Ok](docs/GetMarketsRegionIdHistory200Ok.md)
- - [EsiRuby::GetMarketsRegionIdHistory520Response](docs/GetMarketsRegionIdHistory520Response.md)
- - [EsiRuby::GetMarketsRegionIdHistoryNotFound](docs/GetMarketsRegionIdHistoryNotFound.md)
- - [EsiRuby::GetMarketsRegionIdHistoryUnprocessableEntity](docs/GetMarketsRegionIdHistoryUnprocessableEntity.md)
- - [EsiRuby::GetMarketsRegionIdOrders200Ok](docs/GetMarketsRegionIdOrders200Ok.md)
- - [EsiRuby::GetMarketsRegionIdOrdersNotFound](docs/GetMarketsRegionIdOrdersNotFound.md)
- - [EsiRuby::GetMarketsRegionIdOrdersUnprocessableEntity](docs/GetMarketsRegionIdOrdersUnprocessableEntity.md)
- - [EsiRuby::GetMarketsStructuresStructureId200Ok](docs/GetMarketsStructuresStructureId200Ok.md)
- - [EsiRuby::GetOpportunitiesGroupsGroupIdOk](docs/GetOpportunitiesGroupsGroupIdOk.md)
- - [EsiRuby::GetOpportunitiesTasksTaskIdOk](docs/GetOpportunitiesTasksTaskIdOk.md)
- - [EsiRuby::GetRouteOriginDestinationNotFound](docs/GetRouteOriginDestinationNotFound.md)
- - [EsiRuby::GetSearchOk](docs/GetSearchOk.md)
- - [EsiRuby::GetSovereigntyCampaigns200Ok](docs/GetSovereigntyCampaigns200Ok.md)
- - [EsiRuby::GetSovereigntyCampaignsParticipant](docs/GetSovereigntyCampaignsParticipant.md)
- - [EsiRuby::GetSovereigntyMap200Ok](docs/GetSovereigntyMap200Ok.md)
- - [EsiRuby::GetSovereigntyStructures200Ok](docs/GetSovereigntyStructures200Ok.md)
- - [EsiRuby::GetStatusOk](docs/GetStatusOk.md)
- - [EsiRuby::GetUniverseAncestries200Ok](docs/GetUniverseAncestries200Ok.md)
- - [EsiRuby::GetUniverseAsteroidBeltsAsteroidBeltIdNotFound](docs/GetUniverseAsteroidBeltsAsteroidBeltIdNotFound.md)
- - [EsiRuby::GetUniverseAsteroidBeltsAsteroidBeltIdOk](docs/GetUniverseAsteroidBeltsAsteroidBeltIdOk.md)
- - [EsiRuby::GetUniverseAsteroidBeltsAsteroidBeltIdPosition](docs/GetUniverseAsteroidBeltsAsteroidBeltIdPosition.md)
- - [EsiRuby::GetUniverseBloodlines200Ok](docs/GetUniverseBloodlines200Ok.md)
- - [EsiRuby::GetUniverseCategoriesCategoryIdNotFound](docs/GetUniverseCategoriesCategoryIdNotFound.md)
- - [EsiRuby::GetUniverseCategoriesCategoryIdOk](docs/GetUniverseCategoriesCategoryIdOk.md)
- - [EsiRuby::GetUniverseConstellationsConstellationIdNotFound](docs/GetUniverseConstellationsConstellationIdNotFound.md)
- - [EsiRuby::GetUniverseConstellationsConstellationIdOk](docs/GetUniverseConstellationsConstellationIdOk.md)
- - [EsiRuby::GetUniverseConstellationsConstellationIdPosition](docs/GetUniverseConstellationsConstellationIdPosition.md)
- - [EsiRuby::GetUniverseFactions200Ok](docs/GetUniverseFactions200Ok.md)
- - [EsiRuby::GetUniverseGraphicsGraphicIdNotFound](docs/GetUniverseGraphicsGraphicIdNotFound.md)
- - [EsiRuby::GetUniverseGraphicsGraphicIdOk](docs/GetUniverseGraphicsGraphicIdOk.md)
- - [EsiRuby::GetUniverseGroupsGroupIdNotFound](docs/GetUniverseGroupsGroupIdNotFound.md)
- - [EsiRuby::GetUniverseGroupsGroupIdOk](docs/GetUniverseGroupsGroupIdOk.md)
- - [EsiRuby::GetUniverseMoonsMoonIdNotFound](docs/GetUniverseMoonsMoonIdNotFound.md)
- - [EsiRuby::GetUniverseMoonsMoonIdOk](docs/GetUniverseMoonsMoonIdOk.md)
- - [EsiRuby::GetUniverseMoonsMoonIdPosition](docs/GetUniverseMoonsMoonIdPosition.md)
- - [EsiRuby::GetUniversePlanetsPlanetIdNotFound](docs/GetUniversePlanetsPlanetIdNotFound.md)
- - [EsiRuby::GetUniversePlanetsPlanetIdOk](docs/GetUniversePlanetsPlanetIdOk.md)
- - [EsiRuby::GetUniversePlanetsPlanetIdPosition](docs/GetUniversePlanetsPlanetIdPosition.md)
- - [EsiRuby::GetUniverseRaces200Ok](docs/GetUniverseRaces200Ok.md)
- - [EsiRuby::GetUniverseRegionsRegionIdNotFound](docs/GetUniverseRegionsRegionIdNotFound.md)
- - [EsiRuby::GetUniverseRegionsRegionIdOk](docs/GetUniverseRegionsRegionIdOk.md)
- - [EsiRuby::GetUniverseSchematicsSchematicIdNotFound](docs/GetUniverseSchematicsSchematicIdNotFound.md)
- - [EsiRuby::GetUniverseSchematicsSchematicIdOk](docs/GetUniverseSchematicsSchematicIdOk.md)
- - [EsiRuby::GetUniverseStargatesStargateIdDestination](docs/GetUniverseStargatesStargateIdDestination.md)
- - [EsiRuby::GetUniverseStargatesStargateIdNotFound](docs/GetUniverseStargatesStargateIdNotFound.md)
- - [EsiRuby::GetUniverseStargatesStargateIdOk](docs/GetUniverseStargatesStargateIdOk.md)
- - [EsiRuby::GetUniverseStargatesStargateIdPosition](docs/GetUniverseStargatesStargateIdPosition.md)
- - [EsiRuby::GetUniverseStarsStarIdOk](docs/GetUniverseStarsStarIdOk.md)
- - [EsiRuby::GetUniverseStationsStationIdNotFound](docs/GetUniverseStationsStationIdNotFound.md)
- - [EsiRuby::GetUniverseStationsStationIdOk](docs/GetUniverseStationsStationIdOk.md)
- - [EsiRuby::GetUniverseStationsStationIdPosition](docs/GetUniverseStationsStationIdPosition.md)
- - [EsiRuby::GetUniverseStructuresStructureIdNotFound](docs/GetUniverseStructuresStructureIdNotFound.md)
- - [EsiRuby::GetUniverseStructuresStructureIdOk](docs/GetUniverseStructuresStructureIdOk.md)
- - [EsiRuby::GetUniverseStructuresStructureIdPosition](docs/GetUniverseStructuresStructureIdPosition.md)
- - [EsiRuby::GetUniverseSystemJumps200Ok](docs/GetUniverseSystemJumps200Ok.md)
- - [EsiRuby::GetUniverseSystemKills200Ok](docs/GetUniverseSystemKills200Ok.md)
- - [EsiRuby::GetUniverseSystemsSystemIdNotFound](docs/GetUniverseSystemsSystemIdNotFound.md)
- - [EsiRuby::GetUniverseSystemsSystemIdOk](docs/GetUniverseSystemsSystemIdOk.md)
- - [EsiRuby::GetUniverseSystemsSystemIdPlanet](docs/GetUniverseSystemsSystemIdPlanet.md)
- - [EsiRuby::GetUniverseSystemsSystemIdPosition](docs/GetUniverseSystemsSystemIdPosition.md)
- - [EsiRuby::GetUniverseTypesTypeIdDogmaAttribute](docs/GetUniverseTypesTypeIdDogmaAttribute.md)
- - [EsiRuby::GetUniverseTypesTypeIdDogmaEffect](docs/GetUniverseTypesTypeIdDogmaEffect.md)
- - [EsiRuby::GetUniverseTypesTypeIdNotFound](docs/GetUniverseTypesTypeIdNotFound.md)
- - [EsiRuby::GetUniverseTypesTypeIdOk](docs/GetUniverseTypesTypeIdOk.md)
- - [EsiRuby::GetWarsWarIdAggressor](docs/GetWarsWarIdAggressor.md)
- - [EsiRuby::GetWarsWarIdAlly](docs/GetWarsWarIdAlly.md)
- - [EsiRuby::GetWarsWarIdDefender](docs/GetWarsWarIdDefender.md)
- - [EsiRuby::GetWarsWarIdKillmails200Ok](docs/GetWarsWarIdKillmails200Ok.md)
- - [EsiRuby::GetWarsWarIdKillmailsUnprocessableEntity](docs/GetWarsWarIdKillmailsUnprocessableEntity.md)
- - [EsiRuby::GetWarsWarIdOk](docs/GetWarsWarIdOk.md)
- - [EsiRuby::GetWarsWarIdUnprocessableEntity](docs/GetWarsWarIdUnprocessableEntity.md)
- - [EsiRuby::InternalServerError](docs/InternalServerError.md)
- - [EsiRuby::PostCharactersAffiliation200Ok](docs/PostCharactersAffiliation200Ok.md)
- - [EsiRuby::PostCharactersAffiliationNotFound](docs/PostCharactersAffiliationNotFound.md)
- - [EsiRuby::PostCharactersCharacterIdAssetsLocations200Ok](docs/PostCharactersCharacterIdAssetsLocations200Ok.md)
- - [EsiRuby::PostCharactersCharacterIdAssetsLocationsPosition](docs/PostCharactersCharacterIdAssetsLocationsPosition.md)
- - [EsiRuby::PostCharactersCharacterIdAssetsNames200Ok](docs/PostCharactersCharacterIdAssetsNames200Ok.md)
- - [EsiRuby::PostCharactersCharacterIdFittingsCreated](docs/PostCharactersCharacterIdFittingsCreated.md)
- - [EsiRuby::PostCharactersCharacterIdFittingsFitting](docs/PostCharactersCharacterIdFittingsFitting.md)
- - [EsiRuby::PostCharactersCharacterIdFittingsItem](docs/PostCharactersCharacterIdFittingsItem.md)
- - [EsiRuby::PostCharactersCharacterIdMail520Response](docs/PostCharactersCharacterIdMail520Response.md)
- - [EsiRuby::PostCharactersCharacterIdMailLabelsLabel](docs/PostCharactersCharacterIdMailLabelsLabel.md)
- - [EsiRuby::PostCharactersCharacterIdMailMail](docs/PostCharactersCharacterIdMailMail.md)
- - [EsiRuby::PostCharactersCharacterIdMailRecipient](docs/PostCharactersCharacterIdMailRecipient.md)
- - [EsiRuby::PostCorporationsCorporationIdAssetsLocations200Ok](docs/PostCorporationsCorporationIdAssetsLocations200Ok.md)
- - [EsiRuby::PostCorporationsCorporationIdAssetsLocationsPosition](docs/PostCorporationsCorporationIdAssetsLocationsPosition.md)
- - [EsiRuby::PostCorporationsCorporationIdAssetsNames200Ok](docs/PostCorporationsCorporationIdAssetsNames200Ok.md)
- - [EsiRuby::PostFleetsFleetIdMembersInvitation](docs/PostFleetsFleetIdMembersInvitation.md)
- - [EsiRuby::PostFleetsFleetIdMembersNotFound](docs/PostFleetsFleetIdMembersNotFound.md)
- - [EsiRuby::PostFleetsFleetIdMembersUnprocessableEntity](docs/PostFleetsFleetIdMembersUnprocessableEntity.md)
- - [EsiRuby::PostFleetsFleetIdWingsCreated](docs/PostFleetsFleetIdWingsCreated.md)
- - [EsiRuby::PostFleetsFleetIdWingsNotFound](docs/PostFleetsFleetIdWingsNotFound.md)
- - [EsiRuby::PostFleetsFleetIdWingsWingIdSquadsCreated](docs/PostFleetsFleetIdWingsWingIdSquadsCreated.md)
- - [EsiRuby::PostFleetsFleetIdWingsWingIdSquadsNotFound](docs/PostFleetsFleetIdWingsWingIdSquadsNotFound.md)
- - [EsiRuby::PostUiOpenwindowNewmailNewMail](docs/PostUiOpenwindowNewmailNewMail.md)
- - [EsiRuby::PostUiOpenwindowNewmailUnprocessableEntity](docs/PostUiOpenwindowNewmailUnprocessableEntity.md)
- - [EsiRuby::PostUniverseIdsAgent](docs/PostUniverseIdsAgent.md)
- - [EsiRuby::PostUniverseIdsAlliance](docs/PostUniverseIdsAlliance.md)
- - [EsiRuby::PostUniverseIdsCharacter](docs/PostUniverseIdsCharacter.md)
- - [EsiRuby::PostUniverseIdsConstellation](docs/PostUniverseIdsConstellation.md)
- - [EsiRuby::PostUniverseIdsCorporation](docs/PostUniverseIdsCorporation.md)
- - [EsiRuby::PostUniverseIdsFaction](docs/PostUniverseIdsFaction.md)
- - [EsiRuby::PostUniverseIdsInventoryType](docs/PostUniverseIdsInventoryType.md)
- - [EsiRuby::PostUniverseIdsOk](docs/PostUniverseIdsOk.md)
- - [EsiRuby::PostUniverseIdsRegion](docs/PostUniverseIdsRegion.md)
- - [EsiRuby::PostUniverseIdsStation](docs/PostUniverseIdsStation.md)
- - [EsiRuby::PostUniverseIdsSystem](docs/PostUniverseIdsSystem.md)
- - [EsiRuby::PostUniverseNames200Ok](docs/PostUniverseNames200Ok.md)
- - [EsiRuby::PostUniverseNamesNotFound](docs/PostUniverseNamesNotFound.md)
- - [EsiRuby::PutCharactersCharacterIdCalendarEventIdResponse](docs/PutCharactersCharacterIdCalendarEventIdResponse.md)
- - [EsiRuby::PutCharactersCharacterIdMailMailIdContents](docs/PutCharactersCharacterIdMailMailIdContents.md)
- - [EsiRuby::PutFleetsFleetIdMembersMemberIdMovement](docs/PutFleetsFleetIdMembersMemberIdMovement.md)
- - [EsiRuby::PutFleetsFleetIdMembersMemberIdNotFound](docs/PutFleetsFleetIdMembersMemberIdNotFound.md)
- - [EsiRuby::PutFleetsFleetIdMembersMemberIdUnprocessableEntity](docs/PutFleetsFleetIdMembersMemberIdUnprocessableEntity.md)
- - [EsiRuby::PutFleetsFleetIdNewSettings](docs/PutFleetsFleetIdNewSettings.md)
- - [EsiRuby::PutFleetsFleetIdNotFound](docs/PutFleetsFleetIdNotFound.md)
- - [EsiRuby::PutFleetsFleetIdSquadsSquadIdNaming](docs/PutFleetsFleetIdSquadsSquadIdNaming.md)
- - [EsiRuby::PutFleetsFleetIdSquadsSquadIdNotFound](docs/PutFleetsFleetIdSquadsSquadIdNotFound.md)
- - [EsiRuby::PutFleetsFleetIdWingsWingIdNaming](docs/PutFleetsFleetIdWingsWingIdNaming.md)
- - [EsiRuby::PutFleetsFleetIdWingsWingIdNotFound](docs/PutFleetsFleetIdWingsWingIdNotFound.md)
- - [EsiRuby::ServiceUnavailable](docs/ServiceUnavailable.md)
- - [EsiRuby::Unauthorized](docs/Unauthorized.md)
+ - [Esi::BadGateway](docs/BadGateway.md)
+ - [Esi::BadRequest](docs/BadRequest.md)
+ - [Esi::DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity](docs/DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity.md)
+ - [Esi::DeleteFleetsFleetIdMembersMemberIdNotFound](docs/DeleteFleetsFleetIdMembersMemberIdNotFound.md)
+ - [Esi::DeleteFleetsFleetIdSquadsSquadIdNotFound](docs/DeleteFleetsFleetIdSquadsSquadIdNotFound.md)
+ - [Esi::DeleteFleetsFleetIdWingsWingIdNotFound](docs/DeleteFleetsFleetIdWingsWingIdNotFound.md)
+ - [Esi::Forbidden](docs/Forbidden.md)
+ - [Esi::GetAlliancesAllianceIdContacts200Ok](docs/GetAlliancesAllianceIdContacts200Ok.md)
+ - [Esi::GetAlliancesAllianceIdContactsLabels200Ok](docs/GetAlliancesAllianceIdContactsLabels200Ok.md)
+ - [Esi::GetAlliancesAllianceIdIconsNotFound](docs/GetAlliancesAllianceIdIconsNotFound.md)
+ - [Esi::GetAlliancesAllianceIdIconsOk](docs/GetAlliancesAllianceIdIconsOk.md)
+ - [Esi::GetAlliancesAllianceIdNotFound](docs/GetAlliancesAllianceIdNotFound.md)
+ - [Esi::GetAlliancesAllianceIdOk](docs/GetAlliancesAllianceIdOk.md)
+ - [Esi::GetAlliancesNames200Ok](docs/GetAlliancesNames200Ok.md)
+ - [Esi::GetCharactersCharacterIdAgentsResearch200Ok](docs/GetCharactersCharacterIdAgentsResearch200Ok.md)
+ - [Esi::GetCharactersCharacterIdAssets200Ok](docs/GetCharactersCharacterIdAssets200Ok.md)
+ - [Esi::GetCharactersCharacterIdAttributesOk](docs/GetCharactersCharacterIdAttributesOk.md)
+ - [Esi::GetCharactersCharacterIdBlueprints200Ok](docs/GetCharactersCharacterIdBlueprints200Ok.md)
+ - [Esi::GetCharactersCharacterIdBookmarks200Ok](docs/GetCharactersCharacterIdBookmarks200Ok.md)
+ - [Esi::GetCharactersCharacterIdBookmarksCoordinates](docs/GetCharactersCharacterIdBookmarksCoordinates.md)
+ - [Esi::GetCharactersCharacterIdBookmarksFolders200Ok](docs/GetCharactersCharacterIdBookmarksFolders200Ok.md)
+ - [Esi::GetCharactersCharacterIdBookmarksItem](docs/GetCharactersCharacterIdBookmarksItem.md)
+ - [Esi::GetCharactersCharacterIdCalendar200Ok](docs/GetCharactersCharacterIdCalendar200Ok.md)
+ - [Esi::GetCharactersCharacterIdCalendarEventIdAttendees200Ok](docs/GetCharactersCharacterIdCalendarEventIdAttendees200Ok.md)
+ - [Esi::GetCharactersCharacterIdCalendarEventIdAttendeesNotFound](docs/GetCharactersCharacterIdCalendarEventIdAttendeesNotFound.md)
+ - [Esi::GetCharactersCharacterIdCalendarEventIdNotFound](docs/GetCharactersCharacterIdCalendarEventIdNotFound.md)
+ - [Esi::GetCharactersCharacterIdCalendarEventIdOk](docs/GetCharactersCharacterIdCalendarEventIdOk.md)
+ - [Esi::GetCharactersCharacterIdClonesHomeLocation](docs/GetCharactersCharacterIdClonesHomeLocation.md)
+ - [Esi::GetCharactersCharacterIdClonesJumpClone](docs/GetCharactersCharacterIdClonesJumpClone.md)
+ - [Esi::GetCharactersCharacterIdClonesOk](docs/GetCharactersCharacterIdClonesOk.md)
+ - [Esi::GetCharactersCharacterIdContacts200Ok](docs/GetCharactersCharacterIdContacts200Ok.md)
+ - [Esi::GetCharactersCharacterIdContactsLabels200Ok](docs/GetCharactersCharacterIdContactsLabels200Ok.md)
+ - [Esi::GetCharactersCharacterIdContracts200Ok](docs/GetCharactersCharacterIdContracts200Ok.md)
+ - [Esi::GetCharactersCharacterIdContractsContractIdBids200Ok](docs/GetCharactersCharacterIdContractsContractIdBids200Ok.md)
+ - [Esi::GetCharactersCharacterIdContractsContractIdBidsNotFound](docs/GetCharactersCharacterIdContractsContractIdBidsNotFound.md)
+ - [Esi::GetCharactersCharacterIdContractsContractIdItems200Ok](docs/GetCharactersCharacterIdContractsContractIdItems200Ok.md)
+ - [Esi::GetCharactersCharacterIdContractsContractIdItemsNotFound](docs/GetCharactersCharacterIdContractsContractIdItemsNotFound.md)
+ - [Esi::GetCharactersCharacterIdCorporationhistory200Ok](docs/GetCharactersCharacterIdCorporationhistory200Ok.md)
+ - [Esi::GetCharactersCharacterIdFatigueOk](docs/GetCharactersCharacterIdFatigueOk.md)
+ - [Esi::GetCharactersCharacterIdFittings200Ok](docs/GetCharactersCharacterIdFittings200Ok.md)
+ - [Esi::GetCharactersCharacterIdFittingsItem](docs/GetCharactersCharacterIdFittingsItem.md)
+ - [Esi::GetCharactersCharacterIdFleetNotFound](docs/GetCharactersCharacterIdFleetNotFound.md)
+ - [Esi::GetCharactersCharacterIdFleetOk](docs/GetCharactersCharacterIdFleetOk.md)
+ - [Esi::GetCharactersCharacterIdFwStatsKills](docs/GetCharactersCharacterIdFwStatsKills.md)
+ - [Esi::GetCharactersCharacterIdFwStatsOk](docs/GetCharactersCharacterIdFwStatsOk.md)
+ - [Esi::GetCharactersCharacterIdFwStatsVictoryPoints](docs/GetCharactersCharacterIdFwStatsVictoryPoints.md)
+ - [Esi::GetCharactersCharacterIdIndustryJobs200Ok](docs/GetCharactersCharacterIdIndustryJobs200Ok.md)
+ - [Esi::GetCharactersCharacterIdKillmailsRecent200Ok](docs/GetCharactersCharacterIdKillmailsRecent200Ok.md)
+ - [Esi::GetCharactersCharacterIdLocationOk](docs/GetCharactersCharacterIdLocationOk.md)
+ - [Esi::GetCharactersCharacterIdLoyaltyPoints200Ok](docs/GetCharactersCharacterIdLoyaltyPoints200Ok.md)
+ - [Esi::GetCharactersCharacterIdMail200Ok](docs/GetCharactersCharacterIdMail200Ok.md)
+ - [Esi::GetCharactersCharacterIdMailLabelsLabel](docs/GetCharactersCharacterIdMailLabelsLabel.md)
+ - [Esi::GetCharactersCharacterIdMailLabelsOk](docs/GetCharactersCharacterIdMailLabelsOk.md)
+ - [Esi::GetCharactersCharacterIdMailLists200Ok](docs/GetCharactersCharacterIdMailLists200Ok.md)
+ - [Esi::GetCharactersCharacterIdMailMailIdNotFound](docs/GetCharactersCharacterIdMailMailIdNotFound.md)
+ - [Esi::GetCharactersCharacterIdMailMailIdOk](docs/GetCharactersCharacterIdMailMailIdOk.md)
+ - [Esi::GetCharactersCharacterIdMailMailIdRecipient](docs/GetCharactersCharacterIdMailMailIdRecipient.md)
+ - [Esi::GetCharactersCharacterIdMailRecipient](docs/GetCharactersCharacterIdMailRecipient.md)
+ - [Esi::GetCharactersCharacterIdMedals200Ok](docs/GetCharactersCharacterIdMedals200Ok.md)
+ - [Esi::GetCharactersCharacterIdMedalsGraphic](docs/GetCharactersCharacterIdMedalsGraphic.md)
+ - [Esi::GetCharactersCharacterIdMining200Ok](docs/GetCharactersCharacterIdMining200Ok.md)
+ - [Esi::GetCharactersCharacterIdNotFound](docs/GetCharactersCharacterIdNotFound.md)
+ - [Esi::GetCharactersCharacterIdNotifications200Ok](docs/GetCharactersCharacterIdNotifications200Ok.md)
+ - [Esi::GetCharactersCharacterIdNotificationsContacts200Ok](docs/GetCharactersCharacterIdNotificationsContacts200Ok.md)
+ - [Esi::GetCharactersCharacterIdOk](docs/GetCharactersCharacterIdOk.md)
+ - [Esi::GetCharactersCharacterIdOnlineOk](docs/GetCharactersCharacterIdOnlineOk.md)
+ - [Esi::GetCharactersCharacterIdOpportunities200Ok](docs/GetCharactersCharacterIdOpportunities200Ok.md)
+ - [Esi::GetCharactersCharacterIdOrders200Ok](docs/GetCharactersCharacterIdOrders200Ok.md)
+ - [Esi::GetCharactersCharacterIdOrdersHistory200Ok](docs/GetCharactersCharacterIdOrdersHistory200Ok.md)
+ - [Esi::GetCharactersCharacterIdPlanets200Ok](docs/GetCharactersCharacterIdPlanets200Ok.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdContent](docs/GetCharactersCharacterIdPlanetsPlanetIdContent.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails](docs/GetCharactersCharacterIdPlanetsPlanetIdExtractorDetails.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails](docs/GetCharactersCharacterIdPlanetsPlanetIdFactoryDetails.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdHead](docs/GetCharactersCharacterIdPlanetsPlanetIdHead.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdLink](docs/GetCharactersCharacterIdPlanetsPlanetIdLink.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdNotFound](docs/GetCharactersCharacterIdPlanetsPlanetIdNotFound.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdOk](docs/GetCharactersCharacterIdPlanetsPlanetIdOk.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdPin](docs/GetCharactersCharacterIdPlanetsPlanetIdPin.md)
+ - [Esi::GetCharactersCharacterIdPlanetsPlanetIdRoute](docs/GetCharactersCharacterIdPlanetsPlanetIdRoute.md)
+ - [Esi::GetCharactersCharacterIdPortraitNotFound](docs/GetCharactersCharacterIdPortraitNotFound.md)
+ - [Esi::GetCharactersCharacterIdPortraitOk](docs/GetCharactersCharacterIdPortraitOk.md)
+ - [Esi::GetCharactersCharacterIdRolesOk](docs/GetCharactersCharacterIdRolesOk.md)
+ - [Esi::GetCharactersCharacterIdSearchOk](docs/GetCharactersCharacterIdSearchOk.md)
+ - [Esi::GetCharactersCharacterIdShipOk](docs/GetCharactersCharacterIdShipOk.md)
+ - [Esi::GetCharactersCharacterIdSkillqueue200Ok](docs/GetCharactersCharacterIdSkillqueue200Ok.md)
+ - [Esi::GetCharactersCharacterIdSkillsOk](docs/GetCharactersCharacterIdSkillsOk.md)
+ - [Esi::GetCharactersCharacterIdSkillsSkill](docs/GetCharactersCharacterIdSkillsSkill.md)
+ - [Esi::GetCharactersCharacterIdStandings200Ok](docs/GetCharactersCharacterIdStandings200Ok.md)
+ - [Esi::GetCharactersCharacterIdStats200Ok](docs/GetCharactersCharacterIdStats200Ok.md)
+ - [Esi::GetCharactersCharacterIdStatsCharacter](docs/GetCharactersCharacterIdStatsCharacter.md)
+ - [Esi::GetCharactersCharacterIdStatsCombat](docs/GetCharactersCharacterIdStatsCombat.md)
+ - [Esi::GetCharactersCharacterIdStatsIndustry](docs/GetCharactersCharacterIdStatsIndustry.md)
+ - [Esi::GetCharactersCharacterIdStatsInventory](docs/GetCharactersCharacterIdStatsInventory.md)
+ - [Esi::GetCharactersCharacterIdStatsIsk](docs/GetCharactersCharacterIdStatsIsk.md)
+ - [Esi::GetCharactersCharacterIdStatsMarket](docs/GetCharactersCharacterIdStatsMarket.md)
+ - [Esi::GetCharactersCharacterIdStatsMining](docs/GetCharactersCharacterIdStatsMining.md)
+ - [Esi::GetCharactersCharacterIdStatsModule](docs/GetCharactersCharacterIdStatsModule.md)
+ - [Esi::GetCharactersCharacterIdStatsOrbital](docs/GetCharactersCharacterIdStatsOrbital.md)
+ - [Esi::GetCharactersCharacterIdStatsPve](docs/GetCharactersCharacterIdStatsPve.md)
+ - [Esi::GetCharactersCharacterIdStatsSocial](docs/GetCharactersCharacterIdStatsSocial.md)
+ - [Esi::GetCharactersCharacterIdStatsTravel](docs/GetCharactersCharacterIdStatsTravel.md)
+ - [Esi::GetCharactersCharacterIdTitles200Ok](docs/GetCharactersCharacterIdTitles200Ok.md)
+ - [Esi::GetCharactersCharacterIdWalletJournal200Ok](docs/GetCharactersCharacterIdWalletJournal200Ok.md)
+ - [Esi::GetCharactersCharacterIdWalletTransactions200Ok](docs/GetCharactersCharacterIdWalletTransactions200Ok.md)
+ - [Esi::GetCharactersNames200Ok](docs/GetCharactersNames200Ok.md)
+ - [Esi::GetCorporationCorporationIdMiningExtractions200Ok](docs/GetCorporationCorporationIdMiningExtractions200Ok.md)
+ - [Esi::GetCorporationCorporationIdMiningObservers200Ok](docs/GetCorporationCorporationIdMiningObservers200Ok.md)
+ - [Esi::GetCorporationCorporationIdMiningObserversObserverId200Ok](docs/GetCorporationCorporationIdMiningObserversObserverId200Ok.md)
+ - [Esi::GetCorporationsCorporationIdAlliancehistory200Ok](docs/GetCorporationsCorporationIdAlliancehistory200Ok.md)
+ - [Esi::GetCorporationsCorporationIdAssets200Ok](docs/GetCorporationsCorporationIdAssets200Ok.md)
+ - [Esi::GetCorporationsCorporationIdBlueprints200Ok](docs/GetCorporationsCorporationIdBlueprints200Ok.md)
+ - [Esi::GetCorporationsCorporationIdBookmarks200Ok](docs/GetCorporationsCorporationIdBookmarks200Ok.md)
+ - [Esi::GetCorporationsCorporationIdBookmarksCoordinates](docs/GetCorporationsCorporationIdBookmarksCoordinates.md)
+ - [Esi::GetCorporationsCorporationIdBookmarksFolders200Ok](docs/GetCorporationsCorporationIdBookmarksFolders200Ok.md)
+ - [Esi::GetCorporationsCorporationIdBookmarksItem](docs/GetCorporationsCorporationIdBookmarksItem.md)
+ - [Esi::GetCorporationsCorporationIdContacts200Ok](docs/GetCorporationsCorporationIdContacts200Ok.md)
+ - [Esi::GetCorporationsCorporationIdContactsLabels200Ok](docs/GetCorporationsCorporationIdContactsLabels200Ok.md)
+ - [Esi::GetCorporationsCorporationIdContainersLogs200Ok](docs/GetCorporationsCorporationIdContainersLogs200Ok.md)
+ - [Esi::GetCorporationsCorporationIdContracts200Ok](docs/GetCorporationsCorporationIdContracts200Ok.md)
+ - [Esi::GetCorporationsCorporationIdContractsContractIdBids200Ok](docs/GetCorporationsCorporationIdContractsContractIdBids200Ok.md)
+ - [Esi::GetCorporationsCorporationIdContractsContractIdBidsNotFound](docs/GetCorporationsCorporationIdContractsContractIdBidsNotFound.md)
+ - [Esi::GetCorporationsCorporationIdContractsContractIdItems200Ok](docs/GetCorporationsCorporationIdContractsContractIdItems200Ok.md)
+ - [Esi::GetCorporationsCorporationIdContractsContractIdItems520Response](docs/GetCorporationsCorporationIdContractsContractIdItems520Response.md)
+ - [Esi::GetCorporationsCorporationIdContractsContractIdItemsNotFound](docs/GetCorporationsCorporationIdContractsContractIdItemsNotFound.md)
+ - [Esi::GetCorporationsCorporationIdCustomsOffices200Ok](docs/GetCorporationsCorporationIdCustomsOffices200Ok.md)
+ - [Esi::GetCorporationsCorporationIdDivisionsHangar](docs/GetCorporationsCorporationIdDivisionsHangar.md)
+ - [Esi::GetCorporationsCorporationIdDivisionsOk](docs/GetCorporationsCorporationIdDivisionsOk.md)
+ - [Esi::GetCorporationsCorporationIdDivisionsWallet](docs/GetCorporationsCorporationIdDivisionsWallet.md)
+ - [Esi::GetCorporationsCorporationIdFacilities200Ok](docs/GetCorporationsCorporationIdFacilities200Ok.md)
+ - [Esi::GetCorporationsCorporationIdFwStatsKills](docs/GetCorporationsCorporationIdFwStatsKills.md)
+ - [Esi::GetCorporationsCorporationIdFwStatsOk](docs/GetCorporationsCorporationIdFwStatsOk.md)
+ - [Esi::GetCorporationsCorporationIdFwStatsVictoryPoints](docs/GetCorporationsCorporationIdFwStatsVictoryPoints.md)
+ - [Esi::GetCorporationsCorporationIdIconsNotFound](docs/GetCorporationsCorporationIdIconsNotFound.md)
+ - [Esi::GetCorporationsCorporationIdIconsOk](docs/GetCorporationsCorporationIdIconsOk.md)
+ - [Esi::GetCorporationsCorporationIdIndustryJobs200Ok](docs/GetCorporationsCorporationIdIndustryJobs200Ok.md)
+ - [Esi::GetCorporationsCorporationIdKillmailsRecent200Ok](docs/GetCorporationsCorporationIdKillmailsRecent200Ok.md)
+ - [Esi::GetCorporationsCorporationIdMedals200Ok](docs/GetCorporationsCorporationIdMedals200Ok.md)
+ - [Esi::GetCorporationsCorporationIdMedalsIssued200Ok](docs/GetCorporationsCorporationIdMedalsIssued200Ok.md)
+ - [Esi::GetCorporationsCorporationIdMembersTitles200Ok](docs/GetCorporationsCorporationIdMembersTitles200Ok.md)
+ - [Esi::GetCorporationsCorporationIdMembertracking200Ok](docs/GetCorporationsCorporationIdMembertracking200Ok.md)
+ - [Esi::GetCorporationsCorporationIdNotFound](docs/GetCorporationsCorporationIdNotFound.md)
+ - [Esi::GetCorporationsCorporationIdOk](docs/GetCorporationsCorporationIdOk.md)
+ - [Esi::GetCorporationsCorporationIdOrders200Ok](docs/GetCorporationsCorporationIdOrders200Ok.md)
+ - [Esi::GetCorporationsCorporationIdOrdersHistory200Ok](docs/GetCorporationsCorporationIdOrdersHistory200Ok.md)
+ - [Esi::GetCorporationsCorporationIdOutpostsOutpostIdCoordinates](docs/GetCorporationsCorporationIdOutpostsOutpostIdCoordinates.md)
+ - [Esi::GetCorporationsCorporationIdOutpostsOutpostIdOk](docs/GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
+ - [Esi::GetCorporationsCorporationIdOutpostsOutpostIdService](docs/GetCorporationsCorporationIdOutpostsOutpostIdService.md)
+ - [Esi::GetCorporationsCorporationIdRoles200Ok](docs/GetCorporationsCorporationIdRoles200Ok.md)
+ - [Esi::GetCorporationsCorporationIdRolesHistory200Ok](docs/GetCorporationsCorporationIdRolesHistory200Ok.md)
+ - [Esi::GetCorporationsCorporationIdShareholders200Ok](docs/GetCorporationsCorporationIdShareholders200Ok.md)
+ - [Esi::GetCorporationsCorporationIdStandings200Ok](docs/GetCorporationsCorporationIdStandings200Ok.md)
+ - [Esi::GetCorporationsCorporationIdStarbases200Ok](docs/GetCorporationsCorporationIdStarbases200Ok.md)
+ - [Esi::GetCorporationsCorporationIdStarbasesStarbaseIdFuel](docs/GetCorporationsCorporationIdStarbasesStarbaseIdFuel.md)
+ - [Esi::GetCorporationsCorporationIdStarbasesStarbaseIdOk](docs/GetCorporationsCorporationIdStarbasesStarbaseIdOk.md)
+ - [Esi::GetCorporationsCorporationIdStructures200Ok](docs/GetCorporationsCorporationIdStructures200Ok.md)
+ - [Esi::GetCorporationsCorporationIdStructuresService](docs/GetCorporationsCorporationIdStructuresService.md)
+ - [Esi::GetCorporationsCorporationIdTitles200Ok](docs/GetCorporationsCorporationIdTitles200Ok.md)
+ - [Esi::GetCorporationsCorporationIdWallets200Ok](docs/GetCorporationsCorporationIdWallets200Ok.md)
+ - [Esi::GetCorporationsCorporationIdWalletsDivisionJournal200Ok](docs/GetCorporationsCorporationIdWalletsDivisionJournal200Ok.md)
+ - [Esi::GetCorporationsCorporationIdWalletsDivisionTransactions200Ok](docs/GetCorporationsCorporationIdWalletsDivisionTransactions200Ok.md)
+ - [Esi::GetCorporationsNames200Ok](docs/GetCorporationsNames200Ok.md)
+ - [Esi::GetDogmaAttributesAttributeIdNotFound](docs/GetDogmaAttributesAttributeIdNotFound.md)
+ - [Esi::GetDogmaAttributesAttributeIdOk](docs/GetDogmaAttributesAttributeIdOk.md)
+ - [Esi::GetDogmaEffectsEffectIdModifier](docs/GetDogmaEffectsEffectIdModifier.md)
+ - [Esi::GetDogmaEffectsEffectIdNotFound](docs/GetDogmaEffectsEffectIdNotFound.md)
+ - [Esi::GetDogmaEffectsEffectIdOk](docs/GetDogmaEffectsEffectIdOk.md)
+ - [Esi::GetFleetsFleetIdMembers200Ok](docs/GetFleetsFleetIdMembers200Ok.md)
+ - [Esi::GetFleetsFleetIdMembersNotFound](docs/GetFleetsFleetIdMembersNotFound.md)
+ - [Esi::GetFleetsFleetIdNotFound](docs/GetFleetsFleetIdNotFound.md)
+ - [Esi::GetFleetsFleetIdOk](docs/GetFleetsFleetIdOk.md)
+ - [Esi::GetFleetsFleetIdWings200Ok](docs/GetFleetsFleetIdWings200Ok.md)
+ - [Esi::GetFleetsFleetIdWingsNotFound](docs/GetFleetsFleetIdWingsNotFound.md)
+ - [Esi::GetFleetsFleetIdWingsSquad](docs/GetFleetsFleetIdWingsSquad.md)
+ - [Esi::GetFwLeaderboardsActiveTotal](docs/GetFwLeaderboardsActiveTotal.md)
+ - [Esi::GetFwLeaderboardsActiveTotal1](docs/GetFwLeaderboardsActiveTotal1.md)
+ - [Esi::GetFwLeaderboardsCharactersActiveTotal](docs/GetFwLeaderboardsCharactersActiveTotal.md)
+ - [Esi::GetFwLeaderboardsCharactersActiveTotal1](docs/GetFwLeaderboardsCharactersActiveTotal1.md)
+ - [Esi::GetFwLeaderboardsCharactersKills](docs/GetFwLeaderboardsCharactersKills.md)
+ - [Esi::GetFwLeaderboardsCharactersLastWeek](docs/GetFwLeaderboardsCharactersLastWeek.md)
+ - [Esi::GetFwLeaderboardsCharactersLastWeek1](docs/GetFwLeaderboardsCharactersLastWeek1.md)
+ - [Esi::GetFwLeaderboardsCharactersOk](docs/GetFwLeaderboardsCharactersOk.md)
+ - [Esi::GetFwLeaderboardsCharactersVictoryPoints](docs/GetFwLeaderboardsCharactersVictoryPoints.md)
+ - [Esi::GetFwLeaderboardsCharactersYesterday](docs/GetFwLeaderboardsCharactersYesterday.md)
+ - [Esi::GetFwLeaderboardsCharactersYesterday1](docs/GetFwLeaderboardsCharactersYesterday1.md)
+ - [Esi::GetFwLeaderboardsCorporationsActiveTotal](docs/GetFwLeaderboardsCorporationsActiveTotal.md)
+ - [Esi::GetFwLeaderboardsCorporationsActiveTotal1](docs/GetFwLeaderboardsCorporationsActiveTotal1.md)
+ - [Esi::GetFwLeaderboardsCorporationsKills](docs/GetFwLeaderboardsCorporationsKills.md)
+ - [Esi::GetFwLeaderboardsCorporationsLastWeek](docs/GetFwLeaderboardsCorporationsLastWeek.md)
+ - [Esi::GetFwLeaderboardsCorporationsLastWeek1](docs/GetFwLeaderboardsCorporationsLastWeek1.md)
+ - [Esi::GetFwLeaderboardsCorporationsOk](docs/GetFwLeaderboardsCorporationsOk.md)
+ - [Esi::GetFwLeaderboardsCorporationsVictoryPoints](docs/GetFwLeaderboardsCorporationsVictoryPoints.md)
+ - [Esi::GetFwLeaderboardsCorporationsYesterday](docs/GetFwLeaderboardsCorporationsYesterday.md)
+ - [Esi::GetFwLeaderboardsCorporationsYesterday1](docs/GetFwLeaderboardsCorporationsYesterday1.md)
+ - [Esi::GetFwLeaderboardsKills](docs/GetFwLeaderboardsKills.md)
+ - [Esi::GetFwLeaderboardsLastWeek](docs/GetFwLeaderboardsLastWeek.md)
+ - [Esi::GetFwLeaderboardsLastWeek1](docs/GetFwLeaderboardsLastWeek1.md)
+ - [Esi::GetFwLeaderboardsOk](docs/GetFwLeaderboardsOk.md)
+ - [Esi::GetFwLeaderboardsVictoryPoints](docs/GetFwLeaderboardsVictoryPoints.md)
+ - [Esi::GetFwLeaderboardsYesterday](docs/GetFwLeaderboardsYesterday.md)
+ - [Esi::GetFwLeaderboardsYesterday1](docs/GetFwLeaderboardsYesterday1.md)
+ - [Esi::GetFwStats200Ok](docs/GetFwStats200Ok.md)
+ - [Esi::GetFwStatsKills](docs/GetFwStatsKills.md)
+ - [Esi::GetFwStatsVictoryPoints](docs/GetFwStatsVictoryPoints.md)
+ - [Esi::GetFwSystems200Ok](docs/GetFwSystems200Ok.md)
+ - [Esi::GetFwWars200Ok](docs/GetFwWars200Ok.md)
+ - [Esi::GetIncursions200Ok](docs/GetIncursions200Ok.md)
+ - [Esi::GetIndustryFacilities200Ok](docs/GetIndustryFacilities200Ok.md)
+ - [Esi::GetIndustrySystems200Ok](docs/GetIndustrySystems200Ok.md)
+ - [Esi::GetIndustrySystemsCostIndice](docs/GetIndustrySystemsCostIndice.md)
+ - [Esi::GetInsurancePrices200Ok](docs/GetInsurancePrices200Ok.md)
+ - [Esi::GetInsurancePricesLevel](docs/GetInsurancePricesLevel.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashAttacker](docs/GetKillmailsKillmailIdKillmailHashAttacker.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashItem](docs/GetKillmailsKillmailIdKillmailHashItem.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashItem1](docs/GetKillmailsKillmailIdKillmailHashItem1.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashOk](docs/GetKillmailsKillmailIdKillmailHashOk.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashPosition](docs/GetKillmailsKillmailIdKillmailHashPosition.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashUnprocessableEntity](docs/GetKillmailsKillmailIdKillmailHashUnprocessableEntity.md)
+ - [Esi::GetKillmailsKillmailIdKillmailHashVictim](docs/GetKillmailsKillmailIdKillmailHashVictim.md)
+ - [Esi::GetLoyaltyStoresCorporationIdOffers200Ok](docs/GetLoyaltyStoresCorporationIdOffers200Ok.md)
+ - [Esi::GetLoyaltyStoresCorporationIdOffersNotFound](docs/GetLoyaltyStoresCorporationIdOffersNotFound.md)
+ - [Esi::GetLoyaltyStoresCorporationIdOffersRequiredItem](docs/GetLoyaltyStoresCorporationIdOffersRequiredItem.md)
+ - [Esi::GetMarketsGroupsMarketGroupIdNotFound](docs/GetMarketsGroupsMarketGroupIdNotFound.md)
+ - [Esi::GetMarketsGroupsMarketGroupIdOk](docs/GetMarketsGroupsMarketGroupIdOk.md)
+ - [Esi::GetMarketsPrices200Ok](docs/GetMarketsPrices200Ok.md)
+ - [Esi::GetMarketsRegionIdHistory200Ok](docs/GetMarketsRegionIdHistory200Ok.md)
+ - [Esi::GetMarketsRegionIdHistory520Response](docs/GetMarketsRegionIdHistory520Response.md)
+ - [Esi::GetMarketsRegionIdHistoryNotFound](docs/GetMarketsRegionIdHistoryNotFound.md)
+ - [Esi::GetMarketsRegionIdHistoryUnprocessableEntity](docs/GetMarketsRegionIdHistoryUnprocessableEntity.md)
+ - [Esi::GetMarketsRegionIdOrders200Ok](docs/GetMarketsRegionIdOrders200Ok.md)
+ - [Esi::GetMarketsRegionIdOrdersNotFound](docs/GetMarketsRegionIdOrdersNotFound.md)
+ - [Esi::GetMarketsRegionIdOrdersUnprocessableEntity](docs/GetMarketsRegionIdOrdersUnprocessableEntity.md)
+ - [Esi::GetMarketsStructuresStructureId200Ok](docs/GetMarketsStructuresStructureId200Ok.md)
+ - [Esi::GetOpportunitiesGroupsGroupIdOk](docs/GetOpportunitiesGroupsGroupIdOk.md)
+ - [Esi::GetOpportunitiesTasksTaskIdOk](docs/GetOpportunitiesTasksTaskIdOk.md)
+ - [Esi::GetRouteOriginDestinationNotFound](docs/GetRouteOriginDestinationNotFound.md)
+ - [Esi::GetSearchOk](docs/GetSearchOk.md)
+ - [Esi::GetSovereigntyCampaigns200Ok](docs/GetSovereigntyCampaigns200Ok.md)
+ - [Esi::GetSovereigntyCampaignsParticipant](docs/GetSovereigntyCampaignsParticipant.md)
+ - [Esi::GetSovereigntyMap200Ok](docs/GetSovereigntyMap200Ok.md)
+ - [Esi::GetSovereigntyStructures200Ok](docs/GetSovereigntyStructures200Ok.md)
+ - [Esi::GetStatusOk](docs/GetStatusOk.md)
+ - [Esi::GetUniverseAncestries200Ok](docs/GetUniverseAncestries200Ok.md)
+ - [Esi::GetUniverseAsteroidBeltsAsteroidBeltIdNotFound](docs/GetUniverseAsteroidBeltsAsteroidBeltIdNotFound.md)
+ - [Esi::GetUniverseAsteroidBeltsAsteroidBeltIdOk](docs/GetUniverseAsteroidBeltsAsteroidBeltIdOk.md)
+ - [Esi::GetUniverseAsteroidBeltsAsteroidBeltIdPosition](docs/GetUniverseAsteroidBeltsAsteroidBeltIdPosition.md)
+ - [Esi::GetUniverseBloodlines200Ok](docs/GetUniverseBloodlines200Ok.md)
+ - [Esi::GetUniverseCategoriesCategoryIdNotFound](docs/GetUniverseCategoriesCategoryIdNotFound.md)
+ - [Esi::GetUniverseCategoriesCategoryIdOk](docs/GetUniverseCategoriesCategoryIdOk.md)
+ - [Esi::GetUniverseConstellationsConstellationIdNotFound](docs/GetUniverseConstellationsConstellationIdNotFound.md)
+ - [Esi::GetUniverseConstellationsConstellationIdOk](docs/GetUniverseConstellationsConstellationIdOk.md)
+ - [Esi::GetUniverseConstellationsConstellationIdPosition](docs/GetUniverseConstellationsConstellationIdPosition.md)
+ - [Esi::GetUniverseFactions200Ok](docs/GetUniverseFactions200Ok.md)
+ - [Esi::GetUniverseGraphicsGraphicIdNotFound](docs/GetUniverseGraphicsGraphicIdNotFound.md)
+ - [Esi::GetUniverseGraphicsGraphicIdOk](docs/GetUniverseGraphicsGraphicIdOk.md)
+ - [Esi::GetUniverseGroupsGroupIdNotFound](docs/GetUniverseGroupsGroupIdNotFound.md)
+ - [Esi::GetUniverseGroupsGroupIdOk](docs/GetUniverseGroupsGroupIdOk.md)
+ - [Esi::GetUniverseMoonsMoonIdNotFound](docs/GetUniverseMoonsMoonIdNotFound.md)
+ - [Esi::GetUniverseMoonsMoonIdOk](docs/GetUniverseMoonsMoonIdOk.md)
+ - [Esi::GetUniverseMoonsMoonIdPosition](docs/GetUniverseMoonsMoonIdPosition.md)
+ - [Esi::GetUniversePlanetsPlanetIdNotFound](docs/GetUniversePlanetsPlanetIdNotFound.md)
+ - [Esi::GetUniversePlanetsPlanetIdOk](docs/GetUniversePlanetsPlanetIdOk.md)
+ - [Esi::GetUniversePlanetsPlanetIdPosition](docs/GetUniversePlanetsPlanetIdPosition.md)
+ - [Esi::GetUniverseRaces200Ok](docs/GetUniverseRaces200Ok.md)
+ - [Esi::GetUniverseRegionsRegionIdNotFound](docs/GetUniverseRegionsRegionIdNotFound.md)
+ - [Esi::GetUniverseRegionsRegionIdOk](docs/GetUniverseRegionsRegionIdOk.md)
+ - [Esi::GetUniverseSchematicsSchematicIdNotFound](docs/GetUniverseSchematicsSchematicIdNotFound.md)
+ - [Esi::GetUniverseSchematicsSchematicIdOk](docs/GetUniverseSchematicsSchematicIdOk.md)
+ - [Esi::GetUniverseStargatesStargateIdDestination](docs/GetUniverseStargatesStargateIdDestination.md)
+ - [Esi::GetUniverseStargatesStargateIdNotFound](docs/GetUniverseStargatesStargateIdNotFound.md)
+ - [Esi::GetUniverseStargatesStargateIdOk](docs/GetUniverseStargatesStargateIdOk.md)
+ - [Esi::GetUniverseStargatesStargateIdPosition](docs/GetUniverseStargatesStargateIdPosition.md)
+ - [Esi::GetUniverseStarsStarIdOk](docs/GetUniverseStarsStarIdOk.md)
+ - [Esi::GetUniverseStationsStationIdNotFound](docs/GetUniverseStationsStationIdNotFound.md)
+ - [Esi::GetUniverseStationsStationIdOk](docs/GetUniverseStationsStationIdOk.md)
+ - [Esi::GetUniverseStationsStationIdPosition](docs/GetUniverseStationsStationIdPosition.md)
+ - [Esi::GetUniverseStructuresStructureIdNotFound](docs/GetUniverseStructuresStructureIdNotFound.md)
+ - [Esi::GetUniverseStructuresStructureIdOk](docs/GetUniverseStructuresStructureIdOk.md)
+ - [Esi::GetUniverseStructuresStructureIdPosition](docs/GetUniverseStructuresStructureIdPosition.md)
+ - [Esi::GetUniverseSystemJumps200Ok](docs/GetUniverseSystemJumps200Ok.md)
+ - [Esi::GetUniverseSystemKills200Ok](docs/GetUniverseSystemKills200Ok.md)
+ - [Esi::GetUniverseSystemsSystemIdNotFound](docs/GetUniverseSystemsSystemIdNotFound.md)
+ - [Esi::GetUniverseSystemsSystemIdOk](docs/GetUniverseSystemsSystemIdOk.md)
+ - [Esi::GetUniverseSystemsSystemIdPlanet](docs/GetUniverseSystemsSystemIdPlanet.md)
+ - [Esi::GetUniverseSystemsSystemIdPosition](docs/GetUniverseSystemsSystemIdPosition.md)
+ - [Esi::GetUniverseTypesTypeIdDogmaAttribute](docs/GetUniverseTypesTypeIdDogmaAttribute.md)
+ - [Esi::GetUniverseTypesTypeIdDogmaEffect](docs/GetUniverseTypesTypeIdDogmaEffect.md)
+ - [Esi::GetUniverseTypesTypeIdNotFound](docs/GetUniverseTypesTypeIdNotFound.md)
+ - [Esi::GetUniverseTypesTypeIdOk](docs/GetUniverseTypesTypeIdOk.md)
+ - [Esi::GetWarsWarIdAggressor](docs/GetWarsWarIdAggressor.md)
+ - [Esi::GetWarsWarIdAlly](docs/GetWarsWarIdAlly.md)
+ - [Esi::GetWarsWarIdDefender](docs/GetWarsWarIdDefender.md)
+ - [Esi::GetWarsWarIdKillmails200Ok](docs/GetWarsWarIdKillmails200Ok.md)
+ - [Esi::GetWarsWarIdKillmailsUnprocessableEntity](docs/GetWarsWarIdKillmailsUnprocessableEntity.md)
+ - [Esi::GetWarsWarIdOk](docs/GetWarsWarIdOk.md)
+ - [Esi::GetWarsWarIdUnprocessableEntity](docs/GetWarsWarIdUnprocessableEntity.md)
+ - [Esi::InternalServerError](docs/InternalServerError.md)
+ - [Esi::PostCharactersAffiliation200Ok](docs/PostCharactersAffiliation200Ok.md)
+ - [Esi::PostCharactersAffiliationNotFound](docs/PostCharactersAffiliationNotFound.md)
+ - [Esi::PostCharactersCharacterIdAssetsLocations200Ok](docs/PostCharactersCharacterIdAssetsLocations200Ok.md)
+ - [Esi::PostCharactersCharacterIdAssetsLocationsPosition](docs/PostCharactersCharacterIdAssetsLocationsPosition.md)
+ - [Esi::PostCharactersCharacterIdAssetsNames200Ok](docs/PostCharactersCharacterIdAssetsNames200Ok.md)
+ - [Esi::PostCharactersCharacterIdFittingsCreated](docs/PostCharactersCharacterIdFittingsCreated.md)
+ - [Esi::PostCharactersCharacterIdFittingsFitting](docs/PostCharactersCharacterIdFittingsFitting.md)
+ - [Esi::PostCharactersCharacterIdFittingsItem](docs/PostCharactersCharacterIdFittingsItem.md)
+ - [Esi::PostCharactersCharacterIdMail520Response](docs/PostCharactersCharacterIdMail520Response.md)
+ - [Esi::PostCharactersCharacterIdMailLabelsLabel](docs/PostCharactersCharacterIdMailLabelsLabel.md)
+ - [Esi::PostCharactersCharacterIdMailMail](docs/PostCharactersCharacterIdMailMail.md)
+ - [Esi::PostCharactersCharacterIdMailRecipient](docs/PostCharactersCharacterIdMailRecipient.md)
+ - [Esi::PostCorporationsCorporationIdAssetsLocations200Ok](docs/PostCorporationsCorporationIdAssetsLocations200Ok.md)
+ - [Esi::PostCorporationsCorporationIdAssetsLocationsPosition](docs/PostCorporationsCorporationIdAssetsLocationsPosition.md)
+ - [Esi::PostCorporationsCorporationIdAssetsNames200Ok](docs/PostCorporationsCorporationIdAssetsNames200Ok.md)
+ - [Esi::PostFleetsFleetIdMembersInvitation](docs/PostFleetsFleetIdMembersInvitation.md)
+ - [Esi::PostFleetsFleetIdMembersNotFound](docs/PostFleetsFleetIdMembersNotFound.md)
+ - [Esi::PostFleetsFleetIdMembersUnprocessableEntity](docs/PostFleetsFleetIdMembersUnprocessableEntity.md)
+ - [Esi::PostFleetsFleetIdWingsCreated](docs/PostFleetsFleetIdWingsCreated.md)
+ - [Esi::PostFleetsFleetIdWingsNotFound](docs/PostFleetsFleetIdWingsNotFound.md)
+ - [Esi::PostFleetsFleetIdWingsWingIdSquadsCreated](docs/PostFleetsFleetIdWingsWingIdSquadsCreated.md)
+ - [Esi::PostFleetsFleetIdWingsWingIdSquadsNotFound](docs/PostFleetsFleetIdWingsWingIdSquadsNotFound.md)
+ - [Esi::PostUiOpenwindowNewmailNewMail](docs/PostUiOpenwindowNewmailNewMail.md)
+ - [Esi::PostUiOpenwindowNewmailUnprocessableEntity](docs/PostUiOpenwindowNewmailUnprocessableEntity.md)
+ - [Esi::PostUniverseIdsAgent](docs/PostUniverseIdsAgent.md)
+ - [Esi::PostUniverseIdsAlliance](docs/PostUniverseIdsAlliance.md)
+ - [Esi::PostUniverseIdsCharacter](docs/PostUniverseIdsCharacter.md)
+ - [Esi::PostUniverseIdsConstellation](docs/PostUniverseIdsConstellation.md)
+ - [Esi::PostUniverseIdsCorporation](docs/PostUniverseIdsCorporation.md)
+ - [Esi::PostUniverseIdsFaction](docs/PostUniverseIdsFaction.md)
+ - [Esi::PostUniverseIdsInventoryType](docs/PostUniverseIdsInventoryType.md)
+ - [Esi::PostUniverseIdsOk](docs/PostUniverseIdsOk.md)
+ - [Esi::PostUniverseIdsRegion](docs/PostUniverseIdsRegion.md)
+ - [Esi::PostUniverseIdsStation](docs/PostUniverseIdsStation.md)
+ - [Esi::PostUniverseIdsSystem](docs/PostUniverseIdsSystem.md)
+ - [Esi::PostUniverseNames200Ok](docs/PostUniverseNames200Ok.md)
+ - [Esi::PostUniverseNamesNotFound](docs/PostUniverseNamesNotFound.md)
+ - [Esi::PutCharactersCharacterIdCalendarEventIdResponse](docs/PutCharactersCharacterIdCalendarEventIdResponse.md)
+ - [Esi::PutCharactersCharacterIdMailMailIdContents](docs/PutCharactersCharacterIdMailMailIdContents.md)
+ - [Esi::PutFleetsFleetIdMembersMemberIdMovement](docs/PutFleetsFleetIdMembersMemberIdMovement.md)
+ - [Esi::PutFleetsFleetIdMembersMemberIdNotFound](docs/PutFleetsFleetIdMembersMemberIdNotFound.md)
+ - [Esi::PutFleetsFleetIdMembersMemberIdUnprocessableEntity](docs/PutFleetsFleetIdMembersMemberIdUnprocessableEntity.md)
+ - [Esi::PutFleetsFleetIdNewSettings](docs/PutFleetsFleetIdNewSettings.md)
+ - [Esi::PutFleetsFleetIdNotFound](docs/PutFleetsFleetIdNotFound.md)
+ - [Esi::PutFleetsFleetIdSquadsSquadIdNaming](docs/PutFleetsFleetIdSquadsSquadIdNaming.md)
+ - [Esi::PutFleetsFleetIdSquadsSquadIdNotFound](docs/PutFleetsFleetIdSquadsSquadIdNotFound.md)
+ - [Esi::PutFleetsFleetIdWingsWingIdNaming](docs/PutFleetsFleetIdWingsWingIdNaming.md)
+ - [Esi::PutFleetsFleetIdWingsWingIdNotFound](docs/PutFleetsFleetIdWingsWingIdNotFound.md)
+ - [Esi::ServiceUnavailable](docs/ServiceUnavailable.md)
+ - [Esi::Unauthorized](docs/Unauthorized.md)
 
 
 ## Documentation for Authorization

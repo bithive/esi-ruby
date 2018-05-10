@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseConstellationsConstellationIdPosition
+# Esi::GetUniverseConstellationsConstellationIdPosition
 
 ## Properties
 Name | Type | Description | Notes

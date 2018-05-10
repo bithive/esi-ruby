@@ -1,4 +1,4 @@
-# EsiRuby::Unauthorized
+# Esi::Unauthorized
 
 ## Properties
 Name | Type | Description | Notes

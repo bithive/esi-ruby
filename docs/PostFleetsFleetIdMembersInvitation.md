@@ -1,4 +1,4 @@
-# EsiRuby::PostFleetsFleetIdMembersInvitation
+# Esi::PostFleetsFleetIdMembersInvitation
 
 ## Properties
 Name | Type | Description | Notes

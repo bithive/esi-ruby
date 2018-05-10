@@ -1,4 +1,4 @@
-# EsiRuby::SearchApi
+# Esi::SearchApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -20,12 +20,12 @@ Search for entities that match a given sub-string.  --- Alternate route: `/dev/c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::SearchApi.new
+api_instance = Esi::SearchApi.new
 
 categories = ['categories_example'] # Array<String> | Type of entities to search for
 
@@ -47,7 +47,7 @@ begin
   #Search on a string
   result = api_instance.get_characters_character_id_search(categories, character_idsearch, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SearchApi->get_characters_character_id_search: #{e}"
 end
 ```
@@ -94,7 +94,7 @@ Search for entities that match a given sub-string.  --- Alternate route: `/dev/s
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::SearchApi.new
+api_instance = Esi::SearchApi.new
 
 categories = ['categories_example'] # Array<String> | Type of entities to search for
 
@@ -113,7 +113,7 @@ begin
   #Search on a string
   result = api_instance.get_search(categories, search, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SearchApi->get_search: #{e}"
 end
 ```

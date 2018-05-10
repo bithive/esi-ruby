@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdIconsNotFound
+# Esi::GetCorporationsCorporationIdIconsNotFound
 
 ## Properties
 Name | Type | Description | Notes

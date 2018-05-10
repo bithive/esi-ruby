@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdBookmarksFolders200Ok
+# Esi::GetCharactersCharacterIdBookmarksFolders200Ok
 
 ## Properties
 Name | Type | Description | Notes

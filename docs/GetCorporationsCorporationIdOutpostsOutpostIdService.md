@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdOutpostsOutpostIdService
+# Esi::GetCorporationsCorporationIdOutpostsOutpostIdService
 
 ## Properties
 Name | Type | Description | Notes

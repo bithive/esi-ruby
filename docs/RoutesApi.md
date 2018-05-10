@@ -1,4 +1,4 @@
-# EsiRuby::RoutesApi
+# Esi::RoutesApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -19,7 +19,7 @@ Get the systems between origin and destination  --- Alternate route: `/dev/route
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::RoutesApi.new
+api_instance = Esi::RoutesApi.new
 
 destination = 56 # Integer | destination solar system ID
 
@@ -27,7 +27,7 @@ origin = 56 # Integer | origin solar system ID
 
 opts = { 
   avoid: [56], # Array<Integer> | avoid solar system ID(s)
-  connections: [EsiRuby::Array<Integer>.new], # Array<Array<Integer>> | connected solar system pairs
+  connections: [Esi::Array<Integer>.new], # Array<Array<Integer>> | connected solar system pairs
   datasource: 'tranquility', # String | The server name you would like data from
   flag: 'shortest', # String | route security preference
   if_none_match: 'if_none_match_example', # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
@@ -39,7 +39,7 @@ begin
   #Get route
   result = api_instance.get_route_origin_destination(destination, origin, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling RoutesApi->get_route_origin_destination: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::SovereigntyApi
+# Esi::SovereigntyApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -21,7 +21,7 @@ Shows sovereignty data for campaigns.  --- Alternate route: `/dev/sovereignty/ca
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::SovereigntyApi.new
+api_instance = Esi::SovereigntyApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -34,7 +34,7 @@ begin
   #List sovereignty campaigns
   result = api_instance.get_sovereignty_campaigns(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SovereigntyApi->get_sovereignty_campaigns: #{e}"
 end
 ```
@@ -75,7 +75,7 @@ Shows sovereignty information for solar systems  --- Alternate route: `/dev/sove
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::SovereigntyApi.new
+api_instance = Esi::SovereigntyApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -88,7 +88,7 @@ begin
   #List sovereignty of systems
   result = api_instance.get_sovereignty_map(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SovereigntyApi->get_sovereignty_map: #{e}"
 end
 ```
@@ -129,7 +129,7 @@ Shows sovereignty data for structures.  --- Alternate route: `/dev/sovereignty/s
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::SovereigntyApi.new
+api_instance = Esi::SovereigntyApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -142,7 +142,7 @@ begin
   #List sovereignty structures
   result = api_instance.get_sovereignty_structures(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SovereigntyApi->get_sovereignty_structures: #{e}"
 end
 ```

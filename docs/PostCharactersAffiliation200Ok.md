@@ -1,4 +1,4 @@
-# EsiRuby::PostCharactersAffiliation200Ok
+# Esi::PostCharactersAffiliation200Ok
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetDogmaEffectsEffectIdModifier
+# Esi::GetDogmaEffectsEffectIdModifier
 
 ## Properties
 Name | Type | Description | Notes

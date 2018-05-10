@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdFwStatsKills
+# Esi::GetCharactersCharacterIdFwStatsKills
 
 ## Properties
 Name | Type | Description | Notes

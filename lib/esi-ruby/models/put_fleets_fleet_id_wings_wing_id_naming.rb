@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # naming object
   class PutFleetsFleetIdWingsWingIdNaming
     # name string
@@ -159,7 +159,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

@@ -1,4 +1,4 @@
-# EsiRuby::ContractsApi
+# Esi::ContractsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -24,12 +24,12 @@ Returns contracts available to a character, only if the character is issuer, acc
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContractsApi.new
+api_instance = Esi::ContractsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -46,7 +46,7 @@ begin
   #Get contracts
   result = api_instance.get_characters_character_id_contracts(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContractsApi->get_characters_character_id_contracts: #{e}"
 end
 ```
@@ -90,12 +90,12 @@ Lists bids on a particular auction contract  --- Alternate route: `/dev/characte
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContractsApi.new
+api_instance = Esi::ContractsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -113,7 +113,7 @@ begin
   #Get contract bids
   result = api_instance.get_characters_character_id_contracts_contract_id_bids(character_idcontract_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContractsApi->get_characters_character_id_contracts_contract_id_bids: #{e}"
 end
 ```
@@ -157,12 +157,12 @@ Lists items of a particular contract  --- Alternate route: `/dev/characters/{cha
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContractsApi.new
+api_instance = Esi::ContractsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -180,7 +180,7 @@ begin
   #Get contract items
   result = api_instance.get_characters_character_id_contracts_contract_id_items(character_idcontract_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContractsApi->get_characters_character_id_contracts_contract_id_items: #{e}"
 end
 ```
@@ -224,12 +224,12 @@ Returns contracts available to a coporation, only if the corporation is issuer, 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContractsApi.new
+api_instance = Esi::ContractsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -246,7 +246,7 @@ begin
   #Get coporation contracts
   result = api_instance.get_corporations_corporation_id_contracts(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts: #{e}"
 end
 ```
@@ -290,12 +290,12 @@ Lists bids on a particular auction contract  --- Alternate route: `/dev/corporat
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContractsApi.new
+api_instance = Esi::ContractsApi.new
 
 contract_id = 56 # Integer | ID of a contract
 
@@ -314,7 +314,7 @@ begin
   #Get corporation contract bids
   result = api_instance.get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts_contract_id_bids: #{e}"
 end
 ```
@@ -359,12 +359,12 @@ Lists items of a particular contract  --- Alternate route: `/dev/corporations/{c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContractsApi.new
+api_instance = Esi::ContractsApi.new
 
 contract_id = 56 # Integer | ID of a contract
 
@@ -382,7 +382,7 @@ begin
   #Get corporation contract items
   result = api_instance.get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContractsApi->get_corporations_corporation_id_contracts_contract_id_items: #{e}"
 end
 ```

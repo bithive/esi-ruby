@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdContainersLogs200Ok
+# Esi::GetCorporationsCorporationIdContainersLogs200Ok
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetSovereigntyCampaignsParticipant
+# Esi::GetSovereigntyCampaignsParticipant
 
 ## Properties
 Name | Type | Description | Notes

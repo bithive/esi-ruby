@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdStatsMining
+# Esi::GetCharactersCharacterIdStatsMining
 
 ## Properties
 Name | Type | Description | Notes

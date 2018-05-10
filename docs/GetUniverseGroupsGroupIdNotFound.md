@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseGroupsGroupIdNotFound
+# Esi::GetUniverseGroupsGroupIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

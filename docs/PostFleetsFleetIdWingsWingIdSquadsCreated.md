@@ -1,4 +1,4 @@
-# EsiRuby::PostFleetsFleetIdWingsWingIdSquadsCreated
+# Esi::PostFleetsFleetIdWingsWingIdSquadsCreated
 
 ## Properties
 Name | Type | Description | Notes

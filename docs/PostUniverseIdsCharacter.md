@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsCharacter
+# Esi::PostUniverseIdsCharacter
 
 ## Properties
 Name | Type | Description | Notes

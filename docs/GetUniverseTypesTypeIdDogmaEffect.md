@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseTypesTypeIdDogmaEffect
+# Esi::GetUniverseTypesTypeIdDogmaEffect
 
 ## Properties
 Name | Type | Description | Notes

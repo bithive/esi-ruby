@@ -1,4 +1,4 @@
-# EsiRuby::InsuranceApi
+# Esi::InsuranceApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -19,7 +19,7 @@ Return available insurance levels for all ship types  --- Alternate route: `/dev
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::InsuranceApi.new
+api_instance = Esi::InsuranceApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -33,7 +33,7 @@ begin
   #List insurance levels
   result = api_instance.get_insurance_prices(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling InsuranceApi->get_insurance_prices: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStargatesStargateIdOk
+# Esi::GetUniverseStargatesStargateIdOk
 
 ## Properties
 Name | Type | Description | Notes

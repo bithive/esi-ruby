@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsRegionIdHistoryNotFound
+# Esi::GetMarketsRegionIdHistoryNotFound
 
 ## Properties
 Name | Type | Description | Notes

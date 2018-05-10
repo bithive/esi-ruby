@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStructuresStructureIdNotFound
+# Esi::GetUniverseStructuresStructureIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetIncursions200Ok
+# Esi::GetIncursions200Ok
 
 ## Properties
 Name | Type | Description | Notes

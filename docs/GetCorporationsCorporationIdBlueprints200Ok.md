@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdBlueprints200Ok
+# Esi::GetCorporationsCorporationIdBlueprints200Ok
 
 ## Properties
 Name | Type | Description | Notes

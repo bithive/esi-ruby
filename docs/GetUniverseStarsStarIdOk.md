@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStarsStarIdOk
+# Esi::GetUniverseStarsStarIdOk
 
 ## Properties
 Name | Type | Description | Notes

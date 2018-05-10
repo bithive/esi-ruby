@@ -1,4 +1,4 @@
-# EsiRuby::FleetsApi
+# Esi::FleetsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -32,12 +32,12 @@ Kick a fleet member  --- Alternate route: `/dev/fleets/{fleet_id}/members/{membe
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -53,7 +53,7 @@ opts = {
 begin
   #Kick fleet member
   api_instance.delete_fleets_fleet_id_members_member_id(fleet_id, member_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->delete_fleets_fleet_id_members_member_id: #{e}"
 end
 ```
@@ -96,12 +96,12 @@ Delete a fleet squad, only empty squads can be deleted  --- Alternate route: `/d
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -117,7 +117,7 @@ opts = {
 begin
   #Delete fleet squad
   api_instance.delete_fleets_fleet_id_squads_squad_id(fleet_id, squad_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->delete_fleets_fleet_id_squads_squad_id: #{e}"
 end
 ```
@@ -160,12 +160,12 @@ Delete a fleet wing, only empty wings can be deleted. The wing may contain squad
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -181,7 +181,7 @@ opts = {
 begin
   #Delete fleet wing
   api_instance.delete_fleets_fleet_id_wings_wing_id(fleet_id, wing_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->delete_fleets_fleet_id_wings_wing_id: #{e}"
 end
 ```
@@ -224,12 +224,12 @@ Return the fleet ID the character is in, if any.  --- Alternate route: `/dev/cha
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -245,7 +245,7 @@ begin
   #Get character fleet info
   result = api_instance.get_characters_character_id_fleet(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->get_characters_character_id_fleet: #{e}"
 end
 ```
@@ -288,12 +288,12 @@ Return details about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  Al
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -309,7 +309,7 @@ begin
   #Get fleet information
   result = api_instance.get_fleets_fleet_id(fleet_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->get_fleets_fleet_id: #{e}"
 end
 ```
@@ -352,12 +352,12 @@ Return information about fleet members  --- Alternate route: `/dev/fleets/{fleet
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -374,7 +374,7 @@ begin
   #Get fleet members
   result = api_instance.get_fleets_fleet_id_members(fleet_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->get_fleets_fleet_id_members: #{e}"
 end
 ```
@@ -418,12 +418,12 @@ Return information about wings in a fleet  --- Alternate route: `/dev/fleets/{fl
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -440,7 +440,7 @@ begin
   #Get fleet wings
   result = api_instance.get_fleets_fleet_id_wings(fleet_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->get_fleets_fleet_id_wings: #{e}"
 end
 ```
@@ -484,16 +484,16 @@ Invite a character into the fleet. If a character has a CSPA charge set it is no
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
-invitation = EsiRuby::PostFleetsFleetIdMembersInvitation.new # PostFleetsFleetIdMembersInvitation | Details of the invitation
+invitation = Esi::PostFleetsFleetIdMembersInvitation.new # PostFleetsFleetIdMembersInvitation | Details of the invitation
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -505,7 +505,7 @@ opts = {
 begin
   #Create fleet invitation
   api_instance.post_fleets_fleet_id_members(fleet_id, invitation, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->post_fleets_fleet_id_members: #{e}"
 end
 ```
@@ -548,12 +548,12 @@ Create a new wing in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -568,7 +568,7 @@ begin
   #Create fleet wing
   result = api_instance.post_fleets_fleet_id_wings(fleet_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->post_fleets_fleet_id_wings: #{e}"
 end
 ```
@@ -610,12 +610,12 @@ Create a new squad in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wing
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
@@ -632,7 +632,7 @@ begin
   #Create fleet squad
   result = api_instance.post_fleets_fleet_id_wings_wing_id_squads(fleet_id, wing_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->post_fleets_fleet_id_wings_wing_id_squads: #{e}"
 end
 ```
@@ -675,16 +675,16 @@ Update settings about a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/`  A
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
-new_settings = EsiRuby::PutFleetsFleetIdNewSettings.new # PutFleetsFleetIdNewSettings | What to update for this fleet
+new_settings = Esi::PutFleetsFleetIdNewSettings.new # PutFleetsFleetIdNewSettings | What to update for this fleet
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -696,7 +696,7 @@ opts = {
 begin
   #Update fleet
   api_instance.put_fleets_fleet_id(fleet_id, new_settings, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->put_fleets_fleet_id: #{e}"
 end
 ```
@@ -739,18 +739,18 @@ Move a fleet member around  --- Alternate route: `/dev/fleets/{fleet_id}/members
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
 member_id = 56 # Integer | The character ID of a member in this fleet
 
-movement = EsiRuby::PutFleetsFleetIdMembersMemberIdMovement.new # PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
+movement = Esi::PutFleetsFleetIdMembersMemberIdMovement.new # PutFleetsFleetIdMembersMemberIdMovement | Details of the invitation
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -762,7 +762,7 @@ opts = {
 begin
   #Move fleet member
   api_instance.put_fleets_fleet_id_members_member_id(fleet_id, member_id, movement, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->put_fleets_fleet_id_members_member_id: #{e}"
 end
 ```
@@ -806,16 +806,16 @@ Rename a fleet squad  --- Alternate route: `/dev/fleets/{fleet_id}/squads/{squad
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
-naming = EsiRuby::PutFleetsFleetIdSquadsSquadIdNaming.new # PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
+naming = Esi::PutFleetsFleetIdSquadsSquadIdNaming.new # PutFleetsFleetIdSquadsSquadIdNaming | New name of the squad
 
 squad_id = 789 # Integer | The squad to rename
 
@@ -829,7 +829,7 @@ opts = {
 begin
   #Rename fleet squad
   api_instance.put_fleets_fleet_id_squads_squad_id(fleet_id, naming, squad_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->put_fleets_fleet_id_squads_squad_id: #{e}"
 end
 ```
@@ -873,16 +873,16 @@ Rename a fleet wing  --- Alternate route: `/dev/fleets/{fleet_id}/wings/{wing_id
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FleetsApi.new
+api_instance = Esi::FleetsApi.new
 
 fleet_id = 789 # Integer | ID for a fleet
 
-naming = EsiRuby::PutFleetsFleetIdWingsWingIdNaming.new # PutFleetsFleetIdWingsWingIdNaming | New name of the wing
+naming = Esi::PutFleetsFleetIdWingsWingIdNaming.new # PutFleetsFleetIdWingsWingIdNaming | New name of the wing
 
 wing_id = 789 # Integer | The wing to rename
 
@@ -896,7 +896,7 @@ opts = {
 begin
   #Rename fleet wing
   api_instance.put_fleets_fleet_id_wings_wing_id(fleet_id, naming, wing_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FleetsApi->put_fleets_fleet_id_wings_wing_id: #{e}"
 end
 ```

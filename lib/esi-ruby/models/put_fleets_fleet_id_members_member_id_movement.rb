@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # movement object
   class PutFleetsFleetIdMembersMemberIdMovement
     # If a character is moved to the `fleet_commander` role, neither `wing_id` or `squad_id` should be specified. If a character is moved to the `wing_commander` role, only `wing_id` should be specified. If a character is moved to the `squad_commander` role, both `wing_id` and `squad_id` should be specified. If a character is moved to the `squad_member` role, both `wing_id` and `squad_id` should be specified.
@@ -224,7 +224,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

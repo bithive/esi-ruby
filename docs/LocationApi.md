@@ -1,4 +1,4 @@
-# EsiRuby::LocationApi
+# Esi::LocationApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -21,12 +21,12 @@ Information about the characters current location. Returns the current solar sys
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::LocationApi.new
+api_instance = Esi::LocationApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -42,7 +42,7 @@ begin
   #Get character location
   result = api_instance.get_characters_character_id_location(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling LocationApi->get_characters_character_id_location: #{e}"
 end
 ```
@@ -85,12 +85,12 @@ Checks if the character is currently online  --- Alternate route: `/dev/characte
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::LocationApi.new
+api_instance = Esi::LocationApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -106,7 +106,7 @@ begin
   #Get character online
   result = api_instance.get_characters_character_id_online(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling LocationApi->get_characters_character_id_online: #{e}"
 end
 ```
@@ -149,12 +149,12 @@ Get the current ship type, name and id  --- Alternate route: `/dev/characters/{c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::LocationApi.new
+api_instance = Esi::LocationApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -170,7 +170,7 @@ begin
   #Get current ship
   result = api_instance.get_characters_character_id_ship(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling LocationApi->get_characters_character_id_ship: #{e}"
 end
 ```

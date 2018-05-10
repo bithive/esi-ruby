@@ -1,4 +1,4 @@
-# EsiRuby::PostFleetsFleetIdWingsCreated
+# Esi::PostFleetsFleetIdWingsCreated
 
 ## Properties
 Name | Type | Description | Notes

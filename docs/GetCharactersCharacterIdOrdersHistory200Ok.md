@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdOrdersHistory200Ok
+# Esi::GetCharactersCharacterIdOrdersHistory200Ok
 
 ## Properties
 Name | Type | Description | Notes

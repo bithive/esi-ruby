@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsAlliance
+# Esi::PostUniverseIdsAlliance
 
 ## Properties
 Name | Type | Description | Notes

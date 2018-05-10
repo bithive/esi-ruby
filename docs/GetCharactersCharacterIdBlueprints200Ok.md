@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdBlueprints200Ok
+# Esi::GetCharactersCharacterIdBlueprints200Ok
 
 ## Properties
 Name | Type | Description | Notes

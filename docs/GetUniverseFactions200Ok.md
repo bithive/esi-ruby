@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseFactions200Ok
+# Esi::GetUniverseFactions200Ok
 
 ## Properties
 Name | Type | Description | Notes

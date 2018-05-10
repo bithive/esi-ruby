@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseMoonsMoonIdNotFound
+# Esi::GetUniverseMoonsMoonIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

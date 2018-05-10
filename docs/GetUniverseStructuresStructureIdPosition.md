@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStructuresStructureIdPosition
+# Esi::GetUniverseStructuresStructureIdPosition
 
 ## Properties
 Name | Type | Description | Notes

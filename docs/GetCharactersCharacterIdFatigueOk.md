@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdFatigueOk
+# Esi::GetCharactersCharacterIdFatigueOk
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetAlliancesAllianceIdContacts200Ok
+# Esi::GetAlliancesAllianceIdContacts200Ok
 
 ## Properties
 Name | Type | Description | Notes

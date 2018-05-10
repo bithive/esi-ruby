@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdRolesHistory200Ok
+# Esi::GetCorporationsCorporationIdRolesHistory200Ok
 
 ## Properties
 Name | Type | Description | Notes

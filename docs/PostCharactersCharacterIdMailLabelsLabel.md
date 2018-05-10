@@ -1,4 +1,4 @@
-# EsiRuby::PostCharactersCharacterIdMailLabelsLabel
+# Esi::PostCharactersCharacterIdMailLabelsLabel
 
 ## Properties
 Name | Type | Description | Notes

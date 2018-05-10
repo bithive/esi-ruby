@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseMoonsMoonIdOk
+# Esi::GetUniverseMoonsMoonIdOk
 
 ## Properties
 Name | Type | Description | Notes

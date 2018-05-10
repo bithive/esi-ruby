@@ -1,4 +1,4 @@
-# EsiRuby::ServiceUnavailable
+# Esi::ServiceUnavailable
 
 ## Properties
 Name | Type | Description | Notes

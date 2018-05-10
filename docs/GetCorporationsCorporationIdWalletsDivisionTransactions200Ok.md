@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdWalletsDivisionTransactions200Ok
+# Esi::GetCorporationsCorporationIdWalletsDivisionTransactions200Ok
 
 ## Properties
 Name | Type | Description | Notes

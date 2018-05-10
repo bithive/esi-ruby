@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseGroupsGroupIdOk
+# Esi::GetUniverseGroupsGroupIdOk
 
 ## Properties
 Name | Type | Description | Notes

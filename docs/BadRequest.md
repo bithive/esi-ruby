@@ -1,4 +1,4 @@
-# EsiRuby::BadRequest
+# Esi::BadRequest
 
 ## Properties
 Name | Type | Description | Notes

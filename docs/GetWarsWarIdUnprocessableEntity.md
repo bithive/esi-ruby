@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdUnprocessableEntity
+# Esi::GetWarsWarIdUnprocessableEntity
 
 ## Properties
 Name | Type | Description | Notes

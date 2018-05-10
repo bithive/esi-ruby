@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsRegionIdOrdersUnprocessableEntity
+# Esi::GetMarketsRegionIdOrdersUnprocessableEntity
 
 ## Properties
 Name | Type | Description | Notes

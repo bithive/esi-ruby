@@ -1,4 +1,4 @@
-# EsiRuby::PostCharactersAffiliationNotFound
+# Esi::PostCharactersAffiliationNotFound
 
 ## Properties
 Name | Type | Description | Notes

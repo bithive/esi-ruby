@@ -1,4 +1,4 @@
-# EsiRuby::DeleteFleetsFleetIdMembersMemberIdNotFound
+# Esi::DeleteFleetsFleetIdMembersMemberIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdAlly
+# Esi::GetWarsWarIdAlly
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetFleetsFleetIdWings200Ok
+# Esi::GetFleetsFleetIdWings200Ok
 
 ## Properties
 Name | Type | Description | Notes

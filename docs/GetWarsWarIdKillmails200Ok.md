@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdKillmails200Ok
+# Esi::GetWarsWarIdKillmails200Ok
 
 ## Properties
 Name | Type | Description | Notes

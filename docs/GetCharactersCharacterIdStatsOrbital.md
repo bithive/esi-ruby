@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdStatsOrbital
+# Esi::GetCharactersCharacterIdStatsOrbital
 
 ## Properties
 Name | Type | Description | Notes

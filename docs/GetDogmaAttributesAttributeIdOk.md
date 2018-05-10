@@ -1,4 +1,4 @@
-# EsiRuby::GetDogmaAttributesAttributeIdOk
+# Esi::GetDogmaAttributesAttributeIdOk
 
 ## Properties
 Name | Type | Description | Notes

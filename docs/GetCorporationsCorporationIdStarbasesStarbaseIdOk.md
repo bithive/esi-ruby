@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdStarbasesStarbaseIdOk
+# Esi::GetCorporationsCorporationIdStarbasesStarbaseIdOk
 
 ## Properties
 Name | Type | Description | Notes

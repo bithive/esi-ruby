@@ -1,4 +1,4 @@
-# EsiRuby::PostCharactersCharacterIdMailRecipient
+# Esi::PostCharactersCharacterIdMailRecipient
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::MarketApi
+# Esi::MarketApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -29,12 +29,12 @@ List open market orders placed by a character  --- Alternate route: `/dev/charac
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -50,7 +50,7 @@ begin
   #List open orders from a character
   result = api_instance.get_characters_character_id_orders(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_characters_character_id_orders: #{e}"
 end
 ```
@@ -93,12 +93,12 @@ List cancelled and expired market orders placed by a character up to 90 days in 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -115,7 +115,7 @@ begin
   #List historical orders by a character
   result = api_instance.get_characters_character_id_orders_history(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_characters_character_id_orders_history: #{e}"
 end
 ```
@@ -159,12 +159,12 @@ List open market orders placed on behalf of a corporation  --- Alternate route: 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -181,7 +181,7 @@ begin
   #List open orders from a corporation
   result = api_instance.get_corporations_corporation_id_orders(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_corporations_corporation_id_orders: #{e}"
 end
 ```
@@ -225,12 +225,12 @@ List cancelled and expired market orders placed on behalf of a corporation up to
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -247,7 +247,7 @@ begin
   #List historical orders from a corporation
   result = api_instance.get_corporations_corporation_id_orders_history(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_corporations_corporation_id_orders_history: #{e}"
 end
 ```
@@ -291,7 +291,7 @@ Get a list of item groups  --- Alternate route: `/dev/markets/groups/`  Alternat
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -304,7 +304,7 @@ begin
   #Get item groups
   result = api_instance.get_markets_groups(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_groups: #{e}"
 end
 ```
@@ -345,7 +345,7 @@ Get information on an item group  --- Alternate route: `/dev/markets/groups/{mar
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 market_group_id = 56 # Integer | An Eve item group ID
 
@@ -361,7 +361,7 @@ begin
   #Get item group information
   result = api_instance.get_markets_groups_market_group_id(market_group_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_groups_market_group_id: #{e}"
 end
 ```
@@ -404,7 +404,7 @@ Return a list of prices  --- Alternate route: `/dev/markets/prices/`  Alternate 
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -417,7 +417,7 @@ begin
   #List market prices
   result = api_instance.get_markets_prices(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_prices: #{e}"
 end
 ```
@@ -458,7 +458,7 @@ Return a list of historical market statistics for the specified type in a region
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 region_id = 56 # Integer | Return statistics in this region
 
@@ -475,7 +475,7 @@ begin
   #List historical market statistics in a region
   result = api_instance.get_markets_region_id_history(region_id, type_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_region_id_history: #{e}"
 end
 ```
@@ -518,7 +518,7 @@ Return a list of orders in a region  --- Alternate route: `/dev/markets/{region_
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 order_type = 'all' # String | Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and sell orders.
 
@@ -537,7 +537,7 @@ begin
   #List orders in a region
   result = api_instance.get_markets_region_id_orders(order_type, region_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_region_id_orders: #{e}"
 end
 ```
@@ -582,7 +582,7 @@ Return a list of type IDs that have active orders in the region, for efficient m
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 region_id = 56 # Integer | Return statistics in this region
 
@@ -598,7 +598,7 @@ begin
   #List type IDs relevant to a market
   result = api_instance.get_markets_region_id_types(region_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_region_id_types: #{e}"
 end
 ```
@@ -641,12 +641,12 @@ Return all orders in a structure  --- Alternate route: `/dev/markets/structures/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MarketApi.new
+api_instance = Esi::MarketApi.new
 
 structure_id = 789 # Integer | Return orders in this structure
 
@@ -663,7 +663,7 @@ begin
   #List orders in a structure
   result = api_instance.get_markets_structures_structure_id(structure_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MarketApi->get_markets_structures_structure_id: #{e}"
 end
 ```

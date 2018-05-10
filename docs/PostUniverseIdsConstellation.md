@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsConstellation
+# Esi::PostUniverseIdsConstellation
 
 ## Properties
 Name | Type | Description | Notes

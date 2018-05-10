@@ -1,4 +1,4 @@
-# EsiRuby::WalletApi
+# Esi::WalletApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -24,12 +24,12 @@ Returns a character's wallet balance  --- Alternate route: `/dev/characters/{cha
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::WalletApi.new
+api_instance = Esi::WalletApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -45,7 +45,7 @@ begin
   #Get a character's wallet balance
   result = api_instance.get_characters_character_id_wallet(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WalletApi->get_characters_character_id_wallet: #{e}"
 end
 ```
@@ -88,12 +88,12 @@ Retrieve the given character's wallet journal going 30 days back  --- Alternate 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::WalletApi.new
+api_instance = Esi::WalletApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -110,7 +110,7 @@ begin
   #Get character wallet journal
   result = api_instance.get_characters_character_id_wallet_journal(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WalletApi->get_characters_character_id_wallet_journal: #{e}"
 end
 ```
@@ -154,12 +154,12 @@ Get wallet transactions of a character  --- Alternate route: `/dev/characters/{c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::WalletApi.new
+api_instance = Esi::WalletApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -176,7 +176,7 @@ begin
   #Get wallet transactions
   result = api_instance.get_characters_character_id_wallet_transactions(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WalletApi->get_characters_character_id_wallet_transactions: #{e}"
 end
 ```
@@ -220,12 +220,12 @@ Get a corporation's wallets  --- Alternate route: `/dev/corporations/{corporatio
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::WalletApi.new
+api_instance = Esi::WalletApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -241,7 +241,7 @@ begin
   #Returns a corporation's wallet balance
   result = api_instance.get_corporations_corporation_id_wallets(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WalletApi->get_corporations_corporation_id_wallets: #{e}"
 end
 ```
@@ -284,12 +284,12 @@ Retrieve the given corporation's wallet journal for the given division going 30 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::WalletApi.new
+api_instance = Esi::WalletApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -308,7 +308,7 @@ begin
   #Get corporation wallet journal
   result = api_instance.get_corporations_corporation_id_wallets_division_journal(corporation_iddivision, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WalletApi->get_corporations_corporation_id_wallets_division_journal: #{e}"
 end
 ```
@@ -353,12 +353,12 @@ Get wallet transactions of a corporation  --- Alternate route: `/dev/corporation
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::WalletApi.new
+api_instance = Esi::WalletApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -377,7 +377,7 @@ begin
   #Get corporation wallet transactions
   result = api_instance.get_corporations_corporation_id_wallets_division_transactions(corporation_iddivision, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling WalletApi->get_corporations_corporation_id_wallets_division_transactions: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdOpportunities200Ok
+# Esi::GetCharactersCharacterIdOpportunities200Ok
 
 ## Properties
 Name | Type | Description | Notes

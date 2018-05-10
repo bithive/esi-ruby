@@ -1,4 +1,4 @@
-# EsiRuby::Forbidden
+# Esi::Forbidden
 
 ## Properties
 Name | Type | Description | Notes

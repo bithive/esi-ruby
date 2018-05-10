@@ -1,4 +1,4 @@
-# EsiRuby::GetIndustrySystems200Ok
+# Esi::GetIndustrySystems200Ok
 
 ## Properties
 Name | Type | Description | Notes

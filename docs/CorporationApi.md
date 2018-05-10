@@ -1,4 +1,4 @@
-# EsiRuby::CorporationApi
+# Esi::CorporationApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -43,7 +43,7 @@ Public information about a corporation  --- Alternate route: `/dev/corporations/
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -58,7 +58,7 @@ begin
   #Get corporation information
   result = api_instance.get_corporations_corporation_id(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id: #{e}"
 end
 ```
@@ -100,7 +100,7 @@ Get a list of all the alliances a corporation has been a member of  --- Alternat
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -115,7 +115,7 @@ begin
   #Get alliance history
   result = api_instance.get_corporations_corporation_id_alliancehistory(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_alliancehistory: #{e}"
 end
 ```
@@ -157,12 +157,12 @@ Returns a list of blueprints the corporation owns  --- Alternate route: `/dev/co
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -179,7 +179,7 @@ begin
   #Get corporation blueprints
   result = api_instance.get_corporations_corporation_id_blueprints(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_blueprints: #{e}"
 end
 ```
@@ -223,12 +223,12 @@ Returns logs recorded in the past seven days from all audit log secure container
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -245,7 +245,7 @@ begin
   #Get all corporation ALSC logs
   result = api_instance.get_corporations_corporation_id_containers_logs(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_containers_logs: #{e}"
 end
 ```
@@ -289,12 +289,12 @@ Return corporation hangar and wallet division names, only show if a division is 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -310,7 +310,7 @@ begin
   #Get corporation divisions
   result = api_instance.get_corporations_corporation_id_divisions(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_divisions: #{e}"
 end
 ```
@@ -353,12 +353,12 @@ Return a corporation's facilities  --- Alternate route: `/dev/corporations/{corp
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -374,7 +374,7 @@ begin
   #Get corporation facilities
   result = api_instance.get_corporations_corporation_id_facilities(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_facilities: #{e}"
 end
 ```
@@ -417,7 +417,7 @@ Get the icon urls for a corporation  --- Alternate route: `/dev/corporations/{co
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -432,7 +432,7 @@ begin
   #Get corporation icon
   result = api_instance.get_corporations_corporation_id_icons(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_icons: #{e}"
 end
 ```
@@ -474,12 +474,12 @@ Returns a corporation's medals  --- Alternate route: `/dev/corporations/{corpora
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -496,7 +496,7 @@ begin
   #Get corporation medals
   result = api_instance.get_corporations_corporation_id_medals(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_medals: #{e}"
 end
 ```
@@ -540,12 +540,12 @@ Returns medals issued by a corporation  --- Alternate route: `/dev/corporations/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -562,7 +562,7 @@ begin
   #Get corporation issued medals
   result = api_instance.get_corporations_corporation_id_medals_issued(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_medals_issued: #{e}"
 end
 ```
@@ -606,12 +606,12 @@ Return the current member list of a corporation, the token's character need to b
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -627,7 +627,7 @@ begin
   #Get corporation members
   result = api_instance.get_corporations_corporation_id_members(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_members: #{e}"
 end
 ```
@@ -670,12 +670,12 @@ Return a corporation's member limit, not including CEO himself  --- Alternate ro
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -691,7 +691,7 @@ begin
   #Get corporation member limit
   result = api_instance.get_corporations_corporation_id_members_limit(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_members_limit: #{e}"
 end
 ```
@@ -734,12 +734,12 @@ Returns a corporation's members' titles  --- Alternate route: `/dev/corporations
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -755,7 +755,7 @@ begin
   #Get corporation's members' titles
   result = api_instance.get_corporations_corporation_id_members_titles(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_members_titles: #{e}"
 end
 ```
@@ -798,12 +798,12 @@ Returns additional information about a corporation's members which helps trackin
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -819,7 +819,7 @@ begin
   #Track corporation members
   result = api_instance.get_corporations_corporation_id_membertracking(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_membertracking: #{e}"
 end
 ```
@@ -862,12 +862,12 @@ Get a list of corporation outpost IDs Note: This endpoint will be removed once o
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -884,7 +884,7 @@ begin
   #Get corporation outposts
   result = api_instance.get_corporations_corporation_id_outposts(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_outposts: #{e}"
 end
 ```
@@ -928,12 +928,12 @@ Get details about a given outpost. Note: This endpoint will be removed once outp
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -951,7 +951,7 @@ begin
   #Get corporation outpost details
   result = api_instance.get_corporations_corporation_id_outposts_outpost_id(corporation_idoutpost_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_outposts_outpost_id: #{e}"
 end
 ```
@@ -995,12 +995,12 @@ Return the roles of all members if the character has the personnel manager role 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1016,7 +1016,7 @@ begin
   #Get corporation member roles
   result = api_instance.get_corporations_corporation_id_roles(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_roles: #{e}"
 end
 ```
@@ -1059,12 +1059,12 @@ Return how roles have changed for a coporation's members, up to a month  --- Alt
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1081,7 +1081,7 @@ begin
   #Get corporation member roles history
   result = api_instance.get_corporations_corporation_id_roles_history(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_roles_history: #{e}"
 end
 ```
@@ -1125,12 +1125,12 @@ Return the current shareholders of a corporation.  --- Alternate route: `/dev/co
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1147,7 +1147,7 @@ begin
   #Get corporation shareholders
   result = api_instance.get_corporations_corporation_id_shareholders(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_shareholders: #{e}"
 end
 ```
@@ -1191,12 +1191,12 @@ Return corporation standings from agents, NPC corporations, and factions  --- Al
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1213,7 +1213,7 @@ begin
   #Get corporation standings
   result = api_instance.get_corporations_corporation_id_standings(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_standings: #{e}"
 end
 ```
@@ -1257,12 +1257,12 @@ Returns list of corporation starbases (POSes)  --- Alternate route: `/dev/corpor
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1279,7 +1279,7 @@ begin
   #Get corporation starbases (POSes)
   result = api_instance.get_corporations_corporation_id_starbases(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_starbases: #{e}"
 end
 ```
@@ -1323,12 +1323,12 @@ Returns various settings and fuels of a starbase (POS)  --- Alternate route: `/d
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1348,7 +1348,7 @@ begin
   #Get starbase (POS) detail
   result = api_instance.get_corporations_corporation_id_starbases_starbase_id(corporation_idstarbase_id, system_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_starbases_starbase_id: #{e}"
 end
 ```
@@ -1393,12 +1393,12 @@ Get a list of corporation structures. This route's version includes the changes 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1416,7 +1416,7 @@ begin
   #Get corporation structures
   result = api_instance.get_corporations_corporation_id_structures(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_structures: #{e}"
 end
 ```
@@ -1461,12 +1461,12 @@ Returns a corporation's titles  --- Alternate route: `/dev/corporations/{corpora
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -1482,7 +1482,7 @@ begin
   #Get corporation titles
   result = api_instance.get_corporations_corporation_id_titles(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_corporation_id_titles: #{e}"
 end
 ```
@@ -1525,7 +1525,7 @@ Resolve a set of corporation IDs to corporation names  --- Alternate route: `/de
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 corporation_ids = [56] # Array<Integer> | A comma separated list of corporation IDs
 
@@ -1540,7 +1540,7 @@ begin
   #Get corporation names
   result = api_instance.get_corporations_names(corporation_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_names: #{e}"
 end
 ```
@@ -1582,7 +1582,7 @@ Get a list of npc corporations  --- Alternate route: `/dev/corporations/npccorps
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CorporationApi.new
+api_instance = Esi::CorporationApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1595,7 +1595,7 @@ begin
   #Get npc corporations
   result = api_instance.get_corporations_npccorps(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CorporationApi->get_corporations_npccorps: #{e}"
 end
 ```

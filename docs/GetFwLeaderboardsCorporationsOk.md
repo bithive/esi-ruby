@@ -1,4 +1,4 @@
-# EsiRuby::GetFwLeaderboardsCorporationsOk
+# Esi::GetFwLeaderboardsCorporationsOk
 
 ## Properties
 Name | Type | Description | Notes

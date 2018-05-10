@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseAsteroidBeltsAsteroidBeltIdPosition
+# Esi::GetUniverseAsteroidBeltsAsteroidBeltIdPosition
 
 ## Properties
 Name | Type | Description | Notes

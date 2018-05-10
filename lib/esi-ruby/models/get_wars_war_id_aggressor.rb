@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # The aggressor corporation or alliance that declared this war, only contains either corporation_id or alliance_id
   class GetWarsWarIdAggressor
     # Alliance ID if and only if the aggressor is an alliance
@@ -175,7 +175,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

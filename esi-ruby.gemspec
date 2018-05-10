@@ -17,7 +17,7 @@ require "esi-ruby/version"
 
 Gem::Specification.new do |s|
   s.name        = "esi-ruby"
-  s.version     = EsiRuby::VERSION
+  s.version     = Esi::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Swagger-Codegen"]
   s.email       = [""]

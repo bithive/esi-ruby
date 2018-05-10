@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStationsStationIdPosition
+# Esi::GetUniverseStationsStationIdPosition
 
 ## Properties
 Name | Type | Description | Notes

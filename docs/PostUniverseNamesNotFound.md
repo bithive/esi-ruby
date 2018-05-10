@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseNamesNotFound
+# Esi::PostUniverseNamesNotFound
 
 ## Properties
 Name | Type | Description | Notes

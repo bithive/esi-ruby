@@ -1,4 +1,4 @@
-# EsiRuby::MailApi
+# Esi::MailApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -27,12 +27,12 @@ Delete a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/l
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -48,7 +48,7 @@ opts = {
 begin
   #Delete a mail label
   api_instance.delete_characters_character_id_mail_labels_label_id(character_idlabel_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->delete_characters_character_id_mail_labels_label_id: #{e}"
 end
 ```
@@ -91,12 +91,12 @@ Delete a mail  --- Alternate route: `/dev/characters/{character_id}/mail/{mail_i
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -112,7 +112,7 @@ opts = {
 begin
   #Delete a mail
   api_instance.delete_characters_character_id_mail_mail_id(character_idmail_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->delete_characters_character_id_mail_mail_id: #{e}"
 end
 ```
@@ -155,12 +155,12 @@ Return the 50 most recent mail headers belonging to the character that match the
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -178,7 +178,7 @@ begin
   #Return mail headers
   result = api_instance.get_characters_character_id_mail(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->get_characters_character_id_mail: #{e}"
 end
 ```
@@ -223,12 +223,12 @@ Return a list of the users mail labels, unread counts for each label and a total
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -244,7 +244,7 @@ begin
   #Get mail labels and unread counts
   result = api_instance.get_characters_character_id_mail_labels(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->get_characters_character_id_mail_labels: #{e}"
 end
 ```
@@ -287,12 +287,12 @@ Return all mailing lists that the character is subscribed to  --- Alternate rout
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -308,7 +308,7 @@ begin
   #Return mailing list subscriptions
   result = api_instance.get_characters_character_id_mail_lists(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->get_characters_character_id_mail_lists: #{e}"
 end
 ```
@@ -351,12 +351,12 @@ Return the contents of an EVE mail  --- Alternate route: `/dev/characters/{chara
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -374,7 +374,7 @@ begin
   #Return a mail
   result = api_instance.get_characters_character_id_mail_mail_id(character_idmail_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->get_characters_character_id_mail_mail_id: #{e}"
 end
 ```
@@ -418,16 +418,16 @@ Create and send a new mail  --- Alternate route: `/dev/characters/{character_id}
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-mail = EsiRuby::PostCharactersCharacterIdMailMail.new # PostCharactersCharacterIdMailMail | The mail to send
+mail = Esi::PostCharactersCharacterIdMailMail.new # PostCharactersCharacterIdMailMail | The mail to send
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -440,7 +440,7 @@ begin
   #Send a new mail
   result = api_instance.post_characters_character_id_mail(character_idmail, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->post_characters_character_id_mail: #{e}"
 end
 ```
@@ -483,16 +483,16 @@ Create a mail label  --- Alternate route: `/dev/characters/{character_id}/mail/l
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-label = EsiRuby::PostCharactersCharacterIdMailLabelsLabel.new # PostCharactersCharacterIdMailLabelsLabel | Label to create
+label = Esi::PostCharactersCharacterIdMailLabelsLabel.new # PostCharactersCharacterIdMailLabelsLabel | Label to create
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -505,7 +505,7 @@ begin
   #Create a mail label
   result = api_instance.post_characters_character_id_mail_labels(character_idlabel, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->post_characters_character_id_mail_labels: #{e}"
 end
 ```
@@ -548,16 +548,16 @@ Update metadata about a mail  --- Alternate route: `/dev/characters/{character_i
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::MailApi.new
+api_instance = Esi::MailApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-contents = EsiRuby::PutCharactersCharacterIdMailMailIdContents.new # PutCharactersCharacterIdMailMailIdContents | Data used to update the mail
+contents = Esi::PutCharactersCharacterIdMailMailIdContents.new # PutCharactersCharacterIdMailMailIdContents | Data used to update the mail
 
 mail_id = 56 # Integer | An EVE mail ID
 
@@ -571,7 +571,7 @@ opts = {
 begin
   #Update metadata about a mail
   api_instance.put_characters_character_id_mail_mail_id(character_idcontents, mail_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling MailApi->put_characters_character_id_mail_mail_id: #{e}"
 end
 ```

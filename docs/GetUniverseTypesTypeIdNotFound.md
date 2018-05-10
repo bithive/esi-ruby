@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseTypesTypeIdNotFound
+# Esi::GetUniverseTypesTypeIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

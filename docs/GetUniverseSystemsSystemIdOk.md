@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseSystemsSystemIdOk
+# Esi::GetUniverseSystemsSystemIdOk
 
 ## Properties
 Name | Type | Description | Notes

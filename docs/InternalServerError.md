@@ -1,4 +1,4 @@
-# EsiRuby::InternalServerError
+# Esi::InternalServerError
 
 ## Properties
 Name | Type | Description | Notes

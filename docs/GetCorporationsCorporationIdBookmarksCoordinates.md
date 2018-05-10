@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdBookmarksCoordinates
+# Esi::GetCorporationsCorporationIdBookmarksCoordinates
 
 ## Properties
 Name | Type | Description | Notes

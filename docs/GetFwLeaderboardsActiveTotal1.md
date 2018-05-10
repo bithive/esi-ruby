@@ -1,4 +1,4 @@
-# EsiRuby::GetFwLeaderboardsActiveTotal1
+# Esi::GetFwLeaderboardsActiveTotal1
 
 ## Properties
 Name | Type | Description | Notes

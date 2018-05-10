@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseRaces200Ok
+# Esi::GetUniverseRaces200Ok
 
 ## Properties
 Name | Type | Description | Notes

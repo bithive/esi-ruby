@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseTypesTypeIdDogmaAttribute
+# Esi::GetUniverseTypesTypeIdDogmaAttribute
 
 ## Properties
 Name | Type | Description | Notes

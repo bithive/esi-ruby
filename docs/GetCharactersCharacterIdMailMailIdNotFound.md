@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdMailMailIdNotFound
+# Esi::GetCharactersCharacterIdMailMailIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

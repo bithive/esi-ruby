@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseGraphicsGraphicIdNotFound
+# Esi::GetUniverseGraphicsGraphicIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

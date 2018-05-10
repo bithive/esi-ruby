@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsPrices200Ok
+# Esi::GetMarketsPrices200Ok
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationCorporationIdMiningExtractions200Ok
+# Esi::GetCorporationCorporationIdMiningExtractions200Ok
 
 ## Properties
 Name | Type | Description | Notes

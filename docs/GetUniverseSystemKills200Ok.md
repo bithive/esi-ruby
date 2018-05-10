@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseSystemKills200Ok
+# Esi::GetUniverseSystemKills200Ok
 
 ## Properties
 Name | Type | Description | Notes

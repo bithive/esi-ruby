@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdWalletTransactions200Ok
+# Esi::GetCharactersCharacterIdWalletTransactions200Ok
 
 ## Properties
 Name | Type | Description | Notes

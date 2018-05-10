@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseAsteroidBeltsAsteroidBeltIdOk
+# Esi::GetUniverseAsteroidBeltsAsteroidBeltIdOk
 
 ## Properties
 Name | Type | Description | Notes

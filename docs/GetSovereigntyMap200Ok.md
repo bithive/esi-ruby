@@ -1,4 +1,4 @@
-# EsiRuby::GetSovereigntyMap200Ok
+# Esi::GetSovereigntyMap200Ok
 
 ## Properties
 Name | Type | Description | Notes

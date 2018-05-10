@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdContractsContractIdItems520Response
+# Esi::GetCorporationsCorporationIdContractsContractIdItems520Response
 
 ## Properties
 Name | Type | Description | Notes

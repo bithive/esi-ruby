@@ -1,4 +1,4 @@
-# EsiRuby::GetOpportunitiesTasksTaskIdOk
+# Esi::GetOpportunitiesTasksTaskIdOk
 
 ## Properties
 Name | Type | Description | Notes

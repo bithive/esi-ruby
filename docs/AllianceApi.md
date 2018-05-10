@@ -1,4 +1,4 @@
-# EsiRuby::AllianceApi
+# Esi::AllianceApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -23,7 +23,7 @@ List all active player alliances  --- Alternate route: `/dev/alliances/`  Altern
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::AllianceApi.new
+api_instance = Esi::AllianceApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -36,7 +36,7 @@ begin
   #List all alliances
   result = api_instance.get_alliances(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AllianceApi->get_alliances: #{e}"
 end
 ```
@@ -77,7 +77,7 @@ Public information about an alliance  --- Alternate route: `/dev/alliances/{alli
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::AllianceApi.new
+api_instance = Esi::AllianceApi.new
 
 alliance_id = 56 # Integer | An EVE alliance ID
 
@@ -92,7 +92,7 @@ begin
   #Get alliance information
   result = api_instance.get_alliances_alliance_id(alliance_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AllianceApi->get_alliances_alliance_id: #{e}"
 end
 ```
@@ -134,7 +134,7 @@ List all current member corporations of an alliance  --- Alternate route: `/dev/
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::AllianceApi.new
+api_instance = Esi::AllianceApi.new
 
 alliance_id = 56 # Integer | An EVE alliance ID
 
@@ -149,7 +149,7 @@ begin
   #List alliance's corporations
   result = api_instance.get_alliances_alliance_id_corporations(alliance_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AllianceApi->get_alliances_alliance_id_corporations: #{e}"
 end
 ```
@@ -191,7 +191,7 @@ Get the icon urls for a alliance  --- Alternate route: `/dev/alliances/{alliance
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::AllianceApi.new
+api_instance = Esi::AllianceApi.new
 
 alliance_id = 56 # Integer | An EVE alliance ID
 
@@ -206,7 +206,7 @@ begin
   #Get alliance icon
   result = api_instance.get_alliances_alliance_id_icons(alliance_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AllianceApi->get_alliances_alliance_id_icons: #{e}"
 end
 ```
@@ -248,7 +248,7 @@ Resolve a set of alliance IDs to alliance names  --- Alternate route: `/dev/alli
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::AllianceApi.new
+api_instance = Esi::AllianceApi.new
 
 alliance_ids = [56] # Array<Integer> | A comma separated list of alliance IDs
 
@@ -263,7 +263,7 @@ begin
   #Get alliance names
   result = api_instance.get_alliances_names(alliance_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AllianceApi->get_alliances_names: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetFwLeaderboardsLastWeek1
+# Esi::GetFwLeaderboardsLastWeek1
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::PlanetaryInteractionApi
+# Esi::PlanetaryInteractionApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -22,12 +22,12 @@ Returns a list of all planetary colonies owned by a character.  --- Alternate ro
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::PlanetaryInteractionApi.new
+api_instance = Esi::PlanetaryInteractionApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -43,7 +43,7 @@ begin
   #Get colonies
   result = api_instance.get_characters_character_id_planets(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling PlanetaryInteractionApi->get_characters_character_id_planets: #{e}"
 end
 ```
@@ -86,12 +86,12 @@ Returns full details on the layout of a single planetary colony, including links
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::PlanetaryInteractionApi.new
+api_instance = Esi::PlanetaryInteractionApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -109,7 +109,7 @@ begin
   #Get colony layout
   result = api_instance.get_characters_character_id_planets_planet_id(character_idplanet_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling PlanetaryInteractionApi->get_characters_character_id_planets_planet_id: #{e}"
 end
 ```
@@ -153,12 +153,12 @@ List customs offices owned by a corporation  --- Alternate route: `/dev/corporat
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::PlanetaryInteractionApi.new
+api_instance = Esi::PlanetaryInteractionApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -175,7 +175,7 @@ begin
   #List corporation customs offices
   result = api_instance.get_corporations_corporation_id_customs_offices(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling PlanetaryInteractionApi->get_corporations_corporation_id_customs_offices: #{e}"
 end
 ```
@@ -219,7 +219,7 @@ Get information on a planetary factory schematic  --- Alternate route: `/dev/uni
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::PlanetaryInteractionApi.new
+api_instance = Esi::PlanetaryInteractionApi.new
 
 schematic_id = 56 # Integer | A PI schematic ID
 
@@ -234,7 +234,7 @@ begin
   #Get schematic information
   result = api_instance.get_universe_schematics_schematic_id(schematic_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling PlanetaryInteractionApi->get_universe_schematics_schematic_id: #{e}"
 end
 ```

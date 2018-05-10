@@ -1,4 +1,4 @@
-# EsiRuby::PutCharactersCharacterIdMailMailIdContents
+# Esi::PutCharactersCharacterIdMailMailIdContents
 
 ## Properties
 Name | Type | Description | Notes

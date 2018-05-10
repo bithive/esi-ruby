@@ -1,4 +1,4 @@
-# EsiRuby::PostCharactersCharacterIdFittingsCreated
+# Esi::PostCharactersCharacterIdFittingsCreated
 
 ## Properties
 Name | Type | Description | Notes

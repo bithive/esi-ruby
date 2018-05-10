@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseNames200Ok
+# Esi::PostUniverseNames200Ok
 
 ## Properties
 Name | Type | Description | Notes

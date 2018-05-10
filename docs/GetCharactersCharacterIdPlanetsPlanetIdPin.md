@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdPin
+# Esi::GetCharactersCharacterIdPlanetsPlanetIdPin
 
 ## Properties
 Name | Type | Description | Notes

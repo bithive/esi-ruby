@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdWallets200Ok
+# Esi::GetCorporationsCorporationIdWallets200Ok
 
 ## Properties
 Name | Type | Description | Notes

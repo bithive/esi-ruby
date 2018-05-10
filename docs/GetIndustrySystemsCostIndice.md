@@ -1,4 +1,4 @@
-# EsiRuby::GetIndustrySystemsCostIndice
+# Esi::GetIndustrySystemsCostIndice
 
 ## Properties
 Name | Type | Description | Notes

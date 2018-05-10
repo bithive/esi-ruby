@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdFleetNotFound
+# Esi::GetCharactersCharacterIdFleetNotFound
 
 ## Properties
 Name | Type | Description | Notes

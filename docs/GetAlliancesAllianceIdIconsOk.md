@@ -1,4 +1,4 @@
-# EsiRuby::GetAlliancesAllianceIdIconsOk
+# Esi::GetAlliancesAllianceIdIconsOk
 
 ## Properties
 Name | Type | Description | Notes

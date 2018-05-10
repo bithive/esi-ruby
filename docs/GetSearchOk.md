@@ -1,4 +1,4 @@
-# EsiRuby::GetSearchOk
+# Esi::GetSearchOk
 
 ## Properties
 Name | Type | Description | Notes

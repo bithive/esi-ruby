@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseConstellationsConstellationIdNotFound
+# Esi::GetUniverseConstellationsConstellationIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

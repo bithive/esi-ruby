@@ -1,4 +1,4 @@
-# EsiRuby::GetFwStatsKills
+# Esi::GetFwStatsKills
 
 ## Properties
 Name | Type | Description | Notes

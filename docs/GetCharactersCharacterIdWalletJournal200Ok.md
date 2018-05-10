@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdWalletJournal200Ok
+# Esi::GetCharactersCharacterIdWalletJournal200Ok
 
 ## Properties
 Name | Type | Description | Notes

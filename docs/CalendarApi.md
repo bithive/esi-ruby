@@ -1,4 +1,4 @@
-# EsiRuby::CalendarApi
+# Esi::CalendarApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -22,12 +22,12 @@ Get 50 event summaries from the calendar. If no from_event ID is given, the reso
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CalendarApi.new
+api_instance = Esi::CalendarApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -44,7 +44,7 @@ begin
   #List calendar event summaries
   result = api_instance.get_characters_character_id_calendar(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CalendarApi->get_characters_character_id_calendar: #{e}"
 end
 ```
@@ -88,12 +88,12 @@ Get all the information for a specific event  --- Alternate route: `/dev/charact
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CalendarApi.new
+api_instance = Esi::CalendarApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -111,7 +111,7 @@ begin
   #Get an event
   result = api_instance.get_characters_character_id_calendar_event_id(character_idevent_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CalendarApi->get_characters_character_id_calendar_event_id: #{e}"
 end
 ```
@@ -155,12 +155,12 @@ Get all invited attendees for a given event  --- Alternate route: `/dev/characte
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CalendarApi.new
+api_instance = Esi::CalendarApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -178,7 +178,7 @@ begin
   #Get attendees
   result = api_instance.get_characters_character_id_calendar_event_id_attendees(character_idevent_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CalendarApi->get_characters_character_id_calendar_event_id_attendees: #{e}"
 end
 ```
@@ -222,18 +222,18 @@ Set your response status to an event  --- Alternate route: `/dev/characters/{cha
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CalendarApi.new
+api_instance = Esi::CalendarApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
 event_id = 56 # Integer | The ID of the event requested
 
-response = EsiRuby::PutCharactersCharacterIdCalendarEventIdResponse.new # PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
+response = Esi::PutCharactersCharacterIdCalendarEventIdResponse.new # PutCharactersCharacterIdCalendarEventIdResponse | The response value to set, overriding current value.
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -245,7 +245,7 @@ opts = {
 begin
   #Respond to an event
   api_instance.put_characters_character_id_calendar_event_id(character_idevent_id, response, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CalendarApi->put_characters_character_id_calendar_event_id: #{e}"
 end
 ```

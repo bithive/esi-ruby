@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdMedalsIssued200Ok
+# Esi::GetCorporationsCorporationIdMedalsIssued200Ok
 
 ## Properties
 Name | Type | Description | Notes

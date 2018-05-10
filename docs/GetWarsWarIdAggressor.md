@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdAggressor
+# Esi::GetWarsWarIdAggressor
 
 ## Properties
 Name | Type | Description | Notes

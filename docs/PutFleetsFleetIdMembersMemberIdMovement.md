@@ -1,4 +1,4 @@
-# EsiRuby::PutFleetsFleetIdMembersMemberIdMovement
+# Esi::PutFleetsFleetIdMembersMemberIdMovement
 
 ## Properties
 Name | Type | Description | Notes

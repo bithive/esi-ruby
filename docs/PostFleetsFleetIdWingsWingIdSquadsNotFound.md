@@ -1,4 +1,4 @@
-# EsiRuby::PostFleetsFleetIdWingsWingIdSquadsNotFound
+# Esi::PostFleetsFleetIdWingsWingIdSquadsNotFound
 
 ## Properties
 Name | Type | Description | Notes

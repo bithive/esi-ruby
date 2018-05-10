@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # Summary of kills done by the given character against enemy factions
   class GetCharactersCharacterIdFwStatsKills
     # Last week's total number of kills by a given character against enemy factions
@@ -170,7 +170,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

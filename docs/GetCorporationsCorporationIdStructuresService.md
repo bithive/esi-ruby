@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdStructuresService
+# Esi::GetCorporationsCorporationIdStructuresService
 
 ## Properties
 Name | Type | Description | Notes

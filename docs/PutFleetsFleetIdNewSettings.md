@@ -1,4 +1,4 @@
-# EsiRuby::PutFleetsFleetIdNewSettings
+# Esi::PutFleetsFleetIdNewSettings
 
 ## Properties
 Name | Type | Description | Notes

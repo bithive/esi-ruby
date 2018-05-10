@@ -1,4 +1,4 @@
-# EsiRuby::ClonesApi
+# Esi::ClonesApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -20,12 +20,12 @@ A list of the character's clones  --- Alternate route: `/dev/characters/{charact
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ClonesApi.new
+api_instance = Esi::ClonesApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -41,7 +41,7 @@ begin
   #Get clones
   result = api_instance.get_characters_character_id_clones(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ClonesApi->get_characters_character_id_clones: #{e}"
 end
 ```
@@ -84,12 +84,12 @@ Return implants on the active clone of a character  --- Alternate route: `/dev/c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ClonesApi.new
+api_instance = Esi::ClonesApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -105,7 +105,7 @@ begin
   #Get active implants
   result = api_instance.get_characters_character_id_implants(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ClonesApi->get_characters_character_id_implants: #{e}"
 end
 ```

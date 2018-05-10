@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStationsStationIdNotFound
+# Esi::GetUniverseStationsStationIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

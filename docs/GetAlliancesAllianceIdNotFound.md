@@ -1,4 +1,4 @@
-# EsiRuby::GetAlliancesAllianceIdNotFound
+# Esi::GetAlliancesAllianceIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

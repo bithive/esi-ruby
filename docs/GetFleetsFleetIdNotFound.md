@@ -1,4 +1,4 @@
-# EsiRuby::GetFleetsFleetIdNotFound
+# Esi::GetFleetsFleetIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetInsurancePrices200Ok
+# Esi::GetInsurancePrices200Ok
 
 ## Properties
 Name | Type | Description | Notes

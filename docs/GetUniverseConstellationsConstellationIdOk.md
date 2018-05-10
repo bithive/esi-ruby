@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseConstellationsConstellationIdOk
+# Esi::GetUniverseConstellationsConstellationIdOk
 
 ## Properties
 Name | Type | Description | Notes

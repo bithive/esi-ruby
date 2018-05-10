@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdFwStatsVictoryPoints
+# Esi::GetCharactersCharacterIdFwStatsVictoryPoints
 
 ## Properties
 Name | Type | Description | Notes

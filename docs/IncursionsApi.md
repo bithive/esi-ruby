@@ -1,4 +1,4 @@
-# EsiRuby::IncursionsApi
+# Esi::IncursionsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -19,7 +19,7 @@ Return a list of current incursions  --- Alternate route: `/dev/incursions/`  Al
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::IncursionsApi.new
+api_instance = Esi::IncursionsApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -32,7 +32,7 @@ begin
   #List incursions
   result = api_instance.get_incursions(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IncursionsApi->get_incursions: #{e}"
 end
 ```

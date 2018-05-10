@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdNotifications200Ok
+# Esi::GetCharactersCharacterIdNotifications200Ok
 
 ## Properties
 Name | Type | Description | Notes

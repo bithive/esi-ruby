@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdFwStatsKills
+# Esi::GetCorporationsCorporationIdFwStatsKills
 
 ## Properties
 Name | Type | Description | Notes

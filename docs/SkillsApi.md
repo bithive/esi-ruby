@@ -1,4 +1,4 @@
-# EsiRuby::SkillsApi
+# Esi::SkillsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -21,12 +21,12 @@ Return attributes of a character  --- Alternate route: `/dev/characters/{charact
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::SkillsApi.new
+api_instance = Esi::SkillsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -42,7 +42,7 @@ begin
   #Get character attributes
   result = api_instance.get_characters_character_id_attributes(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SkillsApi->get_characters_character_id_attributes: #{e}"
 end
 ```
@@ -85,12 +85,12 @@ List the configured skill queue for the given character  --- Alternate route: `/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::SkillsApi.new
+api_instance = Esi::SkillsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -106,7 +106,7 @@ begin
   #Get character's skill queue
   result = api_instance.get_characters_character_id_skillqueue(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SkillsApi->get_characters_character_id_skillqueue: #{e}"
 end
 ```
@@ -149,12 +149,12 @@ List all trained skills for the given character  --- Alternate route: `/dev/char
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::SkillsApi.new
+api_instance = Esi::SkillsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -170,7 +170,7 @@ begin
   #Get character skills
   result = api_instance.get_characters_character_id_skills(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling SkillsApi->get_characters_character_id_skills: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseCategoriesCategoryIdNotFound
+# Esi::GetUniverseCategoriesCategoryIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetInsurancePricesLevel
+# Esi::GetInsurancePricesLevel
 
 ## Properties
 Name | Type | Description | Notes

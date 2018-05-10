@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsRegion
+# Esi::PostUniverseIdsRegion
 
 ## Properties
 Name | Type | Description | Notes

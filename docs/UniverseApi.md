@@ -1,4 +1,4 @@
-# EsiRuby::UniverseApi
+# Esi::UniverseApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -48,7 +48,7 @@ Get all character ancestries  --- Alternate route: `/dev/universe/ancestries/`  
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -62,7 +62,7 @@ begin
   #Get ancestries
   result = api_instance.get_universe_ancestries(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_ancestries: #{e}"
 end
 ```
@@ -104,7 +104,7 @@ Get information on an asteroid belt  --- Alternate route: `/dev/universe/asteroi
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 asteroid_belt_id = 56 # Integer | asteroid_belt_id integer
 
@@ -119,7 +119,7 @@ begin
   #Get asteroid belt information
   result = api_instance.get_universe_asteroid_belts_asteroid_belt_id(asteroid_belt_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_asteroid_belts_asteroid_belt_id: #{e}"
 end
 ```
@@ -161,7 +161,7 @@ Get a list of bloodlines  --- Alternate route: `/dev/universe/bloodlines/`  Alte
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -175,7 +175,7 @@ begin
   #Get bloodlines
   result = api_instance.get_universe_bloodlines(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_bloodlines: #{e}"
 end
 ```
@@ -217,7 +217,7 @@ Get a list of item categories  --- Alternate route: `/dev/universe/categories/` 
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -230,7 +230,7 @@ begin
   #Get item categories
   result = api_instance.get_universe_categories(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_categories: #{e}"
 end
 ```
@@ -271,7 +271,7 @@ Get information of an item category  --- Alternate route: `/dev/universe/categor
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 category_id = 56 # Integer | An Eve item category ID
 
@@ -287,7 +287,7 @@ begin
   #Get item category information
   result = api_instance.get_universe_categories_category_id(category_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_categories_category_id: #{e}"
 end
 ```
@@ -330,7 +330,7 @@ Get a list of constellations  --- Alternate route: `/dev/universe/constellations
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -343,7 +343,7 @@ begin
   #Get constellations
   result = api_instance.get_universe_constellations(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_constellations: #{e}"
 end
 ```
@@ -384,7 +384,7 @@ Get information on a constellation  --- Alternate route: `/dev/universe/constell
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 constellation_id = 56 # Integer | constellation_id integer
 
@@ -400,7 +400,7 @@ begin
   #Get constellation information
   result = api_instance.get_universe_constellations_constellation_id(constellation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_constellations_constellation_id: #{e}"
 end
 ```
@@ -443,7 +443,7 @@ Get a list of factions  --- Alternate route: `/dev/universe/factions/`  Alternat
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -457,7 +457,7 @@ begin
   #Get factions
   result = api_instance.get_universe_factions(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_factions: #{e}"
 end
 ```
@@ -499,7 +499,7 @@ Get a list of graphics  --- Alternate route: `/dev/universe/graphics/`  Alternat
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -512,7 +512,7 @@ begin
   #Get graphics
   result = api_instance.get_universe_graphics(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_graphics: #{e}"
 end
 ```
@@ -553,7 +553,7 @@ Get information on a graphic  --- Alternate route: `/dev/universe/graphics/{grap
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 graphic_id = 56 # Integer | graphic_id integer
 
@@ -568,7 +568,7 @@ begin
   #Get graphic information
   result = api_instance.get_universe_graphics_graphic_id(graphic_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_graphics_graphic_id: #{e}"
 end
 ```
@@ -610,7 +610,7 @@ Get a list of item groups  --- Alternate route: `/dev/universe/groups/`  Alterna
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -624,7 +624,7 @@ begin
   #Get item groups
   result = api_instance.get_universe_groups(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_groups: #{e}"
 end
 ```
@@ -666,7 +666,7 @@ Get information on an item group  --- Alternate route: `/dev/universe/groups/{gr
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 group_id = 56 # Integer | An Eve item group ID
 
@@ -682,7 +682,7 @@ begin
   #Get item group information
   result = api_instance.get_universe_groups_group_id(group_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_groups_group_id: #{e}"
 end
 ```
@@ -725,7 +725,7 @@ Get information on a moon  --- Alternate route: `/dev/universe/moons/{moon_id}/`
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 moon_id = 56 # Integer | moon_id integer
 
@@ -740,7 +740,7 @@ begin
   #Get moon information
   result = api_instance.get_universe_moons_moon_id(moon_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_moons_moon_id: #{e}"
 end
 ```
@@ -782,7 +782,7 @@ Get information on a planet  --- Alternate route: `/dev/universe/planets/{planet
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 planet_id = 56 # Integer | planet_id integer
 
@@ -797,7 +797,7 @@ begin
   #Get planet information
   result = api_instance.get_universe_planets_planet_id(planet_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_planets_planet_id: #{e}"
 end
 ```
@@ -839,7 +839,7 @@ Get a list of character races  --- Alternate route: `/dev/universe/races/`  Alte
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -853,7 +853,7 @@ begin
   #Get character races
   result = api_instance.get_universe_races(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_races: #{e}"
 end
 ```
@@ -895,7 +895,7 @@ Get a list of regions  --- Alternate route: `/dev/universe/regions/`  Alternate 
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -908,7 +908,7 @@ begin
   #Get regions
   result = api_instance.get_universe_regions(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_regions: #{e}"
 end
 ```
@@ -949,7 +949,7 @@ Get information on a region  --- Alternate route: `/dev/universe/regions/{region
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 region_id = 56 # Integer | region_id integer
 
@@ -965,7 +965,7 @@ begin
   #Get region information
   result = api_instance.get_universe_regions_region_id(region_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_regions_region_id: #{e}"
 end
 ```
@@ -1008,7 +1008,7 @@ Get information on a stargate  --- Alternate route: `/dev/universe/stargates/{st
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 stargate_id = 56 # Integer | stargate_id integer
 
@@ -1023,7 +1023,7 @@ begin
   #Get stargate information
   result = api_instance.get_universe_stargates_stargate_id(stargate_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_stargates_stargate_id: #{e}"
 end
 ```
@@ -1065,7 +1065,7 @@ Get information on a star  --- Alternate route: `/dev/universe/stars/{star_id}/`
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 star_id = 56 # Integer | star_id integer
 
@@ -1080,7 +1080,7 @@ begin
   #Get star information
   result = api_instance.get_universe_stars_star_id(star_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_stars_star_id: #{e}"
 end
 ```
@@ -1122,7 +1122,7 @@ Get information on a station  --- Alternate route: `/dev/universe/stations/{stat
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 station_id = 56 # Integer | station_id integer
 
@@ -1137,7 +1137,7 @@ begin
   #Get station information
   result = api_instance.get_universe_stations_station_id(station_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_stations_station_id: #{e}"
 end
 ```
@@ -1179,7 +1179,7 @@ List all public structures  --- Alternate route: `/dev/universe/structures/`  Al
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1192,7 +1192,7 @@ begin
   #List all public structures
   result = api_instance.get_universe_structures(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_structures: #{e}"
 end
 ```
@@ -1233,12 +1233,12 @@ Returns information on requested structure, if you are on the ACL. Otherwise, re
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 structure_id = 789 # Integer | An Eve structure ID
 
@@ -1254,7 +1254,7 @@ begin
   #Get structure information
   result = api_instance.get_universe_structures_structure_id(structure_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_structures_structure_id: #{e}"
 end
 ```
@@ -1297,7 +1297,7 @@ Get the number of jumps in solar systems within the last hour ending at the time
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1310,7 +1310,7 @@ begin
   #Get system jumps
   result = api_instance.get_universe_system_jumps(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_system_jumps: #{e}"
 end
 ```
@@ -1351,7 +1351,7 @@ Get the number of ship, pod and NPC kills per solar system within the last hour 
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1364,7 +1364,7 @@ begin
   #Get system kills
   result = api_instance.get_universe_system_kills(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_system_kills: #{e}"
 end
 ```
@@ -1405,7 +1405,7 @@ Get a list of solar systems  --- Alternate route: `/dev/universe/systems/`  Alte
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1418,7 +1418,7 @@ begin
   #Get solar systems
   result = api_instance.get_universe_systems(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_systems: #{e}"
 end
 ```
@@ -1459,7 +1459,7 @@ Get information on a solar system  --- Alternate route: `/dev/universe/systems/{
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 system_id = 56 # Integer | system_id integer
 
@@ -1475,7 +1475,7 @@ begin
   #Get solar system information
   result = api_instance.get_universe_systems_system_id(system_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_systems_system_id: #{e}"
 end
 ```
@@ -1518,7 +1518,7 @@ Get a list of type ids  --- Alternate route: `/dev/universe/types/`  Alternate r
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1532,7 +1532,7 @@ begin
   #Get types
   result = api_instance.get_universe_types(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_types: #{e}"
 end
 ```
@@ -1574,7 +1574,7 @@ Get information on a type  --- Alternate route: `/dev/universe/types/{type_id}/`
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
 type_id = 56 # Integer | An Eve item type ID
 
@@ -1590,7 +1590,7 @@ begin
   #Get type information
   result = api_instance.get_universe_types_type_id(type_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->get_universe_types_type_id: #{e}"
 end
 ```
@@ -1633,9 +1633,9 @@ Resolve a set of names to IDs in the following categories: agents, alliances, ch
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
-names = [EsiRuby::Array<String>.new] # Array<String> | The names to resolve
+names = [Esi::Array<String>.new] # Array<String> | The names to resolve
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1648,7 +1648,7 @@ begin
   #Bulk names to IDs
   result = api_instance.post_universe_ids(names, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->post_universe_ids: #{e}"
 end
 ```
@@ -1690,9 +1690,9 @@ Resolve a set of IDs to names and categories. Supported ID's for resolving are: 
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::UniverseApi.new
+api_instance = Esi::UniverseApi.new
 
-ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | The ids to resolve
+ids = [Esi::Array<Integer>.new] # Array<Integer> | The ids to resolve
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -1704,7 +1704,7 @@ begin
   #Get names and categories for a set of ID's
   result = api_instance.post_universe_names(ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling UniverseApi->post_universe_names: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetOpportunitiesGroupsGroupIdOk
+# Esi::GetOpportunitiesGroupsGroupIdOk
 
 ## Properties
 Name | Type | Description | Notes

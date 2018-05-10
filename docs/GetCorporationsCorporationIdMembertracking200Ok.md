@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdMembertracking200Ok
+# Esi::GetCorporationsCorporationIdMembertracking200Ok
 
 ## Properties
 Name | Type | Description | Notes

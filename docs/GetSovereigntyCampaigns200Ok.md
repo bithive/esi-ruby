@@ -1,4 +1,4 @@
-# EsiRuby::GetSovereigntyCampaigns200Ok
+# Esi::GetSovereigntyCampaigns200Ok
 
 ## Properties
 Name | Type | Description | Notes

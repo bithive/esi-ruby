@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdClonesHomeLocation
+# Esi::GetCharactersCharacterIdClonesHomeLocation
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity
+# Esi::DeleteCharactersCharacterIdMailLabelsLabelIdUnprocessableEntity
 
 ## Properties
 Name | Type | Description | Notes

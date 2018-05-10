@@ -1,4 +1,4 @@
-# EsiRuby::OpportunitiesApi
+# Esi::OpportunitiesApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -23,12 +23,12 @@ Return a list of tasks finished by a character  --- Alternate route: `/dev/chara
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::OpportunitiesApi.new
+api_instance = Esi::OpportunitiesApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -44,7 +44,7 @@ begin
   #Get a character's completed tasks
   result = api_instance.get_characters_character_id_opportunities(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling OpportunitiesApi->get_characters_character_id_opportunities: #{e}"
 end
 ```
@@ -87,7 +87,7 @@ Return a list of opportunities groups  --- Alternate route: `/dev/opportunities/
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::OpportunitiesApi.new
+api_instance = Esi::OpportunitiesApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -100,7 +100,7 @@ begin
   #Get opportunities groups
   result = api_instance.get_opportunities_groups(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling OpportunitiesApi->get_opportunities_groups: #{e}"
 end
 ```
@@ -141,7 +141,7 @@ Return information of an opportunities group  --- Alternate route: `/dev/opportu
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::OpportunitiesApi.new
+api_instance = Esi::OpportunitiesApi.new
 
 group_id = 56 # Integer | ID of an opportunities group
 
@@ -157,7 +157,7 @@ begin
   #Get opportunities group
   result = api_instance.get_opportunities_groups_group_id(group_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling OpportunitiesApi->get_opportunities_groups_group_id: #{e}"
 end
 ```
@@ -200,7 +200,7 @@ Return a list of opportunities tasks  --- Alternate route: `/dev/opportunities/t
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::OpportunitiesApi.new
+api_instance = Esi::OpportunitiesApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -213,7 +213,7 @@ begin
   #Get opportunities tasks
   result = api_instance.get_opportunities_tasks(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling OpportunitiesApi->get_opportunities_tasks: #{e}"
 end
 ```
@@ -254,7 +254,7 @@ Return information of an opportunities task  --- Alternate route: `/dev/opportun
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::OpportunitiesApi.new
+api_instance = Esi::OpportunitiesApi.new
 
 task_id = 56 # Integer | ID of an opportunities task
 
@@ -269,7 +269,7 @@ begin
   #Get opportunities task
   result = api_instance.get_opportunities_tasks_task_id(task_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling OpportunitiesApi->get_opportunities_tasks_task_id: #{e}"
 end
 ```

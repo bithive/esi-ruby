@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdBookmarksItem
+# Esi::GetCharactersCharacterIdBookmarksItem
 
 ## Properties
 Name | Type | Description | Notes

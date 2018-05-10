@@ -1,4 +1,4 @@
-# EsiRuby::DogmaApi
+# Esi::DogmaApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -22,7 +22,7 @@ Get a list of dogma attribute ids  --- Alternate route: `/dev/dogma/attributes/`
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::DogmaApi.new
+api_instance = Esi::DogmaApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -35,7 +35,7 @@ begin
   #Get attributes
   result = api_instance.get_dogma_attributes(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling DogmaApi->get_dogma_attributes: #{e}"
 end
 ```
@@ -76,7 +76,7 @@ Get information on a dogma attribute  --- Alternate route: `/dev/dogma/attribute
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::DogmaApi.new
+api_instance = Esi::DogmaApi.new
 
 attribute_id = 56 # Integer | A dogma attribute ID
 
@@ -91,7 +91,7 @@ begin
   #Get attribute information
   result = api_instance.get_dogma_attributes_attribute_id(attribute_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling DogmaApi->get_dogma_attributes_attribute_id: #{e}"
 end
 ```
@@ -133,7 +133,7 @@ Get a list of dogma effect ids  --- Alternate route: `/dev/dogma/effects/`  Alte
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::DogmaApi.new
+api_instance = Esi::DogmaApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -146,7 +146,7 @@ begin
   #Get effects
   result = api_instance.get_dogma_effects(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling DogmaApi->get_dogma_effects: #{e}"
 end
 ```
@@ -187,7 +187,7 @@ Get information on a dogma effect  --- Alternate route: `/dev/dogma/effects/{eff
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::DogmaApi.new
+api_instance = Esi::DogmaApi.new
 
 effect_id = 56 # Integer | A dogma effect ID
 
@@ -202,7 +202,7 @@ begin
   #Get effect information
   result = api_instance.get_dogma_effects_effect_id(effect_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling DogmaApi->get_dogma_effects_effect_id: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdLoyaltyPoints200Ok
+# Esi::GetCharactersCharacterIdLoyaltyPoints200Ok
 
 ## Properties
 Name | Type | Description | Notes

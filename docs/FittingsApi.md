@@ -1,4 +1,4 @@
-# EsiRuby::FittingsApi
+# Esi::FittingsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -21,12 +21,12 @@ Delete a fitting from a character  --- Alternate route: `/dev/characters/{charac
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FittingsApi.new
+api_instance = Esi::FittingsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -42,7 +42,7 @@ opts = {
 begin
   #Delete fitting
   api_instance.delete_characters_character_id_fittings_fitting_id(character_idfitting_id, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FittingsApi->delete_characters_character_id_fittings_fitting_id: #{e}"
 end
 ```
@@ -85,12 +85,12 @@ Return fittings of a character  --- Alternate route: `/dev/characters/{character
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FittingsApi.new
+api_instance = Esi::FittingsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -106,7 +106,7 @@ begin
   #Get fittings
   result = api_instance.get_characters_character_id_fittings(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FittingsApi->get_characters_character_id_fittings: #{e}"
 end
 ```
@@ -149,16 +149,16 @@ Save a new fitting for a character  --- Alternate route: `/dev/characters/{chara
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::FittingsApi.new
+api_instance = Esi::FittingsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-fitting = EsiRuby::PostCharactersCharacterIdFittingsFitting.new # PostCharactersCharacterIdFittingsFitting | Details about the new fitting
+fitting = Esi::PostCharactersCharacterIdFittingsFitting.new # PostCharactersCharacterIdFittingsFitting | Details about the new fitting
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -171,7 +171,7 @@ begin
   #Create fitting
   result = api_instance.post_characters_character_id_fittings(character_idfitting, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling FittingsApi->post_characters_character_id_fittings: #{e}"
 end
 ```

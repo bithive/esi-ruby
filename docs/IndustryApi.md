@@ -1,4 +1,4 @@
-# EsiRuby::IndustryApi
+# Esi::IndustryApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -26,12 +26,12 @@ List industry jobs placed by a character  --- Alternate route: `/dev/characters/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -48,7 +48,7 @@ begin
   #List character industry jobs
   result = api_instance.get_characters_character_id_industry_jobs(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_characters_character_id_industry_jobs: #{e}"
 end
 ```
@@ -92,12 +92,12 @@ Paginated record of all mining done by a character for the past 30 days   --- Al
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -114,7 +114,7 @@ begin
   #Character mining ledger
   result = api_instance.get_characters_character_id_mining(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_characters_character_id_mining: #{e}"
 end
 ```
@@ -158,12 +158,12 @@ Extraction timers for all moon chunks being extracted by refineries belonging to
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -180,7 +180,7 @@ begin
   #Moon extraction timers
   result = api_instance.get_corporation_corporation_id_mining_extractions(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_extractions: #{e}"
 end
 ```
@@ -224,12 +224,12 @@ Paginated list of all entities capable of observing and recording mining for a c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -246,7 +246,7 @@ begin
   #Corporation mining observers
   result = api_instance.get_corporation_corporation_id_mining_observers(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_observers: #{e}"
 end
 ```
@@ -290,12 +290,12 @@ Paginated record of all mining seen by an observer   --- Alternate route: `/dev/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -314,7 +314,7 @@ begin
   #Observed corporation mining
   result = api_instance.get_corporation_corporation_id_mining_observers_observer_id(corporation_idobserver_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_corporation_corporation_id_mining_observers_observer_id: #{e}"
 end
 ```
@@ -359,12 +359,12 @@ List industry jobs run by a corporation  --- Alternate route: `/dev/corporations
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -382,7 +382,7 @@ begin
   #List corporation industry jobs
   result = api_instance.get_corporations_corporation_id_industry_jobs(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_corporations_corporation_id_industry_jobs: #{e}"
 end
 ```
@@ -427,7 +427,7 @@ Return a list of industry facilities  --- Alternate route: `/dev/industry/facili
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -440,7 +440,7 @@ begin
   #List industry facilities
   result = api_instance.get_industry_facilities(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_industry_facilities: #{e}"
 end
 ```
@@ -481,7 +481,7 @@ Return cost indices for solar systems  --- Alternate route: `/dev/industry/syste
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::IndustryApi.new
+api_instance = Esi::IndustryApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -494,7 +494,7 @@ begin
   #List solar system cost indices
   result = api_instance.get_industry_systems(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling IndustryApi->get_industry_systems: #{e}"
 end
 ```

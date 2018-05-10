@@ -1,4 +1,4 @@
-# EsiRuby::GetFwLeaderboardsVictoryPoints
+# Esi::GetFwLeaderboardsVictoryPoints
 
 ## Properties
 Name | Type | Description | Notes

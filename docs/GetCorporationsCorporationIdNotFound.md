@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdNotFound
+# Esi::GetCorporationsCorporationIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

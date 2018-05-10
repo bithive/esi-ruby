@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdCalendarEventIdNotFound
+# Esi::GetCharactersCharacterIdCalendarEventIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

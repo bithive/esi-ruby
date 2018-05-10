@@ -10,6 +10,6 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 =end
 
-module EsiRuby
+module Esi
   VERSION = '0.8.1'
 end

@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdContractsContractIdBidsNotFound
+# Esi::GetCorporationsCorporationIdContractsContractIdBidsNotFound
 
 ## Properties
 Name | Type | Description | Notes

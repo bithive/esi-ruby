@@ -1,4 +1,4 @@
-# EsiRuby::GetFleetsFleetIdMembers200Ok
+# Esi::GetFleetsFleetIdMembers200Ok
 
 ## Properties
 Name | Type | Description | Notes

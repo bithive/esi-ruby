@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseSystemsSystemIdPlanet
+# Esi::GetUniverseSystemsSystemIdPlanet
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::PutCharactersCharacterIdCalendarEventIdResponse
+# Esi::PutCharactersCharacterIdCalendarEventIdResponse
 
 ## Properties
 Name | Type | Description | Notes

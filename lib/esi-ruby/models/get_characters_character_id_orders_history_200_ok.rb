@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # 200 ok object
   class GetCharactersCharacterIdOrdersHistory200Ok
     # Number of days the order was valid for (starting from the issued date). An order expires at time issued + duration
@@ -381,7 +381,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

@@ -17,7 +17,7 @@ require 'tempfile'
 require 'typhoeus'
 require 'uri'
 
-module EsiRuby
+module Esi
   class ApiClient
     # The Configuration object holding settings to be used in the API client.
     attr_accessor :config
@@ -210,7 +210,7 @@ module EsiRuby
         end
       else
         # models, e.g. Pet
-        EsiRuby.const_get(return_type).new.tap do |model|
+        Esi.const_get(return_type).new.tap do |model|
           model.build_from_hash data
         end
       end

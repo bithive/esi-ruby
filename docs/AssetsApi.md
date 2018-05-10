@@ -1,4 +1,4 @@
-# EsiRuby::AssetsApi
+# Esi::AssetsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -24,12 +24,12 @@ Return a list of the characters assets  --- Alternate route: `/dev/characters/{c
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::AssetsApi.new
+api_instance = Esi::AssetsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -46,7 +46,7 @@ begin
   #Get character assets
   result = api_instance.get_characters_character_id_assets(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AssetsApi->get_characters_character_id_assets: #{e}"
 end
 ```
@@ -90,12 +90,12 @@ Return a list of the corporation assets  --- Alternate route: `/dev/corporations
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::AssetsApi.new
+api_instance = Esi::AssetsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -112,7 +112,7 @@ begin
   #Get corporation assets
   result = api_instance.get_corporations_corporation_id_assets(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AssetsApi->get_corporations_corporation_id_assets: #{e}"
 end
 ```
@@ -156,16 +156,16 @@ Return locations for a set of item ids, which you can get from character assets 
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::AssetsApi.new
+api_instance = Esi::AssetsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-item_ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | A list of item ids
+item_ids = [Esi::Array<Integer>.new] # Array<Integer> | A list of item ids
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -178,7 +178,7 @@ begin
   #Get character asset locations
   result = api_instance.post_characters_character_id_assets_locations(character_iditem_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AssetsApi->post_characters_character_id_assets_locations: #{e}"
 end
 ```
@@ -221,16 +221,16 @@ Return names for a set of item ids, which you can get from character assets endp
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::AssetsApi.new
+api_instance = Esi::AssetsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-item_ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | A list of item ids
+item_ids = [Esi::Array<Integer>.new] # Array<Integer> | A list of item ids
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -243,7 +243,7 @@ begin
   #Get character asset names
   result = api_instance.post_characters_character_id_assets_names(character_iditem_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AssetsApi->post_characters_character_id_assets_names: #{e}"
 end
 ```
@@ -286,16 +286,16 @@ Return locations for a set of item ids, which you can get from corporation asset
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::AssetsApi.new
+api_instance = Esi::AssetsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
-item_ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | A list of item ids
+item_ids = [Esi::Array<Integer>.new] # Array<Integer> | A list of item ids
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -308,7 +308,7 @@ begin
   #Get corporation asset locations
   result = api_instance.post_corporations_corporation_id_assets_locations(corporation_iditem_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AssetsApi->post_corporations_corporation_id_assets_locations: #{e}"
 end
 ```
@@ -351,16 +351,16 @@ Return names for a set of item ids, which you can get from corporation assets en
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::AssetsApi.new
+api_instance = Esi::AssetsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
-item_ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | A list of item ids
+item_ids = [Esi::Array<Integer>.new] # Array<Integer> | A list of item ids
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -373,7 +373,7 @@ begin
   #Get coporation asset names
   result = api_instance.post_corporations_corporation_id_assets_names(corporation_iditem_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling AssetsApi->post_corporations_corporation_id_assets_names: #{e}"
 end
 ```

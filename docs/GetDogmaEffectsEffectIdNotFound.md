@@ -1,4 +1,4 @@
-# EsiRuby::GetDogmaEffectsEffectIdNotFound
+# Esi::GetDogmaEffectsEffectIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

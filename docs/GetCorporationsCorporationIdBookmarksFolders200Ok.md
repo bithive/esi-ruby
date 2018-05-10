@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdBookmarksFolders200Ok
+# Esi::GetCorporationsCorporationIdBookmarksFolders200Ok
 
 ## Properties
 Name | Type | Description | Notes

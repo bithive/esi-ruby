@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdMedalsGraphic
+# Esi::GetCharactersCharacterIdMedalsGraphic
 
 ## Properties
 Name | Type | Description | Notes

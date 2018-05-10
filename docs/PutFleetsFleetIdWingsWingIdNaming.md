@@ -1,4 +1,4 @@
-# EsiRuby::PutFleetsFleetIdWingsWingIdNaming
+# Esi::PutFleetsFleetIdWingsWingIdNaming
 
 ## Properties
 Name | Type | Description | Notes

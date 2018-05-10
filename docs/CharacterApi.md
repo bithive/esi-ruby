@@ -1,4 +1,4 @@
-# EsiRuby::CharacterApi
+# Esi::CharacterApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -34,7 +34,7 @@ Public information about a character  --- Alternate route: `/dev/characters/{cha
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -49,7 +49,7 @@ begin
   #Get character's public information
   result = api_instance.get_characters_character_id(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id: #{e}"
 end
 ```
@@ -91,12 +91,12 @@ Return a list of agents research information for a character. The formula for fi
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -112,7 +112,7 @@ begin
   #Get agents research
   result = api_instance.get_characters_character_id_agents_research(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_agents_research: #{e}"
 end
 ```
@@ -155,12 +155,12 @@ Return a list of blueprints the character owns  --- Alternate route: `/dev/chara
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -177,7 +177,7 @@ begin
   #Get blueprints
   result = api_instance.get_characters_character_id_blueprints(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_blueprints: #{e}"
 end
 ```
@@ -221,7 +221,7 @@ Get a list of all the corporations a character has been a member of  --- Alterna
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -236,7 +236,7 @@ begin
   #Get corporation history
   result = api_instance.get_characters_character_id_corporationhistory(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_corporationhistory: #{e}"
 end
 ```
@@ -278,12 +278,12 @@ Return a character's jump activation and fatigue information  --- Alternate rout
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -299,7 +299,7 @@ begin
   #Get jump fatigue
   result = api_instance.get_characters_character_id_fatigue(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_fatigue: #{e}"
 end
 ```
@@ -342,12 +342,12 @@ Return a list of medals the character has  --- Alternate route: `/dev/characters
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -363,7 +363,7 @@ begin
   #Get medals
   result = api_instance.get_characters_character_id_medals(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_medals: #{e}"
 end
 ```
@@ -406,12 +406,12 @@ Return character notifications  --- Alternate route: `/dev/characters/{character
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -427,7 +427,7 @@ begin
   #Get character notifications
   result = api_instance.get_characters_character_id_notifications(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_notifications: #{e}"
 end
 ```
@@ -470,12 +470,12 @@ Return notifications about having been added to someone's contact list  --- Alte
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -491,7 +491,7 @@ begin
   #Get new contact notifications
   result = api_instance.get_characters_character_id_notifications_contacts(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_notifications_contacts: #{e}"
 end
 ```
@@ -534,7 +534,7 @@ Get portrait urls for a character  --- Alternate route: `/dev/characters/{charac
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -549,7 +549,7 @@ begin
   #Get character portraits
   result = api_instance.get_characters_character_id_portrait(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_portrait: #{e}"
 end
 ```
@@ -591,12 +591,12 @@ Returns a character's corporation roles  --- Alternate route: `/dev/characters/{
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -612,7 +612,7 @@ begin
   #Get character corporation roles
   result = api_instance.get_characters_character_id_roles(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_roles: #{e}"
 end
 ```
@@ -655,12 +655,12 @@ Return character standings from agents, NPC corporations, and factions  --- Alte
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -676,7 +676,7 @@ begin
   #Get standings
   result = api_instance.get_characters_character_id_standings(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_standings: #{e}"
 end
 ```
@@ -719,12 +719,12 @@ Returns aggregate yearly stats for a character  --- Alternate route: `/dev/chara
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -740,7 +740,7 @@ begin
   #Yearly aggregate stats
   result = api_instance.get_characters_character_id_stats(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_stats: #{e}"
 end
 ```
@@ -783,12 +783,12 @@ Returns a character's titles  --- Alternate route: `/dev/characters/{character_i
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -804,7 +804,7 @@ begin
   #Get character corporation titles
   result = api_instance.get_characters_character_id_titles(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_character_id_titles: #{e}"
 end
 ```
@@ -847,7 +847,7 @@ Resolve a set of character IDs to character names  --- Alternate route: `/dev/ch
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_ids = [56] # Array<Integer> | A comma separated list of character IDs
 
@@ -862,7 +862,7 @@ begin
   #Get character names
   result = api_instance.get_characters_names(character_ids, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->get_characters_names: #{e}"
 end
 ```
@@ -904,9 +904,9 @@ Bulk lookup of character IDs to corporation, alliance and faction  --- Alternate
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
-characters = [EsiRuby::Array<Integer>.new] # Array<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
+characters = [Esi::Array<Integer>.new] # Array<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -919,7 +919,7 @@ begin
   #Character affiliation
   result = api_instance.post_characters_affiliation(characters, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->post_characters_affiliation: #{e}"
 end
 ```
@@ -961,16 +961,16 @@ Takes a source character ID in the url and a set of target character ID's in the
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::CharacterApi.new
+api_instance = Esi::CharacterApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-characters = [EsiRuby::Array<Integer>.new] # Array<Integer> | The target characters to calculate the charge for
+characters = [Esi::Array<Integer>.new] # Array<Integer> | The target characters to calculate the charge for
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -983,7 +983,7 @@ begin
   #Calculate a CSPA charge cost
   result = api_instance.post_characters_character_id_cspa(character_idcharacters, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling CharacterApi->post_characters_character_id_cspa: #{e}"
 end
 ```

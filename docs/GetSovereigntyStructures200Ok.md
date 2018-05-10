@@ -1,4 +1,4 @@
-# EsiRuby::GetSovereigntyStructures200Ok
+# Esi::GetSovereigntyStructures200Ok
 
 ## Properties
 Name | Type | Description | Notes

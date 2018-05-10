@@ -1,4 +1,4 @@
-# EsiRuby::GetFwSystems200Ok
+# Esi::GetFwSystems200Ok
 
 ## Properties
 Name | Type | Description | Notes

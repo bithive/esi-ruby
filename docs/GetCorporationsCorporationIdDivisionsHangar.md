@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdDivisionsHangar
+# Esi::GetCorporationsCorporationIdDivisionsHangar
 
 ## Properties
 Name | Type | Description | Notes

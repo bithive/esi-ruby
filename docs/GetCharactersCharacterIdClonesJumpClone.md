@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdClonesJumpClone
+# Esi::GetCharactersCharacterIdClonesJumpClone
 
 ## Properties
 Name | Type | Description | Notes

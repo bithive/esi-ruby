@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsRegionIdOrders200Ok
+# Esi::GetMarketsRegionIdOrders200Ok
 
 ## Properties
 Name | Type | Description | Notes

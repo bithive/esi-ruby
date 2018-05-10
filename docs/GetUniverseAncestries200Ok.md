@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseAncestries200Ok
+# Esi::GetUniverseAncestries200Ok
 
 ## Properties
 Name | Type | Description | Notes

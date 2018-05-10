@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsInventoryType
+# Esi::PostUniverseIdsInventoryType
 
 ## Properties
 Name | Type | Description | Notes

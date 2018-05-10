@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdOk
+# Esi::GetWarsWarIdOk
 
 ## Properties
 Name | Type | Description | Notes

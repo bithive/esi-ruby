@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdKillmailsRecent200Ok
+# Esi::GetCorporationsCorporationIdKillmailsRecent200Ok
 
 ## Properties
 Name | Type | Description | Notes

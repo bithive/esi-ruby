@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdPlanetsPlanetIdNotFound
+# Esi::GetCharactersCharacterIdPlanetsPlanetIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdAgentsResearch200Ok
+# Esi::GetCharactersCharacterIdAgentsResearch200Ok
 
 ## Properties
 Name | Type | Description | Notes

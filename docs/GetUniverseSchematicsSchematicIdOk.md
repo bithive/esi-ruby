@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseSchematicsSchematicIdOk
+# Esi::GetUniverseSchematicsSchematicIdOk
 
 ## Properties
 Name | Type | Description | Notes

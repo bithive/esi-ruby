@@ -1,4 +1,4 @@
-# EsiRuby::KillmailsApi
+# Esi::KillmailsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -21,12 +21,12 @@ Return a list of character's recent kills and losses  --- Alternate route: `/dev
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::KillmailsApi.new
+api_instance = Esi::KillmailsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -44,7 +44,7 @@ begin
   #Get character kills and losses
   result = api_instance.get_characters_character_id_killmails_recent(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling KillmailsApi->get_characters_character_id_killmails_recent: #{e}"
 end
 ```
@@ -89,12 +89,12 @@ Get a list of corporation's recent kills and losses  --- Alternate route: `/dev/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::KillmailsApi.new
+api_instance = Esi::KillmailsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -111,7 +111,7 @@ begin
   #Get corporation kills and losses
   result = api_instance.get_corporations_corporation_id_killmails_recent(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling KillmailsApi->get_corporations_corporation_id_killmails_recent: #{e}"
 end
 ```
@@ -155,7 +155,7 @@ Return a single killmail from its ID and hash  --- Alternate route: `/dev/killma
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::KillmailsApi.new
+api_instance = Esi::KillmailsApi.new
 
 killmail_hash = 'killmail_hash_example' # String | The killmail hash for verification
 
@@ -172,7 +172,7 @@ begin
   #Get a single killmail
   result = api_instance.get_killmails_killmail_id_killmail_hash(killmail_hash, killmail_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling KillmailsApi->get_killmails_killmail_id_killmail_hash: #{e}"
 end
 ```

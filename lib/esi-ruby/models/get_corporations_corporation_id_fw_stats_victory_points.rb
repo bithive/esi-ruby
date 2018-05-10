@@ -12,7 +12,7 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 
 require 'date'
 
-module EsiRuby
+module Esi
   # Summary of victory points gained by the given corporation for the enlisted faction
   class GetCorporationsCorporationIdFwStatsVictoryPoints
     # Last week's victory points gained by members of the given corporation
@@ -170,7 +170,7 @@ module EsiRuby
           end
         end
       else # model
-        temp_model = EsiRuby.const_get(type).new
+        temp_model = Esi.const_get(type).new
         temp_model.build_from_hash(value)
       end
     end

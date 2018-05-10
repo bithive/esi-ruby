@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseCategoriesCategoryIdOk
+# Esi::GetUniverseCategoriesCategoryIdOk
 
 ## Properties
 Name | Type | Description | Notes

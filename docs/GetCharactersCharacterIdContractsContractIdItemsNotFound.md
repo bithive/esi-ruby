@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdContractsContractIdItemsNotFound
+# Esi::GetCharactersCharacterIdContractsContractIdItemsNotFound
 
 ## Properties
 Name | Type | Description | Notes

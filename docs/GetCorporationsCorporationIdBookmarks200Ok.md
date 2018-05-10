@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdBookmarks200Ok
+# Esi::GetCorporationsCorporationIdBookmarks200Ok
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseTypesTypeIdOk
+# Esi::GetUniverseTypesTypeIdOk
 
 ## Properties
 Name | Type | Description | Notes

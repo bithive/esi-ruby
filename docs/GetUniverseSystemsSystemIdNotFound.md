@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseSystemsSystemIdNotFound
+# Esi::GetUniverseSystemsSystemIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

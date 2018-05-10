@@ -1,4 +1,4 @@
-# EsiRuby::GetCorporationsCorporationIdContacts200Ok
+# Esi::GetCorporationsCorporationIdContacts200Ok
 
 ## Properties
 Name | Type | Description | Notes

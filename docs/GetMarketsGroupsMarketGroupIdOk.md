@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsGroupsMarketGroupIdOk
+# Esi::GetMarketsGroupsMarketGroupIdOk
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::BookmarksApi
+# Esi::BookmarksApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -22,12 +22,12 @@ A list of your character's personal bookmarks  --- Alternate route: `/dev/charac
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::BookmarksApi.new
+api_instance = Esi::BookmarksApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -44,7 +44,7 @@ begin
   #List bookmarks
   result = api_instance.get_characters_character_id_bookmarks(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling BookmarksApi->get_characters_character_id_bookmarks: #{e}"
 end
 ```
@@ -88,12 +88,12 @@ A list of your character's personal bookmark folders  --- Alternate route: `/dev
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::BookmarksApi.new
+api_instance = Esi::BookmarksApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -110,7 +110,7 @@ begin
   #List bookmark folders
   result = api_instance.get_characters_character_id_bookmarks_folders(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling BookmarksApi->get_characters_character_id_bookmarks_folders: #{e}"
 end
 ```
@@ -154,12 +154,12 @@ A list of your corporation's bookmarks  --- Alternate route: `/dev/corporations/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::BookmarksApi.new
+api_instance = Esi::BookmarksApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -176,7 +176,7 @@ begin
   #List corporation bookmarks
   result = api_instance.get_corporations_corporation_id_bookmarks(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling BookmarksApi->get_corporations_corporation_id_bookmarks: #{e}"
 end
 ```
@@ -220,12 +220,12 @@ A list of your corporation's bookmark folders  --- Alternate route: `/dev/corpor
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::BookmarksApi.new
+api_instance = Esi::BookmarksApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -242,7 +242,7 @@ begin
   #List corporation bookmark folders
   result = api_instance.get_corporations_corporation_id_bookmarks_folders(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling BookmarksApi->get_corporations_corporation_id_bookmarks_folders: #{e}"
 end
 ```

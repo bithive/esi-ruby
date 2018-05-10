@@ -1,4 +1,4 @@
-# EsiRuby::PostUiOpenwindowNewmailNewMail
+# Esi::PostUiOpenwindowNewmailNewMail
 
 ## Properties
 Name | Type | Description | Notes

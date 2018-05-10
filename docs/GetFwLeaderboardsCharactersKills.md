@@ -1,4 +1,4 @@
-# EsiRuby::GetFwLeaderboardsCharactersKills
+# Esi::GetFwLeaderboardsCharactersKills
 
 ## Properties
 Name | Type | Description | Notes

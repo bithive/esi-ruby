@@ -1,4 +1,4 @@
-# EsiRuby::GetFleetsFleetIdOk
+# Esi::GetFleetsFleetIdOk
 
 ## Properties
 Name | Type | Description | Notes

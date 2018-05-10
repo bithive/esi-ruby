@@ -1,4 +1,4 @@
-# EsiRuby::PostUniverseIdsAgent
+# Esi::PostUniverseIdsAgent
 
 ## Properties
 Name | Type | Description | Notes

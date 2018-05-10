@@ -1,4 +1,4 @@
-# EsiRuby::GetFwLeaderboardsCharactersOk
+# Esi::GetFwLeaderboardsCharactersOk
 
 ## Properties
 Name | Type | Description | Notes

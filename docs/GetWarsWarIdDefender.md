@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdDefender
+# Esi::GetWarsWarIdDefender
 
 ## Properties
 Name | Type | Description | Notes

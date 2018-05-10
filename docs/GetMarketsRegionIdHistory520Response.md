@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsRegionIdHistory520Response
+# Esi::GetMarketsRegionIdHistory520Response
 
 ## Properties
 Name | Type | Description | Notes

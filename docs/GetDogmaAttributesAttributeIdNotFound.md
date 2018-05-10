@@ -1,4 +1,4 @@
-# EsiRuby::GetDogmaAttributesAttributeIdNotFound
+# Esi::GetDogmaAttributesAttributeIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

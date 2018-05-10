@@ -1,4 +1,4 @@
-# EsiRuby::GetFwWars200Ok
+# Esi::GetFwWars200Ok
 
 ## Properties
 Name | Type | Description | Notes

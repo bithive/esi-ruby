@@ -1,4 +1,4 @@
-# EsiRuby::GetFwStats200Ok
+# Esi::GetFwStats200Ok
 
 ## Properties
 Name | Type | Description | Notes

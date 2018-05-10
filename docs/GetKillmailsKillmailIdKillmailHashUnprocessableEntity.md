@@ -1,4 +1,4 @@
-# EsiRuby::GetKillmailsKillmailIdKillmailHashUnprocessableEntity
+# Esi::GetKillmailsKillmailIdKillmailHashUnprocessableEntity
 
 ## Properties
 Name | Type | Description | Notes

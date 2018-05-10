@@ -1,4 +1,4 @@
-# EsiRuby::PostCorporationsCorporationIdAssetsLocationsPosition
+# Esi::PostCorporationsCorporationIdAssetsLocationsPosition
 
 ## Properties
 Name | Type | Description | Notes

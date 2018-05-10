@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdCalendarEventIdAttendees200Ok
+# Esi::GetCharactersCharacterIdCalendarEventIdAttendees200Ok
 
 ## Properties
 Name | Type | Description | Notes

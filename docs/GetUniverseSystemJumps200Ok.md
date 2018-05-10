@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseSystemJumps200Ok
+# Esi::GetUniverseSystemJumps200Ok
 
 ## Properties
 Name | Type | Description | Notes

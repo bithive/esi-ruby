@@ -1,4 +1,4 @@
-# EsiRuby::ContactsApi
+# Esi::ContactsApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -27,12 +27,12 @@ Bulk delete contacts  --- Alternate route: `/dev/characters/{character_id}/conta
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -48,7 +48,7 @@ opts = {
 begin
   #Delete contacts
   api_instance.delete_characters_character_id_contacts(character_idcontact_ids, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->delete_characters_character_id_contacts: #{e}"
 end
 ```
@@ -91,12 +91,12 @@ Return contacts of an alliance  --- Alternate route: `/legacy/alliances/{allianc
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 alliance_id = 56 # Integer | An EVE alliance ID
 
@@ -113,7 +113,7 @@ begin
   #Get alliance contacts
   result = api_instance.get_alliances_alliance_id_contacts(alliance_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->get_alliances_alliance_id_contacts: #{e}"
 end
 ```
@@ -157,12 +157,12 @@ Return custom labels for an alliance's contacts  --- Alternate route: `/dev/alli
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 alliance_id = 56 # Integer | An EVE alliance ID
 
@@ -178,7 +178,7 @@ begin
   #Get alliance contact labels
   result = api_instance.get_alliances_alliance_id_contacts_labels(alliance_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->get_alliances_alliance_id_contacts_labels: #{e}"
 end
 ```
@@ -221,12 +221,12 @@ Return contacts of a character  --- Alternate route: `/legacy/characters/{charac
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -243,7 +243,7 @@ begin
   #Get contacts
   result = api_instance.get_characters_character_id_contacts(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->get_characters_character_id_contacts: #{e}"
 end
 ```
@@ -287,12 +287,12 @@ Return custom labels for a character's contacts  --- Alternate route: `/dev/char
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
@@ -308,7 +308,7 @@ begin
   #Get contact labels
   result = api_instance.get_characters_character_id_contacts_labels(character_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->get_characters_character_id_contacts_labels: #{e}"
 end
 ```
@@ -351,12 +351,12 @@ Return contacts of a corporation  --- Alternate route: `/legacy/corporations/{co
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -373,7 +373,7 @@ begin
   #Get corporation contacts
   result = api_instance.get_corporations_corporation_id_contacts(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->get_corporations_corporation_id_contacts: #{e}"
 end
 ```
@@ -417,12 +417,12 @@ Return custom labels for a corporation's contacts  --- Alternate route: `/dev/co
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 corporation_id = 56 # Integer | An EVE corporation ID
 
@@ -438,7 +438,7 @@ begin
   #Get corporation contact labels
   result = api_instance.get_corporations_corporation_id_contacts_labels(corporation_id, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->get_corporations_corporation_id_contacts_labels: #{e}"
 end
 ```
@@ -481,16 +481,16 @@ Bulk add contacts with same settings  --- Alternate route: `/legacy/characters/{
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-contact_ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | A list of contacts
+contact_ids = [Esi::Array<Integer>.new] # Array<Integer> | A list of contacts
 
 standing = 3.4 # Float | Standing for the contact
 
@@ -507,7 +507,7 @@ begin
   #Add contacts
   result = api_instance.post_characters_character_id_contacts(character_idcontact_ids, standing, opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->post_characters_character_id_contacts: #{e}"
 end
 ```
@@ -553,16 +553,16 @@ Bulk edit contacts with same settings  --- Alternate route: `/legacy/characters/
 # load the gem
 require 'esi-ruby'
 # setup authorization
-EsiRuby.configure do |config|
+Esi.configure do |config|
   # Configure OAuth2 access token for authorization: evesso
   config.access_token = 'YOUR ACCESS TOKEN'
 end
 
-api_instance = EsiRuby::ContactsApi.new
+api_instance = Esi::ContactsApi.new
 
 character_id = 56 # Integer | An EVE character ID
 
-contact_ids = [EsiRuby::Array<Integer>.new] # Array<Integer> | A list of contacts
+contact_ids = [Esi::Array<Integer>.new] # Array<Integer> | A list of contacts
 
 standing = 3.4 # Float | Standing for the contact
 
@@ -578,7 +578,7 @@ opts = {
 begin
   #Edit contacts
   api_instance.put_characters_character_id_contacts(character_idcontact_ids, standing, opts)
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling ContactsApi->put_characters_character_id_contacts: #{e}"
 end
 ```

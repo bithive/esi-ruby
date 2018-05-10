@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseStationsStationIdOk
+# Esi::GetUniverseStationsStationIdOk
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::PostCharactersCharacterIdAssetsLocations200Ok
+# Esi::PostCharactersCharacterIdAssetsLocations200Ok
 
 ## Properties
 Name | Type | Description | Notes

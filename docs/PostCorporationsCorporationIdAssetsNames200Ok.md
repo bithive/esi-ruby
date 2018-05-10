@@ -1,4 +1,4 @@
-# EsiRuby::PostCorporationsCorporationIdAssetsNames200Ok
+# Esi::PostCorporationsCorporationIdAssetsNames200Ok
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# EsiRuby::PutFleetsFleetIdSquadsSquadIdNaming
+# Esi::PutFleetsFleetIdSquadsSquadIdNaming
 
 ## Properties
 Name | Type | Description | Notes

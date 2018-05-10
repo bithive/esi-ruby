@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdNotFound
+# Esi::GetCharactersCharacterIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

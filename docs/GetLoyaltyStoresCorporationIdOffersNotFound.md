@@ -1,4 +1,4 @@
-# EsiRuby::GetLoyaltyStoresCorporationIdOffersNotFound
+# Esi::GetLoyaltyStoresCorporationIdOffersNotFound
 
 ## Properties
 Name | Type | Description | Notes

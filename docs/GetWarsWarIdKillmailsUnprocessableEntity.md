@@ -1,4 +1,4 @@
-# EsiRuby::GetWarsWarIdKillmailsUnprocessableEntity
+# Esi::GetWarsWarIdKillmailsUnprocessableEntity
 
 ## Properties
 Name | Type | Description | Notes

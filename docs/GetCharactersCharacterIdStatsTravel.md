@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdStatsTravel
+# Esi::GetCharactersCharacterIdStatsTravel
 
 ## Properties
 Name | Type | Description | Notes

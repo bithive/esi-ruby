@@ -1,4 +1,4 @@
-# EsiRuby::GetUniverseRegionsRegionIdNotFound
+# Esi::GetUniverseRegionsRegionIdNotFound
 
 ## Properties
 Name | Type | Description | Notes

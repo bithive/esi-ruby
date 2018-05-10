@@ -1,4 +1,4 @@
-# EsiRuby::GetKillmailsKillmailIdKillmailHashItem1
+# Esi::GetKillmailsKillmailIdKillmailHashItem1
 
 ## Properties
 Name | Type | Description | Notes

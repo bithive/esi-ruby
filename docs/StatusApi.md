@@ -1,4 +1,4 @@
-# EsiRuby::StatusApi
+# Esi::StatusApi
 
 All URIs are relative to *https://esi.evetech.net/latest*
 
@@ -19,7 +19,7 @@ EVE Server status  --- Alternate route: `/dev/status/`  Alternate route: `/legac
 # load the gem
 require 'esi-ruby'
 
-api_instance = EsiRuby::StatusApi.new
+api_instance = Esi::StatusApi.new
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
@@ -32,7 +32,7 @@ begin
   #Retrieve the uptime and player counts
   result = api_instance.get_status(opts)
   p result
-rescue EsiRuby::ApiError => e
+rescue Esi::ApiError => e
   puts "Exception when calling StatusApi->get_status: #{e}"
 end
 ```

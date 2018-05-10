@@ -1,4 +1,4 @@
-# EsiRuby::GetRouteOriginDestinationNotFound
+# Esi::GetRouteOriginDestinationNotFound
 
 ## Properties
 Name | Type | Description | Notes

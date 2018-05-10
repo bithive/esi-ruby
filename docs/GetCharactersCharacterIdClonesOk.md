@@ -1,4 +1,4 @@
-# EsiRuby::GetCharactersCharacterIdClonesOk
+# Esi::GetCharactersCharacterIdClonesOk
 
 ## Properties
 Name | Type | Description | Notes

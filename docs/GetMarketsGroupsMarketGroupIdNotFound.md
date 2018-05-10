@@ -1,4 +1,4 @@
-# EsiRuby::GetMarketsGroupsMarketGroupIdNotFound
+# Esi::GetMarketsGroupsMarketGroupIdNotFound
 
 ## Properties
 Name | Type | Description | Notes
