@@ -1,0 +1,43 @@
+# EsiRuby::GetCharactersCharacterIdStatsIndustry
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**hacking_successes** | **Integer** | hacking_successes integer | [optional] 
+**jobs_cancelled** | **Integer** | jobs_cancelled integer | [optional] 
+**jobs_completed_copy_blueprint** | **Integer** | jobs_completed_copy_blueprint integer | [optional] 
+**jobs_completed_invention** | **Integer** | jobs_completed_invention integer | [optional] 
+**jobs_completed_manufacture** | **Integer** | jobs_completed_manufacture integer | [optional] 
+**jobs_completed_manufacture_asteroid** | **Integer** | jobs_completed_manufacture_asteroid integer | [optional] 
+**jobs_completed_manufacture_asteroid_quantity** | **Integer** | jobs_completed_manufacture_asteroid_quantity integer | [optional] 
+**jobs_completed_manufacture_charge** | **Integer** | jobs_completed_manufacture_charge integer | [optional] 
+**jobs_completed_manufacture_charge_quantity** | **Integer** | jobs_completed_manufacture_charge_quantity integer | [optional] 
+**jobs_completed_manufacture_commodity** | **Integer** | jobs_completed_manufacture_commodity integer | [optional] 
+**jobs_completed_manufacture_commodity_quantity** | **Integer** | jobs_completed_manufacture_commodity_quantity integer | [optional] 
+**jobs_completed_manufacture_deployable** | **Integer** | jobs_completed_manufacture_deployable integer | [optional] 
+**jobs_completed_manufacture_deployable_quantity** | **Integer** | jobs_completed_manufacture_deployable_quantity integer | [optional] 
+**jobs_completed_manufacture_drone** | **Integer** | jobs_completed_manufacture_drone integer | [optional] 
+**jobs_completed_manufacture_drone_quantity** | **Integer** | jobs_completed_manufacture_drone_quantity integer | [optional] 
+**jobs_completed_manufacture_implant** | **Integer** | jobs_completed_manufacture_implant integer | [optional] 
+**jobs_completed_manufacture_implant_quantity** | **Integer** | jobs_completed_manufacture_implant_quantity integer | [optional] 
+**jobs_completed_manufacture_module** | **Integer** | jobs_completed_manufacture_module integer | [optional] 
+**jobs_completed_manufacture_module_quantity** | **Integer** | jobs_completed_manufacture_module_quantity integer | [optional] 
+**jobs_completed_manufacture_other** | **Integer** | jobs_completed_manufacture_other integer | [optional] 
+**jobs_completed_manufacture_other_quantity** | **Integer** | jobs_completed_manufacture_other_quantity integer | [optional] 
+**jobs_completed_manufacture_ship** | **Integer** | jobs_completed_manufacture_ship integer | [optional] 
+**jobs_completed_manufacture_ship_quantity** | **Integer** | jobs_completed_manufacture_ship_quantity integer | [optional] 
+**jobs_completed_manufacture_structure** | **Integer** | jobs_completed_manufacture_structure integer | [optional] 
+**jobs_completed_manufacture_structure_quantity** | **Integer** | jobs_completed_manufacture_structure_quantity integer | [optional] 
+**jobs_completed_manufacture_subsystem** | **Integer** | jobs_completed_manufacture_subsystem integer | [optional] 
+**jobs_completed_manufacture_subsystem_quantity** | **Integer** | jobs_completed_manufacture_subsystem_quantity integer | [optional] 
+**jobs_completed_material_productivity** | **Integer** | jobs_completed_material_productivity integer | [optional] 
+**jobs_completed_time_productivity** | **Integer** | jobs_completed_time_productivity integer | [optional] 
+**jobs_started_copy_blueprint** | **Integer** | jobs_started_copy_blueprint integer | [optional] 
+**jobs_started_invention** | **Integer** | jobs_started_invention integer | [optional] 
+**jobs_started_manufacture** | **Integer** | jobs_started_manufacture integer | [optional] 
+**jobs_started_material_productivity** | **Integer** | jobs_started_material_productivity integer | [optional] 
+**jobs_started_time_productivity** | **Integer** | jobs_started_time_productivity integer | [optional] 
+**reprocess_item** | **Integer** | reprocess_item integer | [optional] 
+**reprocess_item_quantity** | **Integer** | reprocess_item_quantity integer | [optional] 
+
+
