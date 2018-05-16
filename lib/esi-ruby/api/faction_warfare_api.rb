@@ -424,7 +424,7 @@ module Esi
       return data, status_code, headers
     end
     # Ownership of faction warfare systems
-    # An overview of the current ownership of faction warfare solar systems  --- Alternate route: `/dev/fw/systems/`  Alternate route: `/legacy/fw/systems/`  Alternate route: `/v1/fw/systems/`  --- This route is cached for up to 1800 seconds
+    # An overview of the current ownership of faction warfare solar systems  --- Alternate route: `/legacy/fw/systems/`  Alternate route: `/v1/fw/systems/`  --- This route is cached for up to 1800 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
@@ -437,7 +437,7 @@ module Esi
     end
 
     # Ownership of faction warfare systems
-    # An overview of the current ownership of faction warfare solar systems  --- Alternate route: &#x60;/dev/fw/systems/&#x60;  Alternate route: &#x60;/legacy/fw/systems/&#x60;  Alternate route: &#x60;/v1/fw/systems/&#x60;  --- This route is cached for up to 1800 seconds
+    # An overview of the current ownership of faction warfare solar systems  --- Alternate route: &#x60;/legacy/fw/systems/&#x60;  Alternate route: &#x60;/v1/fw/systems/&#x60;  --- This route is cached for up to 1800 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
