@@ -107,7 +107,7 @@ module Esi
       return data, status_code, headers
     end
     # Get alliance contacts
-    # Return contacts of an alliance  --- Alternate route: `/legacy/alliances/{alliance_id}/contacts/`  Alternate route: `/v1/alliances/{alliance_id}/contacts/`  --- This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+    # Return contacts of an alliance  --- Alternate route: `/legacy/alliances/{alliance_id}/contacts/`  Alternate route: `/v1/alliances/{alliance_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
     # @param alliance_id An EVE alliance ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -123,7 +123,7 @@ module Esi
     end
 
     # Get alliance contacts
-    # Return contacts of an alliance  --- Alternate route: &#x60;/legacy/alliances/{alliance_id}/contacts/&#x60;  Alternate route: &#x60;/v1/alliances/{alliance_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+    # Return contacts of an alliance  --- Alternate route: &#x60;/legacy/alliances/{alliance_id}/contacts/&#x60;  Alternate route: &#x60;/v1/alliances/{alliance_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
     # @param alliance_id An EVE alliance ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -266,7 +266,7 @@ module Esi
       return data, status_code, headers
     end
     # Get contacts
-    # Return contacts of a character  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`  --- This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+    # Return contacts of a character  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
     # @param character_id An EVE character ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -282,7 +282,7 @@ module Esi
     end
 
     # Get contacts
-    # Return contacts of a character  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+    # Return contacts of a character  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
     # @param character_id An EVE character ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -425,7 +425,7 @@ module Esi
       return data, status_code, headers
     end
     # Get corporation contacts
-    # Return contacts of a corporation  --- Alternate route: `/legacy/corporations/{corporation_id}/contacts/`  Alternate route: `/v1/corporations/{corporation_id}/contacts/`  --- This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+    # Return contacts of a corporation  --- Alternate route: `/legacy/corporations/{corporation_id}/contacts/`  Alternate route: `/v1/corporations/{corporation_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -441,7 +441,7 @@ module Esi
     end
 
     # Get corporation contacts
-    # Return contacts of a corporation  --- Alternate route: &#x60;/legacy/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+    # Return contacts of a corporation  --- Alternate route: &#x60;/legacy/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -584,7 +584,7 @@ module Esi
       return data, status_code, headers
     end
     # Add contacts
-    # Bulk add contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+    # Bulk add contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
@@ -602,7 +602,7 @@ module Esi
     end
 
     # Add contacts
-    # Bulk add contacts with same settings  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;   --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+    # Bulk add contacts with same settings  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
@@ -684,7 +684,7 @@ module Esi
       return data, status_code, headers
     end
     # Edit contacts
-    # Bulk edit contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+    # Bulk edit contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
@@ -702,7 +702,7 @@ module Esi
     end
 
     # Edit contacts
-    # Bulk edit contacts with same settings  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;   --- [This route has an available update](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+    # Bulk edit contacts with same settings  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
