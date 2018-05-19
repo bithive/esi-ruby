@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **corporation_id** | **Integer** | corporation_id integer | [optional] 
 **damage_taken** | **Integer** | How much total damage was taken by the victim  | 
 **faction_id** | **Integer** | faction_id integer | [optional] 
-**items** | [**Array&lt;GetKillmailsKillmailIdKillmailHashItem1&gt;**](GetKillmailsKillmailIdKillmailHashItem1.md) | items array | [optional] 
+**items** | [**Array&lt;GetKillmailsKillmailIdKillmailHashItem&gt;**](GetKillmailsKillmailIdKillmailHashItem.md) | items array | [optional] 
 **position** | [**GetKillmailsKillmailIdKillmailHashPosition**](GetKillmailsKillmailIdKillmailHashPosition.md) |  | [optional] 
 **ship_type_id** | **Integer** | The ship that the victim was piloting and was destroyed  | 
 
