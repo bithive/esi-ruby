@@ -195,8 +195,8 @@ Class | Method | HTTP request | Description
 *Esi::IndustryApi* | [**get_industry_facilities**](docs/IndustryApi.md#get_industry_facilities) | **GET** /industry/facilities/ | List industry facilities
 *Esi::IndustryApi* | [**get_industry_systems**](docs/IndustryApi.md#get_industry_systems) | **GET** /industry/systems/ | List solar system cost indices
 *Esi::InsuranceApi* | [**get_insurance_prices**](docs/InsuranceApi.md#get_insurance_prices) | **GET** /insurance/prices/ | List insurance levels
-*Esi::KillmailsApi* | [**get_characters_character_id_killmails_recent**](docs/KillmailsApi.md#get_characters_character_id_killmails_recent) | **GET** /characters/{character_id}/killmails/recent/ | Get character kills and losses
-*Esi::KillmailsApi* | [**get_corporations_corporation_id_killmails_recent**](docs/KillmailsApi.md#get_corporations_corporation_id_killmails_recent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get corporation kills and losses
+*Esi::KillmailsApi* | [**get_characters_character_id_killmails_recent**](docs/KillmailsApi.md#get_characters_character_id_killmails_recent) | **GET** /characters/{character_id}/killmails/recent/ | Get a character's recent kills and losses
+*Esi::KillmailsApi* | [**get_corporations_corporation_id_killmails_recent**](docs/KillmailsApi.md#get_corporations_corporation_id_killmails_recent) | **GET** /corporations/{corporation_id}/killmails/recent/ | Get a corporation's recent kills and losses
 *Esi::KillmailsApi* | [**get_killmails_killmail_id_killmail_hash**](docs/KillmailsApi.md#get_killmails_killmail_id_killmail_hash) | **GET** /killmails/{killmail_id}/{killmail_hash}/ | Get a single killmail
 *Esi::LocationApi* | [**get_characters_character_id_location**](docs/LocationApi.md#get_characters_character_id_location) | **GET** /characters/{character_id}/location/ | Get character location
 *Esi::LocationApi* | [**get_characters_character_id_online**](docs/LocationApi.md#get_characters_character_id_online) | **GET** /characters/{character_id}/online/ | Get character online

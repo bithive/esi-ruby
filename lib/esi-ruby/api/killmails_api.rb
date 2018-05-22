@@ -19,14 +19,13 @@ module Esi
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Get character kills and losses
-    # Return a list of character's recent kills and losses  --- Alternate route: `/dev/characters/{character_id}/killmails/recent/`  Alternate route: `/legacy/characters/{character_id}/killmails/recent/`  Alternate route: `/v1/characters/{character_id}/killmails/recent/`  --- This route is cached for up to 120 seconds
+    # Get a character's recent kills and losses
+    # Return a list of a character's kills and losses going back 90 days  --- Alternate route: `/dev/characters/{character_id}/killmails/recent/`  Alternate route: `/legacy/characters/{character_id}/killmails/recent/`  Alternate route: `/v1/characters/{character_id}/killmails/recent/`  --- This route is cached for up to 300 seconds
     # @param character_id An EVE character ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [Integer] :max_count How many killmails to return at maximum (default to 50)
-    # @option opts [Integer] :max_kill_id Only return killmails with ID smaller than this. 
+    # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [String] :user_agent Client identifier, takes precedence over headers
     # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
@@ -36,14 +35,13 @@ module Esi
       data
     end
 
-    # Get character kills and losses
-    # Return a list of character&#39;s recent kills and losses  --- Alternate route: &#x60;/dev/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/killmails/recent/&#x60;  --- This route is cached for up to 120 seconds
+    # Get a character&#39;s recent kills and losses
+    # Return a list of a character&#39;s kills and losses going back 90 days  --- Alternate route: &#x60;/dev/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/killmails/recent/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/killmails/recent/&#x60;  --- This route is cached for up to 300 seconds
     # @param character_id An EVE character ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [Integer] :max_count How many killmails to return at maximum
-    # @option opts [Integer] :max_kill_id Only return killmails with ID smaller than this. 
+    # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [String] :user_agent Client identifier, takes precedence over headers
     # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
@@ -63,8 +61,8 @@ module Esi
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
       end
-      if @api_client.config.client_side_validation && !opts[:'max_count'].nil? && opts[:'max_count'] > 5000
-        fail ArgumentError, 'invalid value for "opts[:"max_count"]" when calling KillmailsApi.get_characters_character_id_killmails_recent, must be smaller than or equal to 5000.'
+      if @api_client.config.client_side_validation && !opts[:'page'].nil? && opts[:'page'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"page"]" when calling KillmailsApi.get_characters_character_id_killmails_recent, must be greater than or equal to 1.'
       end
 
       # resource path
@@ -73,8 +71,7 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'max_count'] = opts[:'max_count'] if !opts[:'max_count'].nil?
-      query_params[:'max_kill_id'] = opts[:'max_kill_id'] if !opts[:'max_kill_id'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
       query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
@@ -105,13 +102,13 @@ module Esi
       end
       return data, status_code, headers
     end
-    # Get corporation kills and losses
-    # Get a list of corporation's recent kills and losses  --- Alternate route: `/dev/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/legacy/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/v1/corporations/{corporation_id}/killmails/recent/`  --- This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director 
+    # Get a corporation's recent kills and losses
+    # Get a list of a corporation's kills and losses going back 90 days  --- Alternate route: `/dev/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/legacy/corporations/{corporation_id}/killmails/recent/`  Alternate route: `/v1/corporations/{corporation_id}/killmails/recent/`  --- This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director 
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [Integer] :max_kill_id Only return killmails with ID smaller than this
+    # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [String] :user_agent Client identifier, takes precedence over headers
     # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
@@ -121,13 +118,13 @@ module Esi
       data
     end
 
-    # Get corporation kills and losses
-    # Get a list of corporation&#39;s recent kills and losses  --- Alternate route: &#x60;/dev/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/killmails/recent/&#x60;  --- This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director 
+    # Get a corporation&#39;s recent kills and losses
+    # Get a list of a corporation&#39;s kills and losses going back 90 days  --- Alternate route: &#x60;/dev/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/killmails/recent/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/killmails/recent/&#x60;  --- This route is cached for up to 300 seconds  --- Requires one of the following EVE corporation role(s): Director 
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [Integer] :max_kill_id Only return killmails with ID smaller than this
+    # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [String] :user_agent Client identifier, takes precedence over headers
     # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
@@ -147,13 +144,17 @@ module Esi
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
       end
+      if @api_client.config.client_side_validation && !opts[:'page'].nil? && opts[:'page'] < 1
+        fail ArgumentError, 'invalid value for "opts[:"page"]" when calling KillmailsApi.get_corporations_corporation_id_killmails_recent, must be greater than or equal to 1.'
+      end
+
       # resource path
       local_var_path = '/corporations/{corporation_id}/killmails/recent/'.sub('{' + 'corporation_id' + '}', corporation_id.to_s)
 
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'max_kill_id'] = opts[:'max_kill_id'] if !opts[:'max_kill_id'].nil?
+      query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
       query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
