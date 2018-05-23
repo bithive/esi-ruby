@@ -23,6 +23,7 @@ require 'esi-ruby/models/delete_characters_character_id_mail_labels_label_id_unp
 require 'esi-ruby/models/delete_fleets_fleet_id_members_member_id_not_found'
 require 'esi-ruby/models/delete_fleets_fleet_id_squads_squad_id_not_found'
 require 'esi-ruby/models/delete_fleets_fleet_id_wings_wing_id_not_found'
+require 'esi-ruby/models/error_limited'
 require 'esi-ruby/models/forbidden'
 require 'esi-ruby/models/get_alliances_alliance_id_contacts_200_ok'
 require 'esi-ruby/models/get_alliances_alliance_id_contacts_labels_200_ok'
