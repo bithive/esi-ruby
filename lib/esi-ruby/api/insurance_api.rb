@@ -22,11 +22,10 @@ module Esi
     # List insurance levels
     # Return available insurance levels for all ship types  --- Alternate route: `/dev/insurance/prices/`  Alternate route: `/legacy/insurance/prices/`  Alternate route: `/v1/insurance/prices/`  --- This route is cached for up to 3600 seconds
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [Array<GetInsurancePrices200Ok>]
     def get_insurance_prices(opts = {})
       data, _status_code, _headers = get_insurance_prices_with_http_info(opts)
@@ -36,15 +35,17 @@ module Esi
     # List insurance levels
     # Return available insurance levels for all ship types  --- Alternate route: &#x60;/dev/insurance/prices/&#x60;  Alternate route: &#x60;/legacy/insurance/prices/&#x60;  Alternate route: &#x60;/v1/insurance/prices/&#x60;  --- This route is cached for up to 3600 seconds
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(Array<GetInsurancePrices200Ok>, Fixnum, Hash)>] Array<GetInsurancePrices200Ok> data, response status code and response headers
     def get_insurance_prices_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: InsuranceApi.get_insurance_prices ...'
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -59,7 +60,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -67,8 +67,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

@@ -27,8 +27,6 @@ api_instance = Esi::DogmaApi.new
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
   if_none_match: 'if_none_match_example', # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -46,8 +44,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -83,8 +79,6 @@ attribute_id = 56 # Integer | A dogma attribute ID
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
   if_none_match: 'if_none_match_example', # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -103,8 +97,6 @@ Name | Type | Description  | Notes
  **attribute_id** | **Integer**| A dogma attribute ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -138,8 +130,6 @@ api_instance = Esi::DogmaApi.new
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
   if_none_match: 'if_none_match_example', # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -157,8 +147,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -194,8 +182,6 @@ effect_id = 56 # Integer | A dogma effect ID
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
   if_none_match: 'if_none_match_example', # String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
 }
 
 begin
@@ -214,8 +200,6 @@ Name | Type | Description  | Notes
  **effect_id** | **Integer**| A dogma effect ID | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **if_none_match** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 

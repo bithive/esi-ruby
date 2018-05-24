@@ -22,11 +22,10 @@ module Esi
     # Get ancestries
     # Get all character ancestries  --- Alternate route: `/dev/universe/ancestries/`  Alternate route: `/legacy/universe/ancestries/`  Alternate route: `/v1/universe/ancestries/`  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [Array<GetUniverseAncestries200Ok>]
     def get_universe_ancestries(opts = {})
       data, _status_code, _headers = get_universe_ancestries_with_http_info(opts)
@@ -36,15 +35,17 @@ module Esi
     # Get ancestries
     # Get all character ancestries  --- Alternate route: &#x60;/dev/universe/ancestries/&#x60;  Alternate route: &#x60;/legacy/universe/ancestries/&#x60;  Alternate route: &#x60;/v1/universe/ancestries/&#x60;  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(Array<GetUniverseAncestries200Ok>, Fixnum, Hash)>] Array<GetUniverseAncestries200Ok> data, response status code and response headers
     def get_universe_ancestries_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniverseApi.get_universe_ancestries ...'
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -59,7 +60,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -67,8 +67,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -94,8 +94,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseAsteroidBeltsAsteroidBeltIdOk]
     def get_universe_asteroid_belts_asteroid_belt_id(asteroid_belt_id, opts = {})
       data, _status_code, _headers = get_universe_asteroid_belts_asteroid_belt_id_with_http_info(asteroid_belt_id, opts)
@@ -108,8 +106,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseAsteroidBeltsAsteroidBeltIdOk, Fixnum, Hash)>] GetUniverseAsteroidBeltsAsteroidBeltIdOk data, response status code and response headers
     def get_universe_asteroid_belts_asteroid_belt_id_with_http_info(asteroid_belt_id, opts = {})
       if @api_client.config.debugging
@@ -128,7 +124,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -137,7 +132,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -160,11 +154,10 @@ module Esi
     # Get bloodlines
     # Get a list of bloodlines  --- Alternate route: `/dev/universe/bloodlines/`  Alternate route: `/legacy/universe/bloodlines/`  Alternate route: `/v1/universe/bloodlines/`  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [Array<GetUniverseBloodlines200Ok>]
     def get_universe_bloodlines(opts = {})
       data, _status_code, _headers = get_universe_bloodlines_with_http_info(opts)
@@ -174,15 +167,17 @@ module Esi
     # Get bloodlines
     # Get a list of bloodlines  --- Alternate route: &#x60;/dev/universe/bloodlines/&#x60;  Alternate route: &#x60;/legacy/universe/bloodlines/&#x60;  Alternate route: &#x60;/v1/universe/bloodlines/&#x60;  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(Array<GetUniverseBloodlines200Ok>, Fixnum, Hash)>] Array<GetUniverseBloodlines200Ok> data, response status code and response headers
     def get_universe_bloodlines_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniverseApi.get_universe_bloodlines ...'
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -197,7 +192,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -205,8 +199,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -231,8 +225,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_categories(opts = {})
       data, _status_code, _headers = get_universe_categories_with_http_info(opts)
@@ -244,8 +236,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_categories_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -260,7 +250,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -269,7 +258,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -293,11 +281,10 @@ module Esi
     # Get information of an item category  --- Alternate route: `/dev/universe/categories/{category_id}/`  Alternate route: `/legacy/universe/categories/{category_id}/`  Alternate route: `/v1/universe/categories/{category_id}/`  --- This route expires daily at 11:05
     # @param category_id An Eve item category ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [GetUniverseCategoriesCategoryIdOk]
     def get_universe_categories_category_id(category_id, opts = {})
       data, _status_code, _headers = get_universe_categories_category_id_with_http_info(category_id, opts)
@@ -308,11 +295,10 @@ module Esi
     # Get information of an item category  --- Alternate route: &#x60;/dev/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/legacy/universe/categories/{category_id}/&#x60;  Alternate route: &#x60;/v1/universe/categories/{category_id}/&#x60;  --- This route expires daily at 11:05
     # @param category_id An Eve item category ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(GetUniverseCategoriesCategoryIdOk, Fixnum, Hash)>] GetUniverseCategoriesCategoryIdOk data, response status code and response headers
     def get_universe_categories_category_id_with_http_info(category_id, opts = {})
       if @api_client.config.debugging
@@ -321,6 +307,9 @@ module Esi
       # verify the required parameter 'category_id' is set
       if @api_client.config.client_side_validation && category_id.nil?
         fail ArgumentError, "Missing the required parameter 'category_id' when calling UniverseApi.get_universe_categories_category_id"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -335,7 +324,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -343,8 +331,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -369,8 +357,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_constellations(opts = {})
       data, _status_code, _headers = get_universe_constellations_with_http_info(opts)
@@ -382,8 +368,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_constellations_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -398,7 +382,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -407,7 +390,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -431,11 +413,10 @@ module Esi
     # Get information on a constellation  --- Alternate route: `/dev/universe/constellations/{constellation_id}/`  Alternate route: `/legacy/universe/constellations/{constellation_id}/`  Alternate route: `/v1/universe/constellations/{constellation_id}/`  --- This route expires daily at 11:05
     # @param constellation_id constellation_id integer
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [GetUniverseConstellationsConstellationIdOk]
     def get_universe_constellations_constellation_id(constellation_id, opts = {})
       data, _status_code, _headers = get_universe_constellations_constellation_id_with_http_info(constellation_id, opts)
@@ -446,11 +427,10 @@ module Esi
     # Get information on a constellation  --- Alternate route: &#x60;/dev/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/legacy/universe/constellations/{constellation_id}/&#x60;  Alternate route: &#x60;/v1/universe/constellations/{constellation_id}/&#x60;  --- This route expires daily at 11:05
     # @param constellation_id constellation_id integer
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(GetUniverseConstellationsConstellationIdOk, Fixnum, Hash)>] GetUniverseConstellationsConstellationIdOk data, response status code and response headers
     def get_universe_constellations_constellation_id_with_http_info(constellation_id, opts = {})
       if @api_client.config.debugging
@@ -459,6 +439,9 @@ module Esi
       # verify the required parameter 'constellation_id' is set
       if @api_client.config.client_side_validation && constellation_id.nil?
         fail ArgumentError, "Missing the required parameter 'constellation_id' when calling UniverseApi.get_universe_constellations_constellation_id"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -473,7 +456,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -481,8 +463,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -505,11 +487,10 @@ module Esi
     # Get factions
     # Get a list of factions  --- Alternate route: `/dev/universe/factions/`  Alternate route: `/v2/universe/factions/`  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [Array<GetUniverseFactions200Ok>]
     def get_universe_factions(opts = {})
       data, _status_code, _headers = get_universe_factions_with_http_info(opts)
@@ -519,15 +500,17 @@ module Esi
     # Get factions
     # Get a list of factions  --- Alternate route: &#x60;/dev/universe/factions/&#x60;  Alternate route: &#x60;/v2/universe/factions/&#x60;  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(Array<GetUniverseFactions200Ok>, Fixnum, Hash)>] Array<GetUniverseFactions200Ok> data, response status code and response headers
     def get_universe_factions_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniverseApi.get_universe_factions ...'
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -542,7 +525,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -550,8 +532,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -576,8 +558,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_graphics(opts = {})
       data, _status_code, _headers = get_universe_graphics_with_http_info(opts)
@@ -589,8 +569,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_graphics_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -605,7 +583,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -614,7 +591,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -640,8 +616,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseGraphicsGraphicIdOk]
     def get_universe_graphics_graphic_id(graphic_id, opts = {})
       data, _status_code, _headers = get_universe_graphics_graphic_id_with_http_info(graphic_id, opts)
@@ -654,8 +628,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseGraphicsGraphicIdOk, Fixnum, Hash)>] GetUniverseGraphicsGraphicIdOk data, response status code and response headers
     def get_universe_graphics_graphic_id_with_http_info(graphic_id, opts = {})
       if @api_client.config.debugging
@@ -674,7 +646,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -683,7 +654,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -709,8 +679,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_groups(opts = {})
       data, _status_code, _headers = get_universe_groups_with_http_info(opts)
@@ -723,8 +691,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_groups_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -744,7 +710,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -753,7 +718,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -777,11 +741,10 @@ module Esi
     # Get information on an item group  --- Alternate route: `/dev/universe/groups/{group_id}/`  Alternate route: `/legacy/universe/groups/{group_id}/`  Alternate route: `/v1/universe/groups/{group_id}/`  --- This route expires daily at 11:05
     # @param group_id An Eve item group ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [GetUniverseGroupsGroupIdOk]
     def get_universe_groups_group_id(group_id, opts = {})
       data, _status_code, _headers = get_universe_groups_group_id_with_http_info(group_id, opts)
@@ -792,11 +755,10 @@ module Esi
     # Get information on an item group  --- Alternate route: &#x60;/dev/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/legacy/universe/groups/{group_id}/&#x60;  Alternate route: &#x60;/v1/universe/groups/{group_id}/&#x60;  --- This route expires daily at 11:05
     # @param group_id An Eve item group ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(GetUniverseGroupsGroupIdOk, Fixnum, Hash)>] GetUniverseGroupsGroupIdOk data, response status code and response headers
     def get_universe_groups_group_id_with_http_info(group_id, opts = {})
       if @api_client.config.debugging
@@ -805,6 +767,9 @@ module Esi
       # verify the required parameter 'group_id' is set
       if @api_client.config.client_side_validation && group_id.nil?
         fail ArgumentError, "Missing the required parameter 'group_id' when calling UniverseApi.get_universe_groups_group_id"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -819,7 +784,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -827,8 +791,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -854,8 +818,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseMoonsMoonIdOk]
     def get_universe_moons_moon_id(moon_id, opts = {})
       data, _status_code, _headers = get_universe_moons_moon_id_with_http_info(moon_id, opts)
@@ -868,8 +830,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseMoonsMoonIdOk, Fixnum, Hash)>] GetUniverseMoonsMoonIdOk data, response status code and response headers
     def get_universe_moons_moon_id_with_http_info(moon_id, opts = {})
       if @api_client.config.debugging
@@ -888,7 +848,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -897,7 +856,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -923,8 +881,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniversePlanetsPlanetIdOk]
     def get_universe_planets_planet_id(planet_id, opts = {})
       data, _status_code, _headers = get_universe_planets_planet_id_with_http_info(planet_id, opts)
@@ -937,8 +893,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniversePlanetsPlanetIdOk, Fixnum, Hash)>] GetUniversePlanetsPlanetIdOk data, response status code and response headers
     def get_universe_planets_planet_id_with_http_info(planet_id, opts = {})
       if @api_client.config.debugging
@@ -957,7 +911,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -966,7 +919,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -989,11 +941,10 @@ module Esi
     # Get character races
     # Get a list of character races  --- Alternate route: `/dev/universe/races/`  Alternate route: `/legacy/universe/races/`  Alternate route: `/v1/universe/races/`  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [Array<GetUniverseRaces200Ok>]
     def get_universe_races(opts = {})
       data, _status_code, _headers = get_universe_races_with_http_info(opts)
@@ -1003,15 +954,17 @@ module Esi
     # Get character races
     # Get a list of character races  --- Alternate route: &#x60;/dev/universe/races/&#x60;  Alternate route: &#x60;/legacy/universe/races/&#x60;  Alternate route: &#x60;/v1/universe/races/&#x60;  --- This route expires daily at 11:05
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(Array<GetUniverseRaces200Ok>, Fixnum, Hash)>] Array<GetUniverseRaces200Ok> data, response status code and response headers
     def get_universe_races_with_http_info(opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: UniverseApi.get_universe_races ...'
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -1026,7 +979,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1034,8 +986,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1060,8 +1012,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_regions(opts = {})
       data, _status_code, _headers = get_universe_regions_with_http_info(opts)
@@ -1073,8 +1023,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_regions_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1089,7 +1037,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1098,7 +1045,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1122,11 +1068,10 @@ module Esi
     # Get information on a region  --- Alternate route: `/dev/universe/regions/{region_id}/`  Alternate route: `/legacy/universe/regions/{region_id}/`  Alternate route: `/v1/universe/regions/{region_id}/`  --- This route expires daily at 11:05
     # @param region_id region_id integer
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [GetUniverseRegionsRegionIdOk]
     def get_universe_regions_region_id(region_id, opts = {})
       data, _status_code, _headers = get_universe_regions_region_id_with_http_info(region_id, opts)
@@ -1137,11 +1082,10 @@ module Esi
     # Get information on a region  --- Alternate route: &#x60;/dev/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/legacy/universe/regions/{region_id}/&#x60;  Alternate route: &#x60;/v1/universe/regions/{region_id}/&#x60;  --- This route expires daily at 11:05
     # @param region_id region_id integer
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(GetUniverseRegionsRegionIdOk, Fixnum, Hash)>] GetUniverseRegionsRegionIdOk data, response status code and response headers
     def get_universe_regions_region_id_with_http_info(region_id, opts = {})
       if @api_client.config.debugging
@@ -1150,6 +1094,9 @@ module Esi
       # verify the required parameter 'region_id' is set
       if @api_client.config.client_side_validation && region_id.nil?
         fail ArgumentError, "Missing the required parameter 'region_id' when calling UniverseApi.get_universe_regions_region_id"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -1164,7 +1111,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1172,8 +1118,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1199,8 +1145,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseStargatesStargateIdOk]
     def get_universe_stargates_stargate_id(stargate_id, opts = {})
       data, _status_code, _headers = get_universe_stargates_stargate_id_with_http_info(stargate_id, opts)
@@ -1213,8 +1157,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseStargatesStargateIdOk, Fixnum, Hash)>] GetUniverseStargatesStargateIdOk data, response status code and response headers
     def get_universe_stargates_stargate_id_with_http_info(stargate_id, opts = {})
       if @api_client.config.debugging
@@ -1233,7 +1175,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1242,7 +1183,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1268,8 +1208,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseStarsStarIdOk]
     def get_universe_stars_star_id(star_id, opts = {})
       data, _status_code, _headers = get_universe_stars_star_id_with_http_info(star_id, opts)
@@ -1282,8 +1220,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseStarsStarIdOk, Fixnum, Hash)>] GetUniverseStarsStarIdOk data, response status code and response headers
     def get_universe_stars_star_id_with_http_info(star_id, opts = {})
       if @api_client.config.debugging
@@ -1302,7 +1238,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1311,7 +1246,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1337,8 +1271,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseStationsStationIdOk]
     def get_universe_stations_station_id(station_id, opts = {})
       data, _status_code, _headers = get_universe_stations_station_id_with_http_info(station_id, opts)
@@ -1351,8 +1283,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseStationsStationIdOk, Fixnum, Hash)>] GetUniverseStationsStationIdOk data, response status code and response headers
     def get_universe_stations_station_id_with_http_info(station_id, opts = {})
       if @api_client.config.debugging
@@ -1371,7 +1301,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1380,7 +1309,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1405,8 +1333,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_structures(opts = {})
       data, _status_code, _headers = get_universe_structures_with_http_info(opts)
@@ -1418,8 +1344,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_structures_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1434,7 +1358,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1443,7 +1366,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1470,8 +1392,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetUniverseStructuresStructureIdOk]
     def get_universe_structures_structure_id(structure_id, opts = {})
       data, _status_code, _headers = get_universe_structures_structure_id_with_http_info(structure_id, opts)
@@ -1485,8 +1405,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetUniverseStructuresStructureIdOk, Fixnum, Hash)>] GetUniverseStructuresStructureIdOk data, response status code and response headers
     def get_universe_structures_structure_id_with_http_info(structure_id, opts = {})
       if @api_client.config.debugging
@@ -1506,7 +1424,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1515,7 +1432,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1540,8 +1456,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetUniverseSystemJumps200Ok>]
     def get_universe_system_jumps(opts = {})
       data, _status_code, _headers = get_universe_system_jumps_with_http_info(opts)
@@ -1553,8 +1467,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetUniverseSystemJumps200Ok>, Fixnum, Hash)>] Array<GetUniverseSystemJumps200Ok> data, response status code and response headers
     def get_universe_system_jumps_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1569,7 +1481,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1578,7 +1489,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1603,8 +1513,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetUniverseSystemKills200Ok>]
     def get_universe_system_kills(opts = {})
       data, _status_code, _headers = get_universe_system_kills_with_http_info(opts)
@@ -1616,8 +1524,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetUniverseSystemKills200Ok>, Fixnum, Hash)>] Array<GetUniverseSystemKills200Ok> data, response status code and response headers
     def get_universe_system_kills_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1632,7 +1538,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1641,7 +1546,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1666,8 +1570,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_systems(opts = {})
       data, _status_code, _headers = get_universe_systems_with_http_info(opts)
@@ -1679,8 +1581,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_systems_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1695,7 +1595,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1704,7 +1603,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1728,11 +1626,10 @@ module Esi
     # Get information on a solar system  --- Alternate route: `/dev/universe/systems/{system_id}/`  Alternate route: `/v3/universe/systems/{system_id}/`  --- This route expires daily at 11:05
     # @param system_id system_id integer
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [GetUniverseSystemsSystemIdOk]
     def get_universe_systems_system_id(system_id, opts = {})
       data, _status_code, _headers = get_universe_systems_system_id_with_http_info(system_id, opts)
@@ -1743,11 +1640,10 @@ module Esi
     # Get information on a solar system  --- Alternate route: &#x60;/dev/universe/systems/{system_id}/&#x60;  Alternate route: &#x60;/v3/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05
     # @param system_id system_id integer
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(GetUniverseSystemsSystemIdOk, Fixnum, Hash)>] GetUniverseSystemsSystemIdOk data, response status code and response headers
     def get_universe_systems_system_id_with_http_info(system_id, opts = {})
       if @api_client.config.debugging
@@ -1756,6 +1652,9 @@ module Esi
       # verify the required parameter 'system_id' is set
       if @api_client.config.client_side_validation && system_id.nil?
         fail ArgumentError, "Missing the required parameter 'system_id' when calling UniverseApi.get_universe_systems_system_id"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -1770,7 +1669,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1778,8 +1676,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1805,8 +1703,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_universe_types(opts = {})
       data, _status_code, _headers = get_universe_types_with_http_info(opts)
@@ -1819,8 +1715,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_universe_types_with_http_info(opts = {})
       if @api_client.config.debugging
@@ -1840,7 +1734,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1849,7 +1742,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1873,11 +1765,10 @@ module Esi
     # Get information on a type  --- Alternate route: `/dev/universe/types/{type_id}/`  Alternate route: `/v3/universe/types/{type_id}/`  --- This route expires daily at 11:05
     # @param type_id An Eve item type ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [GetUniverseTypesTypeIdOk]
     def get_universe_types_type_id(type_id, opts = {})
       data, _status_code, _headers = get_universe_types_type_id_with_http_info(type_id, opts)
@@ -1888,11 +1779,10 @@ module Esi
     # Get information on a type  --- Alternate route: &#x60;/dev/universe/types/{type_id}/&#x60;  Alternate route: &#x60;/v3/universe/types/{type_id}/&#x60;  --- This route expires daily at 11:05
     # @param type_id An Eve item type ID
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(GetUniverseTypesTypeIdOk, Fixnum, Hash)>] GetUniverseTypesTypeIdOk data, response status code and response headers
     def get_universe_types_type_id_with_http_info(type_id, opts = {})
       if @api_client.config.debugging
@@ -1901,6 +1791,9 @@ module Esi
       # verify the required parameter 'type_id' is set
       if @api_client.config.client_side_validation && type_id.nil?
         fail ArgumentError, "Missing the required parameter 'type_id' when calling UniverseApi.get_universe_types_type_id"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -1915,7 +1808,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1923,8 +1815,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1948,10 +1840,9 @@ module Esi
     # Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  --- Alternate route: `/dev/universe/ids/`  Alternate route: `/legacy/universe/ids/`  Alternate route: `/v1/universe/ids/` 
     # @param names The names to resolve
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
-    # @option opts [String] :language Language to use in the response (default to en-us)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @return [PostUniverseIdsOk]
     def post_universe_ids(names, opts = {})
       data, _status_code, _headers = post_universe_ids_with_http_info(names, opts)
@@ -1962,10 +1853,9 @@ module Esi
     # Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  --- Alternate route: &#x60;/dev/universe/ids/&#x60;  Alternate route: &#x60;/legacy/universe/ids/&#x60;  Alternate route: &#x60;/v1/universe/ids/&#x60; 
     # @param names The names to resolve
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
-    # @option opts [String] :language Language to use in the response
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @return [Array<(PostUniverseIdsOk, Fixnum, Hash)>] PostUniverseIdsOk data, response status code and response headers
     def post_universe_ids_with_http_info(names, opts = {})
       if @api_client.config.debugging
@@ -1974,6 +1864,9 @@ module Esi
       # verify the required parameter 'names' is set
       if @api_client.config.client_side_validation && names.nil?
         fail ArgumentError, "Missing the required parameter 'names' when calling UniverseApi.post_universe_ids"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -1988,7 +1881,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1996,7 +1888,7 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
 
       # form parameters
       form_params = {}
@@ -2021,8 +1913,6 @@ module Esi
     # @param ids The ids to resolve
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<PostUniverseNames200Ok>]
     def post_universe_names(ids, opts = {})
       data, _status_code, _headers = post_universe_names_with_http_info(ids, opts)
@@ -2034,8 +1924,6 @@ module Esi
     # @param ids The ids to resolve
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<PostUniverseNames200Ok>, Fixnum, Hash)>] Array<PostUniverseNames200Ok> data, response status code and response headers
     def post_universe_names_with_http_info(ids, opts = {})
       if @api_client.config.debugging
@@ -2054,7 +1942,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -2062,7 +1949,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

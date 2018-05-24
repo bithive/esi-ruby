@@ -29,8 +29,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :flag route security preference (default to shortest)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<Integer>]
     def get_route_origin_destination(destination, origin, opts = {})
       data, _status_code, _headers = get_route_origin_destination_with_http_info(destination, origin, opts)
@@ -47,8 +45,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :flag route security preference
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
     def get_route_origin_destination_with_http_info(destination, origin, opts = {})
       if @api_client.config.debugging
@@ -85,7 +81,6 @@ module Esi
       query_params[:'connections'] = @api_client.build_collection_param(opts[:'connections'], :csv) if !opts[:'connections'].nil?
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'flag'] = opts[:'flag'] if !opts[:'flag'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -94,7 +89,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

@@ -27,8 +27,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCharactersCharacterIdBookmarks200Ok>]
     def get_characters_character_id_bookmarks(character_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_bookmarks_with_http_info(character_id, opts)
@@ -43,8 +41,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCharactersCharacterIdBookmarks200Ok>, Fixnum, Hash)>] Array<GetCharactersCharacterIdBookmarks200Ok> data, response status code and response headers
     def get_characters_character_id_bookmarks_with_http_info(character_id, opts = {})
       if @api_client.config.debugging
@@ -73,7 +69,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -82,7 +77,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -110,8 +104,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCharactersCharacterIdBookmarksFolders200Ok>]
     def get_characters_character_id_bookmarks_folders(character_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_bookmarks_folders_with_http_info(character_id, opts)
@@ -126,8 +118,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCharactersCharacterIdBookmarksFolders200Ok>, Fixnum, Hash)>] Array<GetCharactersCharacterIdBookmarksFolders200Ok> data, response status code and response headers
     def get_characters_character_id_bookmarks_folders_with_http_info(character_id, opts = {})
       if @api_client.config.debugging
@@ -156,7 +146,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -165,7 +154,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -193,8 +181,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCorporationsCorporationIdBookmarks200Ok>]
     def get_corporations_corporation_id_bookmarks(corporation_id, opts = {})
       data, _status_code, _headers = get_corporations_corporation_id_bookmarks_with_http_info(corporation_id, opts)
@@ -209,8 +195,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCorporationsCorporationIdBookmarks200Ok>, Fixnum, Hash)>] Array<GetCorporationsCorporationIdBookmarks200Ok> data, response status code and response headers
     def get_corporations_corporation_id_bookmarks_with_http_info(corporation_id, opts = {})
       if @api_client.config.debugging
@@ -239,7 +223,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -248,7 +231,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -276,8 +258,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCorporationsCorporationIdBookmarksFolders200Ok>]
     def get_corporations_corporation_id_bookmarks_folders(corporation_id, opts = {})
       data, _status_code, _headers = get_corporations_corporation_id_bookmarks_folders_with_http_info(corporation_id, opts)
@@ -292,8 +272,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCorporationsCorporationIdBookmarksFolders200Ok>, Fixnum, Hash)>] Array<GetCorporationsCorporationIdBookmarksFolders200Ok> data, response status code and response headers
     def get_corporations_corporation_id_bookmarks_folders_with_http_info(corporation_id, opts = {})
       if @api_client.config.debugging
@@ -322,7 +300,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -331,7 +308,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

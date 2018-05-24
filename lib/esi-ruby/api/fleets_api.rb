@@ -26,8 +26,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def delete_fleets_fleet_id_members_member_id(fleet_id, member_id, opts = {})
       delete_fleets_fleet_id_members_member_id_with_http_info(fleet_id, member_id, opts)
@@ -41,8 +39,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_fleets_fleet_id_members_member_id_with_http_info(fleet_id, member_id, opts = {})
       if @api_client.config.debugging
@@ -66,7 +62,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -74,7 +69,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -100,8 +94,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def delete_fleets_fleet_id_squads_squad_id(fleet_id, squad_id, opts = {})
       delete_fleets_fleet_id_squads_squad_id_with_http_info(fleet_id, squad_id, opts)
@@ -115,8 +107,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_fleets_fleet_id_squads_squad_id_with_http_info(fleet_id, squad_id, opts = {})
       if @api_client.config.debugging
@@ -140,7 +130,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -148,7 +137,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -174,8 +162,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def delete_fleets_fleet_id_wings_wing_id(fleet_id, wing_id, opts = {})
       delete_fleets_fleet_id_wings_wing_id_with_http_info(fleet_id, wing_id, opts)
@@ -189,8 +175,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def delete_fleets_fleet_id_wings_wing_id_with_http_info(fleet_id, wing_id, opts = {})
       if @api_client.config.debugging
@@ -214,7 +198,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -222,7 +205,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -248,8 +230,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetCharactersCharacterIdFleetOk]
     def get_characters_character_id_fleet(character_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_fleet_with_http_info(character_id, opts)
@@ -263,8 +243,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetCharactersCharacterIdFleetOk, Fixnum, Hash)>] GetCharactersCharacterIdFleetOk data, response status code and response headers
     def get_characters_character_id_fleet_with_http_info(character_id, opts = {})
       if @api_client.config.debugging
@@ -288,7 +266,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -297,7 +274,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -324,8 +300,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetFleetsFleetIdOk]
     def get_fleets_fleet_id(fleet_id, opts = {})
       data, _status_code, _headers = get_fleets_fleet_id_with_http_info(fleet_id, opts)
@@ -339,8 +313,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetFleetsFleetIdOk, Fixnum, Hash)>] GetFleetsFleetIdOk data, response status code and response headers
     def get_fleets_fleet_id_with_http_info(fleet_id, opts = {})
       if @api_client.config.debugging
@@ -360,7 +332,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -369,7 +340,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -393,12 +363,11 @@ module Esi
     # Return information about fleet members  --- Alternate route: `/dev/fleets/{fleet_id}/members/`  Alternate route: `/legacy/fleets/{fleet_id}/members/`  Alternate route: `/v1/fleets/{fleet_id}/members/`  --- This route is cached for up to 5 seconds
     # @param fleet_id ID for a fleet
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetFleetsFleetIdMembers200Ok>]
     def get_fleets_fleet_id_members(fleet_id, opts = {})
       data, _status_code, _headers = get_fleets_fleet_id_members_with_http_info(fleet_id, opts)
@@ -409,12 +378,11 @@ module Esi
     # Return information about fleet members  --- Alternate route: &#x60;/dev/fleets/{fleet_id}/members/&#x60;  Alternate route: &#x60;/legacy/fleets/{fleet_id}/members/&#x60;  Alternate route: &#x60;/v1/fleets/{fleet_id}/members/&#x60;  --- This route is cached for up to 5 seconds
     # @param fleet_id ID for a fleet
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetFleetsFleetIdMembers200Ok>, Fixnum, Hash)>] Array<GetFleetsFleetIdMembers200Ok> data, response status code and response headers
     def get_fleets_fleet_id_members_with_http_info(fleet_id, opts = {})
       if @api_client.config.debugging
@@ -423,6 +391,9 @@ module Esi
       # verify the required parameter 'fleet_id' is set
       if @api_client.config.client_side_validation && fleet_id.nil?
         fail ArgumentError, "Missing the required parameter 'fleet_id' when calling FleetsApi.get_fleets_fleet_id_members"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -438,7 +409,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -446,8 +416,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -471,12 +441,11 @@ module Esi
     # Return information about wings in a fleet  --- Alternate route: `/dev/fleets/{fleet_id}/wings/`  Alternate route: `/legacy/fleets/{fleet_id}/wings/`  Alternate route: `/v1/fleets/{fleet_id}/wings/`  --- This route is cached for up to 5 seconds
     # @param fleet_id ID for a fleet
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetFleetsFleetIdWings200Ok>]
     def get_fleets_fleet_id_wings(fleet_id, opts = {})
       data, _status_code, _headers = get_fleets_fleet_id_wings_with_http_info(fleet_id, opts)
@@ -487,12 +456,11 @@ module Esi
     # Return information about wings in a fleet  --- Alternate route: &#x60;/dev/fleets/{fleet_id}/wings/&#x60;  Alternate route: &#x60;/legacy/fleets/{fleet_id}/wings/&#x60;  Alternate route: &#x60;/v1/fleets/{fleet_id}/wings/&#x60;  --- This route is cached for up to 5 seconds
     # @param fleet_id ID for a fleet
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetFleetsFleetIdWings200Ok>, Fixnum, Hash)>] Array<GetFleetsFleetIdWings200Ok> data, response status code and response headers
     def get_fleets_fleet_id_wings_with_http_info(fleet_id, opts = {})
       if @api_client.config.debugging
@@ -501,6 +469,9 @@ module Esi
       # verify the required parameter 'fleet_id' is set
       if @api_client.config.client_side_validation && fleet_id.nil?
         fail ArgumentError, "Missing the required parameter 'fleet_id' when calling FleetsApi.get_fleets_fleet_id_wings"
+      end
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
       end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
@@ -516,7 +487,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -524,8 +494,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -552,8 +522,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def post_fleets_fleet_id_members(fleet_id, invitation, opts = {})
       post_fleets_fleet_id_members_with_http_info(fleet_id, invitation, opts)
@@ -567,8 +535,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def post_fleets_fleet_id_members_with_http_info(fleet_id, invitation, opts = {})
       if @api_client.config.debugging
@@ -592,7 +558,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -600,7 +565,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -625,8 +589,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [PostFleetsFleetIdWingsCreated]
     def post_fleets_fleet_id_wings(fleet_id, opts = {})
       data, _status_code, _headers = post_fleets_fleet_id_wings_with_http_info(fleet_id, opts)
@@ -639,8 +601,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(PostFleetsFleetIdWingsCreated, Fixnum, Hash)>] PostFleetsFleetIdWingsCreated data, response status code and response headers
     def post_fleets_fleet_id_wings_with_http_info(fleet_id, opts = {})
       if @api_client.config.debugging
@@ -660,7 +620,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -668,7 +627,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -695,8 +653,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [PostFleetsFleetIdWingsWingIdSquadsCreated]
     def post_fleets_fleet_id_wings_wing_id_squads(fleet_id, wing_id, opts = {})
       data, _status_code, _headers = post_fleets_fleet_id_wings_wing_id_squads_with_http_info(fleet_id, wing_id, opts)
@@ -710,8 +666,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(PostFleetsFleetIdWingsWingIdSquadsCreated, Fixnum, Hash)>] PostFleetsFleetIdWingsWingIdSquadsCreated data, response status code and response headers
     def post_fleets_fleet_id_wings_wing_id_squads_with_http_info(fleet_id, wing_id, opts = {})
       if @api_client.config.debugging
@@ -735,7 +689,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -743,7 +696,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -770,8 +722,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def put_fleets_fleet_id(fleet_id, new_settings, opts = {})
       put_fleets_fleet_id_with_http_info(fleet_id, new_settings, opts)
@@ -785,8 +735,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def put_fleets_fleet_id_with_http_info(fleet_id, new_settings, opts = {})
       if @api_client.config.debugging
@@ -810,7 +758,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -818,7 +765,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -845,8 +791,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def put_fleets_fleet_id_members_member_id(fleet_id, member_id, movement, opts = {})
       put_fleets_fleet_id_members_member_id_with_http_info(fleet_id, member_id, movement, opts)
@@ -861,8 +805,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def put_fleets_fleet_id_members_member_id_with_http_info(fleet_id, member_id, movement, opts = {})
       if @api_client.config.debugging
@@ -890,7 +832,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -898,7 +839,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -925,8 +865,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def put_fleets_fleet_id_squads_squad_id(fleet_id, naming, squad_id, opts = {})
       put_fleets_fleet_id_squads_squad_id_with_http_info(fleet_id, naming, squad_id, opts)
@@ -941,8 +879,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def put_fleets_fleet_id_squads_squad_id_with_http_info(fleet_id, naming, squad_id, opts = {})
       if @api_client.config.debugging
@@ -970,7 +906,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -978,7 +913,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -1005,8 +939,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [nil]
     def put_fleets_fleet_id_wings_wing_id(fleet_id, naming, wing_id, opts = {})
       put_fleets_fleet_id_wings_wing_id_with_http_info(fleet_id, naming, wing_id, opts)
@@ -1021,8 +953,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
     def put_fleets_fleet_id_wings_wing_id_with_http_info(fleet_id, naming, wing_id, opts = {})
       if @api_client.config.debugging
@@ -1050,7 +980,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -1058,7 +987,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

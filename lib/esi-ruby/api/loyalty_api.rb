@@ -26,8 +26,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCharactersCharacterIdLoyaltyPoints200Ok>]
     def get_characters_character_id_loyalty_points(character_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_loyalty_points_with_http_info(character_id, opts)
@@ -41,8 +39,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCharactersCharacterIdLoyaltyPoints200Ok>, Fixnum, Hash)>] Array<GetCharactersCharacterIdLoyaltyPoints200Ok> data, response status code and response headers
     def get_characters_character_id_loyalty_points_with_http_info(character_id, opts = {})
       if @api_client.config.debugging
@@ -66,7 +62,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -75,7 +70,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -101,8 +95,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetLoyaltyStoresCorporationIdOffers200Ok>]
     def get_loyalty_stores_corporation_id_offers(corporation_id, opts = {})
       data, _status_code, _headers = get_loyalty_stores_corporation_id_offers_with_http_info(corporation_id, opts)
@@ -115,8 +107,6 @@ module Esi
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetLoyaltyStoresCorporationIdOffers200Ok>, Fixnum, Hash)>] Array<GetLoyaltyStoresCorporationIdOffers200Ok> data, response status code and response headers
     def get_loyalty_stores_corporation_id_offers_with_http_info(corporation_id, opts = {})
       if @api_client.config.debugging
@@ -139,7 +129,6 @@ module Esi
       # query parameters
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -148,7 +137,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

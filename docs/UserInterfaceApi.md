@@ -38,9 +38,7 @@ destination_id = 789 # Integer | The destination to travel to, can be solar syst
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  token: 'token_example', # String | Access token to use if unable to set a header
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
+  token: 'token_example' # String | Access token to use if unable to set a header
 }
 
 begin
@@ -60,8 +58,6 @@ Name | Type | Description  | Notes
  **destination_id** | **Integer**| The destination to travel to, can be solar system, station or structure&#39;s id | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -101,9 +97,7 @@ contract_id = 56 # Integer | The contract to open
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  token: 'token_example', # String | Access token to use if unable to set a header
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
+  token: 'token_example' # String | Access token to use if unable to set a header
 }
 
 begin
@@ -121,8 +115,6 @@ Name | Type | Description  | Notes
  **contract_id** | **Integer**| The contract to open | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -162,9 +154,7 @@ target_id = 56 # Integer | The target to open
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  token: 'token_example', # String | Access token to use if unable to set a header
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
+  token: 'token_example' # String | Access token to use if unable to set a header
 }
 
 begin
@@ -182,8 +172,6 @@ Name | Type | Description  | Notes
  **target_id** | **Integer**| The target to open | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -223,9 +211,7 @@ type_id = 56 # Integer | The item type to open in market window
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  token: 'token_example', # String | Access token to use if unable to set a header
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
+  token: 'token_example' # String | Access token to use if unable to set a header
 }
 
 begin
@@ -243,8 +229,6 @@ Name | Type | Description  | Notes
  **type_id** | **Integer**| The item type to open in market window | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 
@@ -284,9 +268,7 @@ new_mail = Esi::PostUiOpenwindowNewmailNewMail.new # PostUiOpenwindowNewmailNewM
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  token: 'token_example', # String | Access token to use if unable to set a header
-  user_agent: 'user_agent_example', # String | Client identifier, takes precedence over headers
-  x_user_agent: 'x_user_agent_example' # String | Client identifier, takes precedence over User-Agent
+  token: 'token_example' # String | Access token to use if unable to set a header
 }
 
 begin
@@ -304,8 +286,6 @@ Name | Type | Description  | Notes
  **new_mail** | [**PostUiOpenwindowNewmailNewMail**](PostUiOpenwindowNewmailNewMail.md)| The details of mail to create | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional] 
- **user_agent** | **String**| Client identifier, takes precedence over headers | [optional] 
- **x_user_agent** | **String**| Client identifier, takes precedence over User-Agent | [optional] 
 
 ### Return type
 

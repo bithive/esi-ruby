@@ -27,8 +27,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCharactersCharacterIdContracts200Ok>]
     def get_characters_character_id_contracts(character_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_contracts_with_http_info(character_id, opts)
@@ -43,8 +41,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCharactersCharacterIdContracts200Ok>, Fixnum, Hash)>] Array<GetCharactersCharacterIdContracts200Ok> data, response status code and response headers
     def get_characters_character_id_contracts_with_http_info(character_id, opts = {})
       if @api_client.config.debugging
@@ -73,7 +69,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -82,7 +77,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -110,8 +104,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCharactersCharacterIdContractsContractIdBids200Ok>]
     def get_characters_character_id_contracts_contract_id_bids(character_id, contract_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_contracts_contract_id_bids_with_http_info(character_id, contract_id, opts)
@@ -126,8 +118,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCharactersCharacterIdContractsContractIdBids200Ok>, Fixnum, Hash)>] Array<GetCharactersCharacterIdContractsContractIdBids200Ok> data, response status code and response headers
     def get_characters_character_id_contracts_contract_id_bids_with_http_info(character_id, contract_id, opts = {})
       if @api_client.config.debugging
@@ -155,7 +145,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -164,7 +153,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -192,8 +180,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCharactersCharacterIdContractsContractIdItems200Ok>]
     def get_characters_character_id_contracts_contract_id_items(character_id, contract_id, opts = {})
       data, _status_code, _headers = get_characters_character_id_contracts_contract_id_items_with_http_info(character_id, contract_id, opts)
@@ -208,8 +194,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCharactersCharacterIdContractsContractIdItems200Ok>, Fixnum, Hash)>] Array<GetCharactersCharacterIdContractsContractIdItems200Ok> data, response status code and response headers
     def get_characters_character_id_contracts_contract_id_items_with_http_info(character_id, contract_id, opts = {})
       if @api_client.config.debugging
@@ -237,7 +221,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -246,7 +229,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -274,8 +256,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCorporationsCorporationIdContracts200Ok>]
     def get_corporations_corporation_id_contracts(corporation_id, opts = {})
       data, _status_code, _headers = get_corporations_corporation_id_contracts_with_http_info(corporation_id, opts)
@@ -290,8 +270,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCorporationsCorporationIdContracts200Ok>, Fixnum, Hash)>] Array<GetCorporationsCorporationIdContracts200Ok> data, response status code and response headers
     def get_corporations_corporation_id_contracts_with_http_info(corporation_id, opts = {})
       if @api_client.config.debugging
@@ -320,7 +298,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -329,7 +306,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -358,8 +334,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return (default to 1)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCorporationsCorporationIdContractsContractIdBids200Ok>]
     def get_corporations_corporation_id_contracts_contract_id_bids(contract_id, corporation_id, opts = {})
       data, _status_code, _headers = get_corporations_corporation_id_contracts_contract_id_bids_with_http_info(contract_id, corporation_id, opts)
@@ -375,8 +349,6 @@ module Esi
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [Integer] :page Which page of results to return
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCorporationsCorporationIdContractsContractIdBids200Ok>, Fixnum, Hash)>] Array<GetCorporationsCorporationIdContractsContractIdBids200Ok> data, response status code and response headers
     def get_corporations_corporation_id_contracts_contract_id_bids_with_http_info(contract_id, corporation_id, opts = {})
       if @api_client.config.debugging
@@ -409,7 +381,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'page'] = opts[:'page'] if !opts[:'page'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -418,7 +389,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -446,8 +416,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<GetCorporationsCorporationIdContractsContractIdItems200Ok>]
     def get_corporations_corporation_id_contracts_contract_id_items(contract_id, corporation_id, opts = {})
       data, _status_code, _headers = get_corporations_corporation_id_contracts_contract_id_items_with_http_info(contract_id, corporation_id, opts)
@@ -462,8 +430,6 @@ module Esi
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(Array<GetCorporationsCorporationIdContractsContractIdItems200Ok>, Fixnum, Hash)>] Array<GetCorporationsCorporationIdContractsContractIdItems200Ok> data, response status code and response headers
     def get_corporations_corporation_id_contracts_contract_id_items_with_http_info(contract_id, corporation_id, opts = {})
       if @api_client.config.debugging
@@ -491,7 +457,6 @@ module Esi
       query_params = {}
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -500,7 +465,6 @@ module Esi
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}

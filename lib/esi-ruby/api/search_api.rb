@@ -25,13 +25,12 @@ module Esi
     # @param character_id An EVE character ID
     # @param search The string to search on
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @option opts [BOOLEAN] :strict Whether the search should be a strict match (default to false)
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetCharactersCharacterIdSearchOk]
     def get_characters_character_id_search(categories, character_id, search, opts = {})
       data, _status_code, _headers = get_characters_character_id_search_with_http_info(categories, character_id, search, opts)
@@ -44,13 +43,12 @@ module Esi
     # @param character_id An EVE character ID
     # @param search The string to search on
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @option opts [BOOLEAN] :strict Whether the search should be a strict match
     # @option opts [String] :token Access token to use if unable to set a header
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetCharactersCharacterIdSearchOk, Fixnum, Hash)>] GetCharactersCharacterIdSearchOk data, response status code and response headers
     def get_characters_character_id_search_with_http_info(categories, character_id, search, opts = {})
       if @api_client.config.debugging
@@ -84,6 +82,9 @@ module Esi
         fail ArgumentError, 'invalid value for "search" when calling SearchApi.get_characters_character_id_search, the character length must be great than or equal to 3.'
       end
 
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
+      end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
       end
@@ -101,7 +102,6 @@ module Esi
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
       query_params[:'strict'] = opts[:'strict'] if !opts[:'strict'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -109,8 +109,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
@@ -135,12 +135,11 @@ module Esi
     # @param categories Type of entities to search for
     # @param search The string to search on
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response (default to en-us)
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response (default to en-us)
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language (default to en-us)
     # @option opts [BOOLEAN] :strict Whether the search should be a strict match (default to false)
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [GetSearchOk]
     def get_search(categories, search, opts = {})
       data, _status_code, _headers = get_search_with_http_info(categories, search, opts)
@@ -152,12 +151,11 @@ module Esi
     # @param categories Type of entities to search for
     # @param search The string to search on
     # @param [Hash] opts the optional parameters
+    # @option opts [String] :accept_language Language to use in the response
     # @option opts [String] :datasource The server name you would like data from
     # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
-    # @option opts [String] :language Language to use in the response
+    # @option opts [String] :language Language to use in the response, takes precedence over Accept-Language
     # @option opts [BOOLEAN] :strict Whether the search should be a strict match
-    # @option opts [String] :user_agent Client identifier, takes precedence over headers
-    # @option opts [String] :x_user_agent Client identifier, takes precedence over User-Agent
     # @return [Array<(GetSearchOk, Fixnum, Hash)>] GetSearchOk data, response status code and response headers
     def get_search_with_http_info(categories, search, opts = {})
       if @api_client.config.debugging
@@ -183,6 +181,9 @@ module Esi
         fail ArgumentError, 'invalid value for "search" when calling SearchApi.get_search, the character length must be great than or equal to 3.'
       end
 
+      if @api_client.config.client_side_validation && opts[:'accept_language'] && !['de', 'en-us', 'fr', 'ja', 'ru', 'zh'].include?(opts[:'accept_language'])
+        fail ArgumentError, 'invalid value for "accept_language", must be one of de, en-us, fr, ja, ru, zh'
+      end
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
       end
@@ -199,7 +200,6 @@ module Esi
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
       query_params[:'language'] = opts[:'language'] if !opts[:'language'].nil?
       query_params[:'strict'] = opts[:'strict'] if !opts[:'strict'].nil?
-      query_params[:'user_agent'] = opts[:'user_agent'] if !opts[:'user_agent'].nil?
 
       # header parameters
       header_params = {}
@@ -207,8 +207,8 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+      header_params[:'Accept-Language'] = opts[:'accept_language'] if !opts[:'accept_language'].nil?
       header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
-      header_params[:'X-User-Agent'] = opts[:'x_user_agent'] if !opts[:'x_user_agent'].nil?
 
       # form parameters
       form_params = {}
