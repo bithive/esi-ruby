@@ -15,6 +15,9 @@ require 'date'
 module Esi
   # 200 ok object
   class GetCharactersCharacterIdAssets200Ok
+    # is_blueprint_copy boolean
+    attr_accessor :is_blueprint_copy
+
     # is_singleton boolean
     attr_accessor :is_singleton
 
@@ -61,6 +64,7 @@ module Esi
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
+        :'is_blueprint_copy' => :'is_blueprint_copy',
         :'is_singleton' => :'is_singleton',
         :'item_id' => :'item_id',
         :'location_flag' => :'location_flag',
@@ -74,6 +78,7 @@ module Esi
     # Attribute type mapping.
     def self.swagger_types
       {
+        :'is_blueprint_copy' => :'BOOLEAN',
         :'is_singleton' => :'BOOLEAN',
         :'item_id' => :'Integer',
         :'location_flag' => :'String',
@@ -91,6 +96,10 @@ module Esi
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
+
+      if attributes.has_key?(:'is_blueprint_copy')
+        self.is_blueprint_copy = attributes[:'is_blueprint_copy']
+      end
 
       if attributes.has_key?(:'is_singleton')
         self.is_singleton = attributes[:'is_singleton']
@@ -198,6 +207,7 @@ module Esi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
+          is_blueprint_copy == o.is_blueprint_copy &&
           is_singleton == o.is_singleton &&
           item_id == o.item_id &&
           location_flag == o.location_flag &&
@@ -216,7 +226,7 @@ module Esi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [is_singleton, item_id, location_flag, location_id, location_type, quantity, type_id].hash
+      [is_blueprint_copy, is_singleton, item_id, location_flag, location_id, location_type, quantity, type_id].hash
     end
 
     # Builds the object from hash

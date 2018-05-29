@@ -156,6 +156,7 @@ Class | Method | HTTP request | Description
 *Esi::CorporationApi* | [**get_corporations_npccorps**](docs/CorporationApi.md#get_corporations_npccorps) | **GET** /corporations/npccorps/ | Get npc corporations
 *Esi::DogmaApi* | [**get_dogma_attributes**](docs/DogmaApi.md#get_dogma_attributes) | **GET** /dogma/attributes/ | Get attributes
 *Esi::DogmaApi* | [**get_dogma_attributes_attribute_id**](docs/DogmaApi.md#get_dogma_attributes_attribute_id) | **GET** /dogma/attributes/{attribute_id}/ | Get attribute information
+*Esi::DogmaApi* | [**get_dogma_dynamic_items_type_id_item_id**](docs/DogmaApi.md#get_dogma_dynamic_items_type_id_item_id) | **GET** /dogma/dynamic/items/{type_id}/{item_id}/ | Get dynamic item information
 *Esi::DogmaApi* | [**get_dogma_effects**](docs/DogmaApi.md#get_dogma_effects) | **GET** /dogma/effects/ | Get effects
 *Esi::DogmaApi* | [**get_dogma_effects_effect_id**](docs/DogmaApi.md#get_dogma_effects_effect_id) | **GET** /dogma/effects/{effect_id}/ | Get effect information
 *Esi::FactionWarfareApi* | [**get_characters_character_id_fw_stats**](docs/FactionWarfareApi.md#get_characters_character_id_fw_stats) | **GET** /characters/{character_id}/fw/stats/ | Overview of a character involved in faction warfare
@@ -452,6 +453,10 @@ Class | Method | HTTP request | Description
  - [Esi::GetCorporationsNames200Ok](docs/GetCorporationsNames200Ok.md)
  - [Esi::GetDogmaAttributesAttributeIdNotFound](docs/GetDogmaAttributesAttributeIdNotFound.md)
  - [Esi::GetDogmaAttributesAttributeIdOk](docs/GetDogmaAttributesAttributeIdOk.md)
+ - [Esi::GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute](docs/GetDogmaDynamicItemsTypeIdItemIdDogmaAttribute.md)
+ - [Esi::GetDogmaDynamicItemsTypeIdItemIdDogmaEffect](docs/GetDogmaDynamicItemsTypeIdItemIdDogmaEffect.md)
+ - [Esi::GetDogmaDynamicItemsTypeIdItemIdNotFound](docs/GetDogmaDynamicItemsTypeIdItemIdNotFound.md)
+ - [Esi::GetDogmaDynamicItemsTypeIdItemIdOk](docs/GetDogmaDynamicItemsTypeIdItemIdOk.md)
  - [Esi::GetDogmaEffectsEffectIdModifier](docs/GetDogmaEffectsEffectIdModifier.md)
  - [Esi::GetDogmaEffectsEffectIdNotFound](docs/GetDogmaEffectsEffectIdNotFound.md)
  - [Esi::GetDogmaEffectsEffectIdOk](docs/GetDogmaEffectsEffectIdOk.md)
