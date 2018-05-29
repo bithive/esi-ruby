@@ -167,7 +167,7 @@ module Esi
       return data, status_code, headers
     end
     # List open orders from a corporation
-    # List open market orders placed on behalf of a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/orders/`  Alternate route: `/v2/corporations/{corporation_id}/orders/`  --- This route is cached for up to 1200 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader 
+    # List open market orders placed on behalf of a corporation  --- Alternate route: `/v2/corporations/{corporation_id}/orders/`  --- This route is cached for up to 1200 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/orders/)
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -181,7 +181,7 @@ module Esi
     end
 
     # List open orders from a corporation
-    # List open market orders placed on behalf of a corporation  --- Alternate route: &#x60;/dev/corporations/{corporation_id}/orders/&#x60;  Alternate route: &#x60;/v2/corporations/{corporation_id}/orders/&#x60;  --- This route is cached for up to 1200 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader 
+    # List open market orders placed on behalf of a corporation  --- Alternate route: &#x60;/v2/corporations/{corporation_id}/orders/&#x60;  --- This route is cached for up to 1200 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/orders/)
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -244,7 +244,7 @@ module Esi
       return data, status_code, headers
     end
     # List historical orders from a corporation
-    # List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  --- Alternate route: `/dev/corporations/{corporation_id}/orders/history/`  Alternate route: `/legacy/corporations/{corporation_id}/orders/history/`  Alternate route: `/v1/corporations/{corporation_id}/orders/history/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader 
+    # List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  --- Alternate route: `/legacy/corporations/{corporation_id}/orders/history/`  Alternate route: `/v1/corporations/{corporation_id}/orders/history/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/orders/history/)
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -258,7 +258,7 @@ module Esi
     end
 
     # List historical orders from a corporation
-    # List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  --- Alternate route: &#x60;/dev/corporations/{corporation_id}/orders/history/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/orders/history/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/orders/history/&#x60;  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader 
+    # List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  --- Alternate route: &#x60;/legacy/corporations/{corporation_id}/orders/history/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/orders/history/&#x60;  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/orders/history/)
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from

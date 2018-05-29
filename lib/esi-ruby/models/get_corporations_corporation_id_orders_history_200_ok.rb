@@ -57,7 +57,7 @@ module Esi
     # Quantity of items required or offered at time order was placed
     attr_accessor :volume_total
 
-    # The corporation wallet division used for this order.
+    # The corporation wallet division used for this order
     attr_accessor :wallet_division
 
     class EnumAttributeValidator

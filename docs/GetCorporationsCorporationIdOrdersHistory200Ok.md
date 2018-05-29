@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **type_id** | **Integer** | The type ID of the item transacted in this order | 
 **volume_remain** | **Integer** | Quantity of items still required or offered | 
 **volume_total** | **Integer** | Quantity of items required or offered at time order was placed | 
-**wallet_division** | **Integer** | The corporation wallet division used for this order. | 
+**wallet_division** | **Integer** | The corporation wallet division used for this order | 
 
 

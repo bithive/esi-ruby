@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 List open orders from a corporation
 
-List open market orders placed on behalf of a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/orders/`  Alternate route: `/v2/corporations/{corporation_id}/orders/`  --- This route is cached for up to 1200 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader 
+List open market orders placed on behalf of a corporation  --- Alternate route: `/v2/corporations/{corporation_id}/orders/`  --- This route is cached for up to 1200 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/orders/)
 
 ### Example
 ```ruby
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 List historical orders from a corporation
 
-List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  --- Alternate route: `/dev/corporations/{corporation_id}/orders/history/`  Alternate route: `/legacy/corporations/{corporation_id}/orders/history/`  Alternate route: `/v1/corporations/{corporation_id}/orders/history/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader 
+List cancelled and expired market orders placed on behalf of a corporation up to 90 days in the past.  --- Alternate route: `/legacy/corporations/{corporation_id}/orders/history/`  Alternate route: `/v1/corporations/{corporation_id}/orders/history/`  --- This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Accountant, Trader   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/orders/history/)
 
 ### Example
 ```ruby
