@@ -1386,7 +1386,7 @@ module Esi
       return data, status_code, headers
     end
     # Get structure information
-    # Returns information on requested structure, if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.  --- Alternate route: `/dev/universe/structures/{structure_id}/`  Alternate route: `/legacy/universe/structures/{structure_id}/`  Alternate route: `/v1/universe/structures/{structure_id}/`  --- This route is cached for up to 3600 seconds
+    # Returns information on requested structure, if you are on the ACL. Otherwise, returns \"Forbidden\" for all inputs.  --- Alternate route: `/legacy/universe/structures/{structure_id}/`  Alternate route: `/v1/universe/structures/{structure_id}/`  --- This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/universe/structures/{structure_id}/)
     # @param structure_id An Eve structure ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -1399,7 +1399,7 @@ module Esi
     end
 
     # Get structure information
-    # Returns information on requested structure, if you are on the ACL. Otherwise, returns \&quot;Forbidden\&quot; for all inputs.  --- Alternate route: &#x60;/dev/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/legacy/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/v1/universe/structures/{structure_id}/&#x60;  --- This route is cached for up to 3600 seconds
+    # Returns information on requested structure, if you are on the ACL. Otherwise, returns \&quot;Forbidden\&quot; for all inputs.  --- Alternate route: &#x60;/legacy/universe/structures/{structure_id}/&#x60;  Alternate route: &#x60;/v1/universe/structures/{structure_id}/&#x60;  --- This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/universe/structures/{structure_id}/)
     # @param structure_id An Eve structure ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -1623,7 +1623,7 @@ module Esi
       return data, status_code, headers
     end
     # Get solar system information
-    # Get information on a solar system  --- Alternate route: `/dev/universe/systems/{system_id}/`  Alternate route: `/v3/universe/systems/{system_id}/`  --- This route expires daily at 11:05
+    # Get information on a solar system. NOTE: This route does not work with abyssal systems.  --- Alternate route: `/v3/universe/systems/{system_id}/`  --- This route expires daily at 11:05  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/universe/systems/{system_id}/)
     # @param system_id system_id integer
     # @param [Hash] opts the optional parameters
     # @option opts [String] :accept_language Language to use in the response (default to en-us)
@@ -1637,7 +1637,7 @@ module Esi
     end
 
     # Get solar system information
-    # Get information on a solar system  --- Alternate route: &#x60;/dev/universe/systems/{system_id}/&#x60;  Alternate route: &#x60;/v3/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05
+    # Get information on a solar system. NOTE: This route does not work with abyssal systems.  --- Alternate route: &#x60;/v3/universe/systems/{system_id}/&#x60;  --- This route expires daily at 11:05  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/universe/systems/{system_id}/)
     # @param system_id system_id integer
     # @param [Hash] opts the optional parameters
     # @option opts [String] :accept_language Language to use in the response
