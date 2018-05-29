@@ -1004,7 +1004,6 @@ module Esi
     # @param characters The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
-    # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @return [Array<PostCharactersAffiliation200Ok>]
     def post_characters_affiliation(characters, opts = {})
       data, _status_code, _headers = post_characters_affiliation_with_http_info(characters, opts)
@@ -1016,7 +1015,6 @@ module Esi
     # @param characters The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
-    # @option opts [String] :if_none_match ETag from a previous request. A 304 will be returned if this matches the current ETag
     # @return [Array<(Array<PostCharactersAffiliation200Ok>, Fixnum, Hash)>] Array<PostCharactersAffiliation200Ok> data, response status code and response headers
     def post_characters_affiliation_with_http_info(characters, opts = {})
       if @api_client.config.debugging
@@ -1042,7 +1040,6 @@ module Esi
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
       # HTTP header 'Content-Type'
       header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-      header_params[:'If-None-Match'] = opts[:'if_none_match'] if !opts[:'if_none_match'].nil?
 
       # form parameters
       form_params = {}
