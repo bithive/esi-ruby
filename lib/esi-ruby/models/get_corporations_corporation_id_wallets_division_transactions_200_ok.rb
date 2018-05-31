@@ -24,7 +24,7 @@ module Esi
     # is_buy boolean
     attr_accessor :is_buy
 
-    # journal_ref_id integer
+    # -1 if there is no corresponding wallet journal entry
     attr_accessor :journal_ref_id
 
     # location_id integer
