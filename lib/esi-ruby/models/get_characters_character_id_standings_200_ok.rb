@@ -101,14 +101,6 @@ module Esi
         invalid_properties.push('invalid value for "standing", standing cannot be nil.')
       end
 
-      if @standing > 10
-        invalid_properties.push('invalid value for "standing", must be smaller than or equal to 10.')
-      end
-
-      if @standing < -10
-        invalid_properties.push('invalid value for "standing", must be greater than or equal to -10.')
-      end
-
       invalid_properties
     end
 
@@ -120,8 +112,6 @@ module Esi
       from_type_validator = EnumAttributeValidator.new('String', ['agent', 'npc_corp', 'faction'])
       return false unless from_type_validator.valid?(@from_type)
       return false if @standing.nil?
-      return false if @standing > 10
-      return false if @standing < -10
       true
     end
 
@@ -133,24 +123,6 @@ module Esi
         fail ArgumentError, 'invalid value for "from_type", must be one of #{validator.allowable_values}.'
       end
       @from_type = from_type
-    end
-
-    # Custom attribute writer method with validation
-    # @param [Object] standing Value to be assigned
-    def standing=(standing)
-      if standing.nil?
-        fail ArgumentError, 'standing cannot be nil'
-      end
-
-      if standing > 10
-        fail ArgumentError, 'invalid value for "standing", must be smaller than or equal to 10.'
-      end
-
-      if standing < -10
-        fail ArgumentError, 'invalid value for "standing", must be greater than or equal to -10.'
-      end
-
-      @standing = standing
     end
 
     # Checks equality by comparing each attribute.
