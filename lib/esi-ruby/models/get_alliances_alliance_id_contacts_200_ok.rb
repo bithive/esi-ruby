@@ -21,8 +21,8 @@ module Esi
     # contact_type string
     attr_accessor :contact_type
 
-    # Custom label of the contact
-    attr_accessor :label_id
+    # label_ids array
+    attr_accessor :label_ids
 
     # Standing of the contact
     attr_accessor :standing
@@ -54,7 +54,7 @@ module Esi
       {
         :'contact_id' => :'contact_id',
         :'contact_type' => :'contact_type',
-        :'label_id' => :'label_id',
+        :'label_ids' => :'label_ids',
         :'standing' => :'standing'
       }
     end
@@ -64,7 +64,7 @@ module Esi
       {
         :'contact_id' => :'Integer',
         :'contact_type' => :'String',
-        :'label_id' => :'Integer',
+        :'label_ids' => :'Array<Integer>',
         :'standing' => :'Float'
       }
     end
@@ -85,8 +85,10 @@ module Esi
         self.contact_type = attributes[:'contact_type']
       end
 
-      if attributes.has_key?(:'label_id')
-        self.label_id = attributes[:'label_id']
+      if attributes.has_key?(:'label_ids')
+        if (value = attributes[:'label_ids']).is_a?(Array)
+          self.label_ids = value
+        end
       end
 
       if attributes.has_key?(:'standing')
@@ -141,7 +143,7 @@ module Esi
       self.class == o.class &&
           contact_id == o.contact_id &&
           contact_type == o.contact_type &&
-          label_id == o.label_id &&
+          label_ids == o.label_ids &&
           standing == o.standing
     end
 
@@ -154,7 +156,7 @@ module Esi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [contact_id, contact_type, label_id, standing].hash
+      [contact_id, contact_type, label_ids, standing].hash
     end
 
     # Builds the object from hash

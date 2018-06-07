@@ -24,8 +24,8 @@ module Esi
     # Whether this contact is being watched
     attr_accessor :is_watched
 
-    # Custom label of the contact
-    attr_accessor :label_id
+    # label_ids array
+    attr_accessor :label_ids
 
     # Standing of the contact
     attr_accessor :standing
@@ -58,7 +58,7 @@ module Esi
         :'contact_id' => :'contact_id',
         :'contact_type' => :'contact_type',
         :'is_watched' => :'is_watched',
-        :'label_id' => :'label_id',
+        :'label_ids' => :'label_ids',
         :'standing' => :'standing'
       }
     end
@@ -69,7 +69,7 @@ module Esi
         :'contact_id' => :'Integer',
         :'contact_type' => :'String',
         :'is_watched' => :'BOOLEAN',
-        :'label_id' => :'Integer',
+        :'label_ids' => :'Array<Integer>',
         :'standing' => :'Float'
       }
     end
@@ -94,8 +94,10 @@ module Esi
         self.is_watched = attributes[:'is_watched']
       end
 
-      if attributes.has_key?(:'label_id')
-        self.label_id = attributes[:'label_id']
+      if attributes.has_key?(:'label_ids')
+        if (value = attributes[:'label_ids']).is_a?(Array)
+          self.label_ids = value
+        end
       end
 
       if attributes.has_key?(:'standing')
@@ -151,7 +153,7 @@ module Esi
           contact_id == o.contact_id &&
           contact_type == o.contact_type &&
           is_watched == o.is_watched &&
-          label_id == o.label_id &&
+          label_ids == o.label_ids &&
           standing == o.standing
     end
 
@@ -164,7 +166,7 @@ module Esi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [contact_id, contact_type, is_watched, label_id, standing].hash
+      [contact_id, contact_type, is_watched, label_ids, standing].hash
     end
 
     # Builds the object from hash

@@ -101,7 +101,7 @@ module Esi
       return data, status_code, headers
     end
     # Get alliance contacts
-    # Return contacts of an alliance  --- Alternate route: `/legacy/alliances/{alliance_id}/contacts/`  Alternate route: `/v1/alliances/{alliance_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+    # Return contacts of an alliance  --- Alternate route: `/dev/alliances/{alliance_id}/contacts/`  Alternate route: `/v2/alliances/{alliance_id}/contacts/`  --- This route is cached for up to 300 seconds
     # @param alliance_id An EVE alliance ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -115,7 +115,7 @@ module Esi
     end
 
     # Get alliance contacts
-    # Return contacts of an alliance  --- Alternate route: &#x60;/legacy/alliances/{alliance_id}/contacts/&#x60;  Alternate route: &#x60;/v1/alliances/{alliance_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+    # Return contacts of an alliance  --- Alternate route: &#x60;/dev/alliances/{alliance_id}/contacts/&#x60;  Alternate route: &#x60;/v2/alliances/{alliance_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
     # @param alliance_id An EVE alliance ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -248,7 +248,7 @@ module Esi
       return data, status_code, headers
     end
     # Get contacts
-    # Return contacts of a character  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+    # Return contacts of a character  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/`  --- This route is cached for up to 300 seconds
     # @param character_id An EVE character ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -262,7 +262,7 @@ module Esi
     end
 
     # Get contacts
-    # Return contacts of a character  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+    # Return contacts of a character  --- Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v2/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
     # @param character_id An EVE character ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -395,7 +395,7 @@ module Esi
       return data, status_code, headers
     end
     # Get corporation contacts
-    # Return contacts of a corporation  --- Alternate route: `/legacy/corporations/{corporation_id}/contacts/`  Alternate route: `/v1/corporations/{corporation_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+    # Return contacts of a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/contacts/`  Alternate route: `/v2/corporations/{corporation_id}/contacts/`  --- This route is cached for up to 300 seconds
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
@@ -409,7 +409,7 @@ module Esi
     end
 
     # Get corporation contacts
-    # Return contacts of a corporation  --- Alternate route: &#x60;/legacy/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/v1/corporations/{corporation_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+    # Return contacts of a corporation  --- Alternate route: &#x60;/dev/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/v2/corporations/{corporation_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
     # @param corporation_id An EVE corporation ID
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
@@ -542,13 +542,13 @@ module Esi
       return data, status_code, headers
     end
     # Add contacts
-    # Bulk add contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+    # Bulk add contacts with same settings  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/` 
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
-    # @option opts [Integer] :label_id Add a custom label to the new contact (default to 0)
+    # @option opts [Array<Integer>] :label_ids Add custom labels to the new contact
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [BOOLEAN] :watched Whether the contact should be watched, note this is only effective on characters (default to false)
     # @return [Array<Integer>]
@@ -558,13 +558,13 @@ module Esi
     end
 
     # Add contacts
-    # Bulk add contacts with same settings  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+    # Bulk add contacts with same settings  --- Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v2/characters/{character_id}/contacts/&#x60; 
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
-    # @option opts [Integer] :label_id Add a custom label to the new contact
+    # @option opts [Array<Integer>] :label_ids Add custom labels to the new contact
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [BOOLEAN] :watched Whether the contact should be watched, note this is only effective on characters
     # @return [Array<(Array<Integer>, Fixnum, Hash)>] Array<Integer> data, response status code and response headers
@@ -599,6 +599,10 @@ module Esi
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
       end
+      if @api_client.config.client_side_validation && !opts[:'label_ids'].nil? && opts[:'label_ids'].length > 63
+        fail ArgumentError, 'invalid value for "opts[:"label_ids"]" when calling ContactsApi.post_characters_character_id_contacts, number of items must be less than or equal to 63.'
+      end
+
       # resource path
       local_var_path = '/characters/{character_id}/contacts/'.sub('{' + 'character_id' + '}', character_id.to_s)
 
@@ -606,7 +610,7 @@ module Esi
       query_params = {}
       query_params[:'standing'] = standing
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'label_id'] = opts[:'label_id'] if !opts[:'label_id'].nil?
+      query_params[:'label_ids'] = @api_client.build_collection_param(opts[:'label_ids'], :csv) if !opts[:'label_ids'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
       query_params[:'watched'] = opts[:'watched'] if !opts[:'watched'].nil?
 
@@ -636,13 +640,13 @@ module Esi
       return data, status_code, headers
     end
     # Edit contacts
-    # Bulk edit contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+    # Bulk edit contacts with same settings  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/` 
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from (default to tranquility)
-    # @option opts [Integer] :label_id Add a custom label to the contact, use 0 for clearing label (default to 0)
+    # @option opts [Array<Integer>] :label_ids Add custom labels to the contact
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [BOOLEAN] :watched Whether the contact should be watched, note this is only effective on characters (default to false)
     # @return [nil]
@@ -652,13 +656,13 @@ module Esi
     end
 
     # Edit contacts
-    # Bulk edit contacts with same settings  --- Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+    # Bulk edit contacts with same settings  --- Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/v2/characters/{character_id}/contacts/&#x60; 
     # @param character_id An EVE character ID
     # @param contact_ids A list of contacts
     # @param standing Standing for the contact
     # @param [Hash] opts the optional parameters
     # @option opts [String] :datasource The server name you would like data from
-    # @option opts [Integer] :label_id Add a custom label to the contact, use 0 for clearing label
+    # @option opts [Array<Integer>] :label_ids Add custom labels to the contact
     # @option opts [String] :token Access token to use if unable to set a header
     # @option opts [BOOLEAN] :watched Whether the contact should be watched, note this is only effective on characters
     # @return [Array<(nil, Fixnum, Hash)>] nil, response status code and response headers
@@ -693,6 +697,10 @@ module Esi
       if @api_client.config.client_side_validation && opts[:'datasource'] && !['tranquility', 'singularity'].include?(opts[:'datasource'])
         fail ArgumentError, 'invalid value for "datasource", must be one of tranquility, singularity'
       end
+      if @api_client.config.client_side_validation && !opts[:'label_ids'].nil? && opts[:'label_ids'].length > 63
+        fail ArgumentError, 'invalid value for "opts[:"label_ids"]" when calling ContactsApi.put_characters_character_id_contacts, number of items must be less than or equal to 63.'
+      end
+
       # resource path
       local_var_path = '/characters/{character_id}/contacts/'.sub('{' + 'character_id' + '}', character_id.to_s)
 
@@ -700,7 +708,7 @@ module Esi
       query_params = {}
       query_params[:'standing'] = standing
       query_params[:'datasource'] = opts[:'datasource'] if !opts[:'datasource'].nil?
-      query_params[:'label_id'] = opts[:'label_id'] if !opts[:'label_id'].nil?
+      query_params[:'label_ids'] = @api_client.build_collection_param(opts[:'label_ids'], :csv) if !opts[:'label_ids'].nil?
       query_params[:'token'] = opts[:'token'] if !opts[:'token'].nil?
       query_params[:'watched'] = opts[:'watched'] if !opts[:'watched'].nil?
 

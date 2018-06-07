@@ -80,7 +80,7 @@ nil (empty response body)
 
 Get alliance contacts
 
-Return contacts of an alliance  --- Alternate route: `/legacy/alliances/{alliance_id}/contacts/`  Alternate route: `/v1/alliances/{alliance_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
+Return contacts of an alliance  --- Alternate route: `/dev/alliances/{alliance_id}/contacts/`  Alternate route: `/v2/alliances/{alliance_id}/contacts/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```ruby
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 Get contacts
 
-Return contacts of a character  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
+Return contacts of a character  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```ruby
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 Get corporation contacts
 
-Return contacts of a corporation  --- Alternate route: `/legacy/corporations/{corporation_id}/contacts/`  Alternate route: `/v1/corporations/{corporation_id}/contacts/`  --- This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
+Return contacts of a corporation  --- Alternate route: `/dev/corporations/{corporation_id}/contacts/`  Alternate route: `/v2/corporations/{corporation_id}/contacts/`  --- This route is cached for up to 300 seconds
 
 ### Example
 ```ruby
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 Add contacts
 
-Bulk add contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
+Bulk add contacts with same settings  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/` 
 
 ### Example
 ```ruby
@@ -468,7 +468,7 @@ standing = 3.4 # Float | Standing for the contact
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  label_id: 0, # Integer | Add a custom label to the new contact
+  label_ids: [56], # Array<Integer> | Add custom labels to the new contact
   token: 'token_example' # String | Access token to use if unable to set a header
   watched: false # BOOLEAN | Whether the contact should be watched, note this is only effective on characters
 }
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
  **contact_ids** | **Array&lt;Integer&gt;**| A list of contacts | 
  **standing** | **Float**| Standing for the contact | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
- **label_id** | **Integer**| Add a custom label to the new contact | [optional] [default to 0]
+ **label_ids** | [**Array&lt;Integer&gt;**](Integer.md)| Add custom labels to the new contact | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **watched** | **BOOLEAN**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 Edit contacts
 
-Bulk edit contacts with same settings  --- Alternate route: `/legacy/characters/{character_id}/contacts/`  Alternate route: `/v1/characters/{character_id}/contacts/`   --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
+Bulk edit contacts with same settings  --- Alternate route: `/dev/characters/{character_id}/contacts/`  Alternate route: `/v2/characters/{character_id}/contacts/` 
 
 ### Example
 ```ruby
@@ -536,7 +536,7 @@ standing = 3.4 # Float | Standing for the contact
 
 opts = { 
   datasource: 'tranquility', # String | The server name you would like data from
-  label_id: 0, # Integer | Add a custom label to the contact, use 0 for clearing label
+  label_ids: [56], # Array<Integer> | Add custom labels to the contact
   token: 'token_example' # String | Access token to use if unable to set a header
   watched: false # BOOLEAN | Whether the contact should be watched, note this is only effective on characters
 }
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
  **contact_ids** | **Array&lt;Integer&gt;**| A list of contacts | 
  **standing** | **Float**| Standing for the contact | 
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility]
- **label_id** | **Integer**| Add a custom label to the contact, use 0 for clearing label | [optional] [default to 0]
+ **label_ids** | [**Array&lt;Integer&gt;**](Integer.md)| Add custom labels to the contact | [optional] 
  **token** | **String**| Access token to use if unable to set a header | [optional] 
  **watched** | **BOOLEAN**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 

@@ -595,6 +595,7 @@ Class | Method | HTTP request | Description
  - [Esi::PostCharactersCharacterIdAssetsLocations200Ok](docs/PostCharactersCharacterIdAssetsLocations200Ok.md)
  - [Esi::PostCharactersCharacterIdAssetsLocationsPosition](docs/PostCharactersCharacterIdAssetsLocationsPosition.md)
  - [Esi::PostCharactersCharacterIdAssetsNames200Ok](docs/PostCharactersCharacterIdAssetsNames200Ok.md)
+ - [Esi::PostCharactersCharacterIdContactsError520](docs/PostCharactersCharacterIdContactsError520.md)
  - [Esi::PostCharactersCharacterIdFittingsCreated](docs/PostCharactersCharacterIdFittingsCreated.md)
  - [Esi::PostCharactersCharacterIdFittingsFitting](docs/PostCharactersCharacterIdFittingsFitting.md)
  - [Esi::PostCharactersCharacterIdFittingsItem](docs/PostCharactersCharacterIdFittingsItem.md)

@@ -13,69 +13,22 @@ Swagger Codegen version: 2.4.0-SNAPSHOT
 require 'date'
 
 module Esi
-  # 200 ok object
-  class GetCharactersCharacterIdContacts200Ok
-    # contact_id integer
-    attr_accessor :contact_id
-
-    # contact_type string
-    attr_accessor :contact_type
-
-    # Whether this contact is in the blocked list. Note a missing value denotes unknown, not true or false
-    attr_accessor :is_blocked
-
-    # Whether this contact is being watched
-    attr_accessor :is_watched
-
-    # label_ids array
-    attr_accessor :label_ids
-
-    # Standing of the contact
-    attr_accessor :standing
-
-    class EnumAttributeValidator
-      attr_reader :datatype
-      attr_reader :allowable_values
-
-      def initialize(datatype, allowable_values)
-        @allowable_values = allowable_values.map do |value|
-          case datatype.to_s
-          when /Integer/i
-            value.to_i
-          when /Float/i
-            value.to_f
-          else
-            value
-          end
-        end
-      end
-
-      def valid?(value)
-        !value || allowable_values.include?(value)
-      end
-    end
+  # Error 520
+  class PostCharactersCharacterIdContactsError520
+    # Error 520 message
+    attr_accessor :error
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'contact_id' => :'contact_id',
-        :'contact_type' => :'contact_type',
-        :'is_blocked' => :'is_blocked',
-        :'is_watched' => :'is_watched',
-        :'label_ids' => :'label_ids',
-        :'standing' => :'standing'
+        :'error' => :'error'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'contact_id' => :'Integer',
-        :'contact_type' => :'String',
-        :'is_blocked' => :'BOOLEAN',
-        :'is_watched' => :'BOOLEAN',
-        :'label_ids' => :'Array<Integer>',
-        :'standing' => :'Float'
+        :'error' => :'String'
       }
     end
 
@@ -87,30 +40,8 @@ module Esi
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'contact_id')
-        self.contact_id = attributes[:'contact_id']
-      end
-
-      if attributes.has_key?(:'contact_type')
-        self.contact_type = attributes[:'contact_type']
-      end
-
-      if attributes.has_key?(:'is_blocked')
-        self.is_blocked = attributes[:'is_blocked']
-      end
-
-      if attributes.has_key?(:'is_watched')
-        self.is_watched = attributes[:'is_watched']
-      end
-
-      if attributes.has_key?(:'label_ids')
-        if (value = attributes[:'label_ids']).is_a?(Array)
-          self.label_ids = value
-        end
-      end
-
-      if attributes.has_key?(:'standing')
-        self.standing = attributes[:'standing']
+      if attributes.has_key?(:'error')
+        self.error = attributes[:'error']
       end
     end
 
@@ -118,40 +49,13 @@ module Esi
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @contact_id.nil?
-        invalid_properties.push('invalid value for "contact_id", contact_id cannot be nil.')
-      end
-
-      if @contact_type.nil?
-        invalid_properties.push('invalid value for "contact_type", contact_type cannot be nil.')
-      end
-
-      if @standing.nil?
-        invalid_properties.push('invalid value for "standing", standing cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @contact_id.nil?
-      return false if @contact_type.nil?
-      contact_type_validator = EnumAttributeValidator.new('String', ['character', 'corporation', 'alliance', 'faction'])
-      return false unless contact_type_validator.valid?(@contact_type)
-      return false if @standing.nil?
       true
-    end
-
-    # Custom attribute writer method checking allowed values (enum).
-    # @param [Object] contact_type Object to be assigned
-    def contact_type=(contact_type)
-      validator = EnumAttributeValidator.new('String', ['character', 'corporation', 'alliance', 'faction'])
-      unless validator.valid?(contact_type)
-        fail ArgumentError, 'invalid value for "contact_type", must be one of #{validator.allowable_values}.'
-      end
-      @contact_type = contact_type
     end
 
     # Checks equality by comparing each attribute.
@@ -159,12 +63,7 @@ module Esi
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          contact_id == o.contact_id &&
-          contact_type == o.contact_type &&
-          is_blocked == o.is_blocked &&
-          is_watched == o.is_watched &&
-          label_ids == o.label_ids &&
-          standing == o.standing
+          error == o.error
     end
 
     # @see the `==` method
@@ -176,7 +75,7 @@ module Esi
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [contact_id, contact_type, is_blocked, is_watched, label_ids, standing].hash
+      [error].hash
     end
 
     # Builds the object from hash
